@@ -3,26 +3,49 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
+const textPhoneNumber = "+13089208128";
+const displayTextPhone = "+1 308-920-8128";
+
+const whatsappNumber = "+14056179293";
+const displayWhatsapp = "+1 405-617-9293";
+
+const emailAddress = "uotohol5@gmail.com";
+const facebookUrl = "https://www.facebook.com/share/17u5bPzfKG/?mibextid=wwXIfr";
+const instagramUrl = "/";
+
+const bookingMessage =
+  "Hi Katrina Studios, I would like to book a massage session. Please share your availability.";
 
 function ContactPage() {
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace(
+    "+",
+    ""
+  )}?text=${encodeURIComponent(bookingMessage)}`;
+
+  const smsLink = `sms:${textPhoneNumber}?body=${encodeURIComponent(
+    bookingMessage
+  )}`;
+
   return (
     <>
       <Helmet>
         <title>Contact | Katrina Studios</title>
         <meta
           name="description"
-          content="Contact Katrina Studios in Edmonton to book a private massage and wellness session."
+          content="Contact Katrina Studios by WhatsApp, text, phone, or email for massage appointments in Edmonton, Alberta and USA availability."
         />
       </Helmet>
 
       <section className="page-hero">
         <div className="container">
           <span className="section-kicker">Book Appointment</span>
-          <h1>Ready to relax? Text Katrina Studios today.</h1>
+          <h1>Ready to relax? Text or WhatsApp Katrina Studios today.</h1>
           <p>
-            Send a normal text message to ask about availability, pricing,
-            services, or booking a private massage session.
+            Katrina Studios serves clients in Edmonton, Alberta and also offers
+            massage availability in the USA. Message directly for location,
+            timing, pricing, and booking details.
           </p>
         </div>
       </section>
@@ -41,7 +64,7 @@ function ContactPage() {
               <MapPin />
               <div>
                 <strong>Location</strong>
-                <span>Edmonton, Alberta</span>
+                <span>Edmonton, Alberta & USA</span>
               </div>
             </div>
 
@@ -49,7 +72,15 @@ function ContactPage() {
               <Phone />
               <div>
                 <strong>Phone / Text</strong>
-                <span>+1 308-920-8128</span>
+                <span>{displayTextPhone}</span>
+              </div>
+            </div>
+
+            <div className="contact-item">
+              <FaWhatsapp />
+              <div>
+                <strong>WhatsApp</strong>
+                <span>{displayWhatsapp}</span>
               </div>
             </div>
 
@@ -57,7 +88,7 @@ function ContactPage() {
               <MessageCircle />
               <div>
                 <strong>Booking Method</strong>
-                <span>Normal text messages only</span>
+                <span>WhatsApp and normal text messages</span>
               </div>
             </div>
 
@@ -65,31 +96,37 @@ function ContactPage() {
               <Mail />
               <div>
                 <strong>Email</strong>
-                <span>Add email address</span>
+                <span>{emailAddress}</span>
               </div>
             </div>
 
             <div className="contact-socials">
-              <a href="sms:+13089208128">
+              <a href={smsLink}>
                 <MessageCircle />
                 Text Now
               </a>
 
-              <a href="tel:+13089208128">
+              <a href={whatsappLink} target="_blank" rel="noreferrer">
+                <FaWhatsapp />
+                WhatsApp
+              </a>
+
+              <a href={`tel:${textPhoneNumber}`}>
                 <Phone />
                 Call
               </a>
 
-              <a
-                href="https://www.facebook.com/share/1Csb1VJQxm/?mibextid=wwXIfr"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={`mailto:${emailAddress}`}>
+                <Mail />
+                Email
+              </a>
+
+              <a href={facebookUrl} target="_blank" rel="noreferrer">
                 <FaFacebookF />
                 Facebook
               </a>
 
-              <a href="/">
+              <a href={instagramUrl} aria-label="Instagram">
                 <FaInstagram />
                 Instagram
               </a>
@@ -113,6 +150,14 @@ function ContactPage() {
             </div>
 
             <div>
+              <label>Preferred Location</label>
+              <select>
+                <option>Edmonton, Alberta</option>
+                <option>USA</option>
+              </select>
+            </div>
+
+            <div>
               <label>Preferred Session</label>
               <select>
                 <option>30 Minute Massage - $100</option>
@@ -127,15 +172,17 @@ function ContactPage() {
               <label>Message</label>
               <textarea
                 rows="6"
-                placeholder="Tell us your preferred date, time, and session length"
+                placeholder="Tell us your preferred date, time, location, and session length"
               ></textarea>
             </div>
 
             <a
               className="btn primary-btn"
-              href="sms:+13089208128?body=Hi Katrina Studios, I would like to book a massage session."
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
             >
-              Send Text Message
+              Send WhatsApp Message
             </a>
           </motion.form>
         </div>

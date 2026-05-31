@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,28 +12,30 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        <Link to="/" className="logo" onClick={closeMenu}>
-          <span className="logo-mark">
-            <Sparkles size={18} />
-          </span>
-          <span>
-            Katrina <strong>Studios</strong>
-          </span>
+        <Link to="/" className="logo image-logo" onClick={closeMenu}>
+          <img
+            src="/images/katrina-studios-logo.png"
+            alt="Katrina Studios logo"
+          />
         </Link>
 
         <nav className={isOpen ? "nav-links open" : "nav-links"}>
           <NavLink to="/" onClick={closeMenu}>
             Home
           </NavLink>
+
           <NavLink to="/about" onClick={closeMenu}>
             About
           </NavLink>
+
           <NavLink to="/services" onClick={closeMenu}>
             Services
           </NavLink>
+
           <NavLink to="/gallery" onClick={closeMenu}>
             Gallery
           </NavLink>
+
           <NavLink to="/contact" onClick={closeMenu}>
             Contact
           </NavLink>
@@ -47,6 +49,7 @@ function Navbar() {
           className="menu-btn"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation menu"
+          type="button"
         >
           {isOpen ? <X size={25} /> : <Menu size={25} />}
         </button>
