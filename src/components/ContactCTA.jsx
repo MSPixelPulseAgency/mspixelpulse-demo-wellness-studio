@@ -14,13 +14,14 @@ function ContactCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
         >
-          <span>Ready to relax?</span>
-          <h2>Book your private massage session in Edmonton.</h2>
+          <span>Ready to explore the demo?</span>
+          <h2>Launch a clean beauty and wellness website for your studio.</h2>
           <p>
-            Take a break from stress and give your body the comfort it deserves.
+            This demo can be adapted for salons, spas, wellness clinics, massage
+            studios, skincare brands, and local beauty service businesses.
           </p>
           <Link to="/contact" className="btn light-btn">
-            Contact Katrina Studios
+            Contact MS PixelPulse
           </Link>
         </motion.div>
       </div>
