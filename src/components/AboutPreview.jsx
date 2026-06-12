@@ -17,12 +17,12 @@ function AboutPreview() {
         >
           <img
             src="/images/katrina-profile.jpg"
-            alt="Katrina Studios wellness lifestyle"
+            alt="Wellness studio lifestyle"
             className="about-main-img"
           />
           <div className="about-badge">
-            <span>Edmonton</span>
-            <strong>Massage Studio</strong>
+            <span>Toronto</span>
+            <strong>Wellness Demo</strong>
           </div>
         </motion.div>
 
@@ -33,31 +33,31 @@ function AboutPreview() {
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
         >
-          <span className="section-kicker">About Katrina Studios</span>
-          <h2>A peaceful space created for comfort, privacy, and relaxation.</h2>
+          <span className="section-kicker">About MS PixelPulse Wellness Studio</span>
+          <h2>A polished demo space created for beauty, wellness, and self-care brands.</h2>
           <p>
-            Katrina Studios is designed for clients who want a calm escape from
-            daily stress. Every session focuses on creating a comfortable,
-            private, and soothing experience.
+            This demo website shows how a modern wellness business can present
+            services, atmosphere, pricing, gallery visuals, and booking details
+            in a simple, premium, and mobile-friendly layout.
           </p>
 
           <div className="feature-list">
             <div>
               <Leaf />
-              <span>Relaxing wellness-focused treatments</span>
+              <span>Relaxing wellness-focused presentation</span>
             </div>
             <div>
               <ShieldCheck />
-              <span>Clean, private, and comfortable studio</span>
+              <span>Clean, trustworthy, and conversion-ready pages</span>
             </div>
             <div>
               <Smile />
-              <span>Friendly service with affordable pricing</span>
+              <span>Friendly copy built for local service businesses</span>
             </div>
           </div>
 
           <Link to="/about" className="text-link">
-            Learn more about the studio
+            Learn more about the demo
           </Link>
         </motion.div>
       </div>
