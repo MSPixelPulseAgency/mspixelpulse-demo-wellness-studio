@@ -6,47 +6,47 @@ export const servicesData = [
   {
     id: 1,
     icon: Flower2,
-    title: "Relaxation Massage",
+    title: "Relaxation Wellness Session",
     duration: "60 / 90 Minutes",
     price: "Starting from $70",
     description:
-      "A calm and soothing massage designed to reduce daily stress, soften muscle tension, and help the body feel refreshed.",
+      "A calm self-care session designed to reduce daily stress, support comfort, and help clients feel refreshed.",
   },
   {
     id: 2,
     icon: HeartPulse,
-    title: "Deep Tissue Massage",
+    title: "Body Care Treatment",
     duration: "60 / 90 Minutes",
     price: "Starting from $85",
     description:
-      "Focused pressure therapy for tight muscles, body stiffness, and areas that need deeper attention and recovery.",
+      "A focused wellness treatment for clients who want deeper care, comfort, and a restored body feel.",
   },
   {
     id: 3,
     icon: Sparkles,
-    title: "Aromatherapy Massage",
+    title: "Aromatherapy Ritual",
     duration: "60 Minutes",
     price: "Starting from $80",
     description:
-      "A relaxing experience using soft massage techniques and calming aromas to create a peaceful wellness session.",
+      "A relaxing experience using calming aromas and gentle techniques to create a peaceful studio session.",
   },
   {
     id: 4,
     icon: Flame,
-    title: "Hot Stone Massage",
+    title: "Warm Stone Experience",
     duration: "75 / 90 Minutes",
     price: "Starting from $95",
     description:
-      "Warm stones and gentle pressure help relax the body, improve comfort, and create a luxury spa-like experience.",
+      "A premium spa-style service using warmth, soft pressure, and calming details to support relaxation.",
   },
   {
     id: 5,
     icon: Moon,
-    title: "Evening Relaxation Session",
+    title: "Evening Reset Session",
     duration: "60 Minutes",
     price: "Starting from $75",
     description:
-      "A peaceful massage session ideal after a long day, designed to help you unwind and reset.",
+      "A peaceful after-work wellness option designed to help clients unwind and reset their energy.",
   },
   {
     id: 6,
@@ -55,6 +55,6 @@ export const servicesData = [
     duration: "90 Minutes",
     price: "Starting from $120",
     description:
-      "A complete massage experience combining relaxation, comfort, and personalized care in a private studio setting.",
+      "A complete beauty and wellness package combining relaxation, comfort, and personalized self-care.",
   },
 ];
