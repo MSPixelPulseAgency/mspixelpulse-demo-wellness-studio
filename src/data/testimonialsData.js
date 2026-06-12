@@ -4,16 +4,16 @@ export const testimonialsData = [
   {
     id: 1,
     name: "Client Review",
-    text: "The studio felt calm, clean, and private. The whole session was relaxing and very comfortable.",
+    text: "The demo feels calm, clean, and premium. It would work well for a beauty or wellness studio.",
   },
   {
     id: 2,
     name: "Client Review",
-    text: "Great massage experience. The atmosphere was peaceful and the pricing was very reasonable.",
+    text: "The layout makes services, pricing, and booking information easy to understand.",
   },
   {
     id: 3,
     name: "Client Review",
-    text: "A beautiful place to relax after a long week. Professional, warm, and welcoming.",
+    text: "A polished website direction for local self-care brands that want a professional online presence.",
   },
 ];
