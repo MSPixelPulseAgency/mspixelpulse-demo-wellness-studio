@@ -3,18 +3,18 @@
 export const galleryData = [
   {
     id: 1,
-    title: "Private Studio Room",
+    title: "Modern Wellness Room",
     image: "/images/studio-room.jpg",
   },
   {
     id: 2,
-    title: "Wellness Lifestyle",
+    title: "Beauty & Self-Care Lifestyle",
     image:
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 3,
-    title: "Relaxing Treatment",
+    title: "Relaxing Treatment Setup",
     image:
       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80",
   },
@@ -32,7 +32,7 @@ export const galleryData = [
   },
   {
     id: 6,
-    title: "Body Care Ritual",
+    title: "Wellness Brand Visuals",
     image:
       "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80",
   },
