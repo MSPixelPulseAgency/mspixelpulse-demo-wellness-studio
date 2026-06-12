@@ -13,10 +13,10 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Katrina Studios | Massage & Wellness Studio in Edmonton</title>
+        <title>MS PixelPulse Wellness Studio | Beauty & Wellness Demo</title>
         <meta
           name="description"
-          content="Katrina Studios is a private massage and wellness studio in Edmonton offering relaxing, affordable, and professional massage services."
+          content="MS PixelPulse Wellness Studio is a clean beauty and wellness demo website template for salons, spas, wellness studios, and beauty brands in Toronto."
         />
       </Helmet>
 
