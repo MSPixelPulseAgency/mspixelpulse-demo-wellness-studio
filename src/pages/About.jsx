@@ -8,20 +8,21 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About | Katrina Studios</title>
+        <title>About | MS PixelPulse Wellness Studio</title>
         <meta
           name="description"
-          content="Learn more about Katrina Studios, a private massage and wellness studio in Edmonton."
+          content="Learn more about MS PixelPulse Wellness Studio, a beauty and wellness demo website template for local service businesses in Toronto."
         />
       </Helmet>
 
       <section className="page-hero">
         <div className="container">
           <span className="section-kicker">About Us</span>
-          <h1>Comfort, care, and calm in one private wellness space.</h1>
+          <h1>A clean demo website built for beauty, wellness, and self-care brands.</h1>
           <p>
-            Katrina Studios was created for clients who want a relaxing,
-            welcoming, and affordable massage experience in Edmonton.
+            MS PixelPulse Wellness Studio shows how a modern local business can
+            present services, trust, atmosphere, and booking details in a simple
+            and polished website experience.
           </p>
         </div>
       </section>
@@ -34,7 +35,7 @@ function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65 }}
           >
-            <img src="/images/studio-room.jpg" alt="Katrina Studios room" />
+            <img src="/images/studio-room.jpg" alt="Wellness studio room" />
           </motion.div>
 
           <motion.div
@@ -43,29 +44,29 @@ function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65 }}
           >
-            <h2>A studio built around relaxation and personal attention.</h2>
+            <h2>A layout built around calm visuals and clear conversion paths.</h2>
             <p>
-              Every massage session is designed to help clients slow down,
-              release stress, and feel more comfortable in their body. The
-              studio atmosphere is soft, warm, and private so clients can enjoy
-              a peaceful experience from start to finish.
+              Every section is designed to help visitors understand the brand,
+              explore services, view the studio atmosphere, and take action. The
+              copy is general demo content and can be customized for any beauty
+              or wellness business.
             </p>
 
             <div className="value-grid">
               <div>
                 <Heart />
-                <h3>Personal Care</h3>
-                <p>Sessions are focused on comfort, relaxation, and trust.</p>
+                <h3>Client-Focused</h3>
+                <p>Clear messaging that helps clients feel confident booking.</p>
               </div>
               <div>
                 <Leaf />
                 <h3>Calm Energy</h3>
-                <p>A quiet environment designed for peaceful self-care.</p>
+                <p>A soft, modern design direction for wellness experiences.</p>
               </div>
               <div>
                 <ShieldCheck />
-                <h3>Private Studio</h3>
-                <p>Clean, comfortable, and professional studio experience.</p>
+                <h3>Demo Ready</h3>
+                <p>Flexible content that can be reused for multiple niches.</p>
               </div>
             </div>
           </motion.div>
