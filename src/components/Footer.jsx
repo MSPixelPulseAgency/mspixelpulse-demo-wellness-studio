@@ -4,19 +4,18 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
-const phoneNumber = "+13089208128";
-const displayPhone = "+1 308-920-8128";
-const emailAddress = "uotohol5@gmail.com";
+const displayPhone = "+1 (000) 000-0000";
+const emailAddress = "hello@mspixelpulse.com";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <h3>Katrina Studios</h3>
+          <h3>MS PixelPulse Wellness Studio</h3>
           <p>
-            A private massage and wellness studio serving Edmonton, Alberta and
-            USA clients with relaxing, affordable self-care sessions.
+            A clean beauty and wellness demo website for Toronto-based salons,
+            spas, massage studios, skincare brands, and local self-care businesses.
           </p>
         </div>
 
@@ -32,7 +31,7 @@ function Footer() {
         <div>
           <h4>Contact</h4>
           <p>
-            <MapPin size={16} /> Edmonton, Alberta & USA
+            <MapPin size={16} /> Toronto, Ontario, Canada
           </p>
           <p>
             <Phone size={16} /> {displayPhone}
@@ -45,25 +44,15 @@ function Footer() {
         <div>
           <h4>Social</h4>
           <div className="social-links">
-            <a
-              href={`https://wa.me/${phoneNumber.replace("+", "")}`}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="WhatsApp"
-            >
+            <a href="#" aria-label="WhatsApp">
               <FaWhatsapp />
             </a>
 
-            <a
-              href="https://www.facebook.com/share/17u5bPzfKG/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-            >
+            <a href="#" aria-label="Facebook">
               <FaFacebookF />
             </a>
 
-            <a href="/" aria-label="Instagram">
+            <a href="#" aria-label="Instagram">
               <FaInstagram />
             </a>
           </div>
@@ -71,7 +60,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 Katrina Studios. All rights reserved.</p>
+        <p>© 2026 MS PixelPulse Wellness Studio. All rights reserved.</p>
       </div>
     </footer>
   );
