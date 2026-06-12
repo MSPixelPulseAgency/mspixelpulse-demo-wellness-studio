@@ -19,22 +19,22 @@ function Hero() {
         >
           <span className="eyebrow">
             <MapPin size={16} />
-            Edmonton Massage & Wellness Studio
+            Toronto Beauty & Wellness Studio
           </span>
 
           <h1>
-            Relax your body, refresh your mind, and feel beautifully restored.
+            A calm beauty and wellness experience designed to help clients feel renewed.
           </h1>
 
           <p>
-            Katrina Studios offers a private, calming, and affordable massage
-            experience designed for relaxation, stress relief, and complete
-            self-care.
+            MS PixelPulse Wellness Studio is a polished demo website template for
+            modern salons, spas, massage studios, and wellness brands that want a
+            clean online presence.
           </p>
 
           <div className="hero-actions">
             <Link to="/contact" className="btn primary-btn">
-              Book Appointment
+              Request Demo
             </Link>
             <Link to="/services" className="btn secondary-btn">
               View Services
@@ -43,16 +43,16 @@ function Hero() {
 
           <div className="hero-stats">
             <div>
-              <strong>Private</strong>
-              <span>Studio Setting</span>
+              <strong>Modern</strong>
+              <span>Beauty Layout</span>
             </div>
             <div>
-              <strong>Affordable</strong>
-              <span>Wellness Care</span>
+              <strong>Flexible</strong>
+              <span>Demo Content</span>
             </div>
             <div>
-              <strong>Relaxing</strong>
-              <span>Calm Experience</span>
+              <strong>Clean</strong>
+              <span>Wellness Style</span>
             </div>
           </div>
         </motion.div>
@@ -64,17 +64,20 @@ function Hero() {
           transition={{ duration: 0.75, delay: 0.15 }}
         >
           <div className="hero-card">
-            <img src="/images/studio-room.jpg" alt="Katrina Studios massage room" />
+            <img
+              src="/images/studio-room.jpg"
+              alt="Modern wellness studio treatment room"
+            />
           </div>
 
           <div className="floating-card top-card">
             <Star size={18} />
-            <span>Premium calm atmosphere</span>
+            <span>Premium demo experience</span>
           </div>
 
           <div className="floating-card bottom-card">
             <Heart size={18} />
-            <span>Personalized wellness sessions</span>
+            <span>Beauty and wellness focused</span>
           </div>
         </motion.div>
       </div>
