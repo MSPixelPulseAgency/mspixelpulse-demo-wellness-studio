@@ -8,20 +8,20 @@ function GalleryPage() {
   return (
     <>
       <Helmet>
-        <title>Gallery | Katrina Studios</title>
+        <title>Gallery | MS PixelPulse Wellness Studio</title>
         <meta
           name="description"
-          content="Explore Katrina Studios gallery featuring massage room details, wellness atmosphere, calm interiors, and relaxing spa-inspired visuals."
+          content="Explore demo gallery visuals for a clean beauty and wellness website, including calm interiors, self-care details, and studio atmosphere."
         />
       </Helmet>
 
       <section className="page-hero">
         <div className="container">
           <span className="section-kicker">Studio Gallery</span>
-          <h1>A calm, private, and relaxing space designed for comfort.</h1>
+          <h1>A calm gallery layout designed to build trust and visual appeal.</h1>
           <p>
-            View the atmosphere, massage room setup, wellness details, and soft
-            spa-inspired visuals of Katrina Studios.
+            Use this section to show treatment rooms, beauty details, wellness
+            interiors, skincare visuals, product shots, and brand atmosphere.
           </p>
         </div>
       </section>
