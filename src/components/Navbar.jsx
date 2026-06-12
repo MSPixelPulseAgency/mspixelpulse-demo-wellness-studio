@@ -13,10 +13,7 @@ function Navbar() {
     <header className="navbar">
       <div className="nav-container">
         <Link to="/" className="logo image-logo" onClick={closeMenu}>
-          <img
-            src="/images/katrina-studios-logo.png"
-            alt="Katrina Studios logo"
-          />
+          <span className="brand-text">MS PixelPulse Wellness Studio</span>
         </Link>
 
         <nav className={isOpen ? "nav-links open" : "nav-links"}>
@@ -41,7 +38,7 @@ function Navbar() {
           </NavLink>
 
           <Link to="/contact" className="nav-cta" onClick={closeMenu}>
-            Book Now
+            Book Demo
           </Link>
         </nav>
 
