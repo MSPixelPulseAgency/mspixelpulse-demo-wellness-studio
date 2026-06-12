@@ -7,33 +7,33 @@ function Pricing() {
   const pricing = [
     {
       icon: Clock,
-      title: "30 Minute Massage",
+      title: "Starter Wellness Session",
       price: "$100",
-      text: "A quick relaxation session for stress relief and body comfort.",
+      text: "A quick self-care option for clients who want a simple wellness visit.",
     },
     {
       icon: Sparkles,
-      title: "60 Minute Massage",
+      title: "Signature Beauty Service",
       price: "$130",
-      text: "A balanced full session designed for relaxation and wellness care.",
+      text: "A balanced studio service designed for relaxation, beauty, and care.",
     },
     {
       icon: Sparkles,
-      title: "90 Minute Massage",
+      title: "Premium Wellness Package",
       price: "$160",
-      text: "A deeper session for full-body relaxation and longer comfort.",
+      text: "A complete package for clients who want a longer, more premium experience.",
     },
     {
       icon: Sparkles,
-      title: "120 Minute Massage",
+      title: "Luxury Studio Ritual",
       price: "$190",
-      text: "An extended massage experience for complete relaxation and reset.",
+      text: "An extended beauty and wellness service for a more elevated visit.",
     },
     {
       icon: Moon,
-      title: "All Night Massage",
+      title: "Custom Self-Care Package",
       price: "$270",
-      text: "An extended overnight relaxation package. Text for availability.",
+      text: "A flexible package option that can be customized for real studio needs.",
     },
   ];
 
@@ -41,11 +41,11 @@ function Pricing() {
     <section className="section pricing-section">
       <div className="container">
         <div className="section-heading center">
-          <span className="section-kicker">Massage Pricing</span>
-          <h2>Simple, clear pricing for every relaxation session.</h2>
+          <span className="section-kicker">Demo Pricing</span>
+          <h2>Simple, clear pricing for beauty and wellness services.</h2>
           <p>
-            Choose the session length that fits your schedule and relaxation
-            needs.
+            Use this pricing section to present service packages in a clean,
+            trustworthy, and easy-to-scan format.
           </p>
         </div>
 
@@ -72,8 +72,8 @@ function Pricing() {
         </div>
 
         <p className="pricing-note">
-          For booking and availability, please send a normal text message to{" "}
-          <a href="sms:+13089208128">+1 308-920-8128</a>.
+          For demo inquiries and availability, contact{" "}
+          <a href="mailto:hello@mspixelpulse.com">hello@mspixelpulse.com</a>.
         </p>
       </div>
     </section>
