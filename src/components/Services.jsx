@@ -12,10 +12,10 @@ function Services({ showAll = false }) {
       <div className="container">
         <div className="section-heading center">
           <span className="section-kicker">Our Services</span>
-          <h2>Massage treatments made for relaxation and body comfort.</h2>
+          <h2>Beauty and wellness services presented with clarity and care.</h2>
           <p>
-            Choose from calming, wellness-focused massage services in a private
-            studio environment.
+            Showcase signature treatments, self-care packages, and studio
+            experiences in a calm, organized, and conversion-friendly layout.
           </p>
         </div>
 
