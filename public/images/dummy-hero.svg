@@ -1,0 +1,15 @@
+<svg width="1400" height="1000" viewBox="0 0 1400 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="1000" fill="#f4eee8"/>
+  <rect x="104" y="92" width="1192" height="816" rx="58" fill="#fffaf5" stroke="#e6d7cd" stroke-width="6"/>
+  <rect x="184" y="170" width="1032" height="660" rx="42" fill="#eaded5"/>
+  <path d="M184 714C327 654 455 674 588 724C744 784 907 762 1216 610V830H184V714Z" fill="#d9c4b6"/>
+  <circle cx="1110" cy="276" r="126" fill="#cfa88f"/>
+  <circle cx="1110" cy="276" r="78" fill="#f8efe8"/>
+  <rect x="285" y="286" width="408" height="34" rx="17" fill="#7a4f42" opacity=".35"/>
+  <rect x="285" y="360" width="544" height="34" rx="17" fill="#7a4f42" opacity=".25"/>
+  <rect x="285" y="434" width="320" height="34" rx="17" fill="#7a4f42" opacity=".2"/>
+  <rect x="286" y="636" width="320" height="96" rx="48" fill="#3b1f2c"/>
+  <rect x="646" y="636" width="254" height="96" rx="48" fill="#fffaf5" stroke="#dccbc1" stroke-width="4"/>
+  <text x="700" y="533" fill="#3b1f2c" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" text-anchor="middle">Dummy Wellness Visual</text>
+  <text x="700" y="588" fill="#7a6259" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">Placeholder image for demo use</text>
+</svg>

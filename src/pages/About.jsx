@@ -35,7 +35,7 @@ function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.65 }}
           >
-            <img src="/images/studio-room.jpg" alt="Wellness studio room" />
+            <img src="/images/dummy-hero.svg" alt="Dummy wellness studio placeholder" />
           </motion.div>
 
           <motion.div

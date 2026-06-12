@@ -65,8 +65,8 @@ function Hero() {
         >
           <div className="hero-card">
             <img
-              src="/images/studio-room.jpg"
-              alt="Modern wellness studio treatment room"
+              src="/images/dummy-hero.svg"
+              alt="Dummy wellness studio placeholder"
             />
           </div>
 

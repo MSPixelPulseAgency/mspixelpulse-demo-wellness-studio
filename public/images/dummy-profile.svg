@@ -1,0 +1,11 @@
+<svg width="1100" height="900" viewBox="0 0 1100 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="900" fill="#f7f1ec"/>
+  <rect x="82" y="82" width="936" height="736" rx="48" fill="#fffaf6" stroke="#e6d8ce" stroke-width="5"/>
+  <circle cx="360" cy="344" r="142" fill="#cfa88f"/>
+  <path d="M206 694C298 574 442 538 566 612C680 680 790 650 894 546V818H206V694Z" fill="#dcc6b7"/>
+  <rect x="604" y="260" width="276" height="30" rx="15" fill="#3b1f2c" opacity=".28"/>
+  <rect x="604" y="330" width="214" height="30" rx="15" fill="#3b1f2c" opacity=".22"/>
+  <rect x="604" y="400" width="304" height="30" rx="15" fill="#3b1f2c" opacity=".16"/>
+  <text x="550" y="520" fill="#3b1f2c" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Dummy Image</text>
+  <text x="550" y="572" fill="#7a6259" font-family="Arial, Helvetica, sans-serif" font-size="26" text-anchor="middle">Generic demo placeholder</text>
+</svg>

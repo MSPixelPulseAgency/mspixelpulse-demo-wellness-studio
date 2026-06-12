@@ -16,8 +16,8 @@ function AboutPreview() {
           transition={{ duration: 0.65 }}
         >
           <img
-            src="/images/wellness-profile.jpg"
-            alt="Wellness studio lifestyle"
+            src="/images/dummy-profile.svg"
+            alt="Dummy wellness profile placeholder"
             className="about-main-img"
           />
           <div className="about-badge">
