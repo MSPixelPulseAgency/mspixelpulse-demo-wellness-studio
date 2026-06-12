@@ -5,47 +5,40 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
-const textPhoneNumber = "+13089208128";
-const displayTextPhone = "+1 308-920-8128";
-
-const whatsappNumber = "+14056179293";
-const displayWhatsapp = "+1 405-617-9293";
-
-const emailAddress = "uotohol5@gmail.com";
-const facebookUrl = "https://www.facebook.com/share/17u5bPzfKG/?mibextid=wwXIfr";
-const instagramUrl = "/";
+const phoneNumber = "+10000000000";
+const displayPhone = "+1 (000) 000-0000";
+const emailAddress = "hello@mspixelpulse.com";
+const facebookUrl = "#";
+const instagramUrl = "#";
+const whatsappUrl = "#";
 
 const bookingMessage =
-  "Hi Katrina Studios, I would like to book a massage session. Please share your availability.";
+  "Hi MS PixelPulse, I would like to learn more about this wellness studio demo website.";
 
 function ContactPage() {
-  const whatsappLink = `https://wa.me/${whatsappNumber.replace(
-    "+",
-    ""
-  )}?text=${encodeURIComponent(bookingMessage)}`;
-
-  const smsLink = `sms:${textPhoneNumber}?body=${encodeURIComponent(
-    bookingMessage
-  )}`;
+  const smsLink = `sms:${phoneNumber}?body=${encodeURIComponent(bookingMessage)}`;
+  const emailLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    "Wellness Studio Demo Inquiry"
+  )}&body=${encodeURIComponent(bookingMessage)}`;
 
   return (
     <>
       <Helmet>
-        <title>Contact | Katrina Studios</title>
+        <title>Contact | MS PixelPulse Wellness Studio</title>
         <meta
           name="description"
-          content="Contact Katrina Studios by WhatsApp, text, phone, or email for massage appointments in Edmonton, Alberta and USA availability."
+          content="Contact MS PixelPulse Wellness Studio demo using placeholder contact details for a beauty and wellness website template in Toronto, Ontario, Canada."
         />
       </Helmet>
 
       <section className="page-hero">
         <div className="container">
           <span className="section-kicker">Book Appointment</span>
-          <h1>Ready to relax? Text or WhatsApp Katrina Studios today.</h1>
+          <h1>Ready to turn this wellness demo into a real business website?</h1>
           <p>
-            Katrina Studios serves clients in Edmonton, Alberta and also offers
-            massage availability in the USA. Message directly for location,
-            timing, pricing, and booking details.
+            This contact page uses safe demo details for Toronto, Ontario,
+            Canada. Replace the placeholder contact information when adapting the
+            template for a real beauty or wellness business.
           </p>
         </div>
       </section>
@@ -64,7 +57,7 @@ function ContactPage() {
               <MapPin />
               <div>
                 <strong>Location</strong>
-                <span>Edmonton, Alberta & USA</span>
+                <span>Toronto, Ontario, Canada</span>
               </div>
             </div>
 
@@ -72,7 +65,7 @@ function ContactPage() {
               <Phone />
               <div>
                 <strong>Phone / Text</strong>
-                <span>{displayTextPhone}</span>
+                <span>{displayPhone}</span>
               </div>
             </div>
 
@@ -80,7 +73,7 @@ function ContactPage() {
               <FaWhatsapp />
               <div>
                 <strong>WhatsApp</strong>
-                <span>{displayWhatsapp}</span>
+                <span>{displayPhone}</span>
               </div>
             </div>
 
@@ -88,7 +81,7 @@ function ContactPage() {
               <MessageCircle />
               <div>
                 <strong>Booking Method</strong>
-                <span>WhatsApp and normal text messages</span>
+                <span>Demo contact form, email, or social links</span>
               </div>
             </div>
 
@@ -106,22 +99,22 @@ function ContactPage() {
                 Text Now
               </a>
 
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
+              <a href={whatsappUrl} aria-label="WhatsApp">
                 <FaWhatsapp />
                 WhatsApp
               </a>
 
-              <a href={`tel:${textPhoneNumber}`}>
+              <a href={`tel:${phoneNumber}`}>
                 <Phone />
                 Call
               </a>
 
-              <a href={`mailto:${emailAddress}`}>
+              <a href={emailLink}>
                 <Mail />
                 Email
               </a>
 
-              <a href={facebookUrl} target="_blank" rel="noreferrer">
+              <a href={facebookUrl} aria-label="Facebook">
                 <FaFacebookF />
                 Facebook
               </a>
@@ -152,19 +145,19 @@ function ContactPage() {
             <div>
               <label>Preferred Location</label>
               <select>
-                <option>Edmonton, Alberta</option>
-                <option>USA</option>
+                <option>Toronto, Ontario</option>
+                <option>Online consultation</option>
               </select>
             </div>
 
             <div>
-              <label>Preferred Session</label>
+              <label>Preferred Service</label>
               <select>
-                <option>30 Minute Massage - $100</option>
-                <option>60 Minute Massage - $130</option>
-                <option>90 Minute Massage - $160</option>
-                <option>120 Minute Massage - $190</option>
-                <option>All Night Massage - $270</option>
+                <option>Relaxation Wellness Session</option>
+                <option>Beauty Consultation</option>
+                <option>Skin Care Treatment</option>
+                <option>Body Care Ritual</option>
+                <option>Wellness Package</option>
               </select>
             </div>
 
@@ -172,17 +165,12 @@ function ContactPage() {
               <label>Message</label>
               <textarea
                 rows="6"
-                placeholder="Tell us your preferred date, time, location, and session length"
+                placeholder="Tell us your preferred date, service, and any questions about this demo website"
               ></textarea>
             </div>
 
-            <a
-              className="btn primary-btn"
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send WhatsApp Message
+            <a className="btn primary-btn" href={emailLink}>
+              Send Demo Inquiry
             </a>
           </motion.form>
         </div>
