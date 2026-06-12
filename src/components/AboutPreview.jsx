@@ -16,7 +16,7 @@ function AboutPreview() {
           transition={{ duration: 0.65 }}
         >
           <img
-            src="/images/katrina-profile.jpg"
+            src="/images/wellness-profile.jpg"
             alt="Wellness studio lifestyle"
             className="about-main-img"
           />
