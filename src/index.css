@@ -5808,3 +5808,72 @@ button:disabled:hover {
     transition: none;
   }
 }
+
+/* Compact liquid-glass capsule, requested after final UI review. */
+.site-header {
+  min-height: 72px;
+  padding: 8px 20px 8px 24px;
+  border-radius: 999px;
+}
+.site-header::before {
+  border-radius: inherit;
+}
+.site-header.is-scrolled {
+  padding-block: 8px;
+}
+.wordmark {
+  font-size: 22px;
+}
+.wordmark small {
+  margin-top: 4px;
+}
+.navigation .button {
+  min-height: 48px;
+  padding-block: 11px;
+}
+@media (max-width: 1279px) {
+  .site-header {
+    min-height: 66px;
+    padding: 7px 16px 7px 21px;
+  }
+  .wordmark {
+    font-size: 22px;
+  }
+}
+@media (max-width: 520px) {
+  .site-header,
+  .site-header.is-scrolled {
+    min-height: 62px;
+    padding: 7px 11px 7px 17px;
+  }
+  .wordmark {
+    font-size: 20px;
+    gap: 8px;
+  }
+  .wordmark small {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+  .wordmark > svg {
+    width: 25px;
+    height: 30px;
+  }
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 359px) {
+  .wordmark {
+    font-size: 18px;
+    gap: 6px;
+  }
+  .wordmark small {
+    font-size: 8px;
+  }
+  .wordmark > svg {
+    width: 23px;
+  }
+}
