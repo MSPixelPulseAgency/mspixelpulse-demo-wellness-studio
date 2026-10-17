@@ -1,0 +1,15 @@
+{
+  "pool-ritual": {
+    "source": "https://www.pexels.com/video/woman-relaxin-in-indoor-pool-6617115/",
+    "author": "Pavel Danilyuk",
+    "license": "https://www.pexels.com/license/",
+    "download": "https://www.pexels.com/download/video/6617115/",
+    "local": "/videos/pool-ritual.mp4",
+    "poster": "/images/noire/film-800.webp",
+    "durationSeconds": 10,
+    "dimensions": "540x960",
+    "audio": "removed",
+    "encoding": "H.264 CRF28, yuv420p, faststart, 24fps",
+    "behavior": "Click-to-play, source attached only after interaction, muted playsinline, pauses offscreen/hidden; no automatic motion including reduced motion."
+  }
+}

@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -21,14 +22,92 @@
       type="font/woff2"
       crossorigin
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#24131F" />
+
+    <link
+      rel="preload"
+      as="font"
+      href="/fonts/noire-italic.woff2"
+      type="font/woff2"
+      crossorigin
+    />
+    <script>
+      (() => {
+        const path = location.pathname;
+        const details = {
+          "relaxation-massage": "massage",
+          "hot-stone-massage": "stone",
+          "aromatherapy-massage": "body",
+          "couples-massage": "ritual",
+          "evening-reset": "scalp",
+          "foot-relaxation": "foot",
+          "botanical-facial": "facial",
+          "signature-experience": "skin",
+          "hydrating-facial": "mask",
+          "deep-cleansing-facial": "beauty",
+          "brightening-facial": "hero",
+          "sensitive-skin-facial": "portrait",
+          "body-care": "body",
+          "body-polish": "still-life",
+          "body-wrap": "ritual",
+          "hydrating-body": "oils",
+          "exfoliation-ritual": "candles",
+          "rose-body-ritual": "mask",
+          "aromatherapy-ritual": "candles",
+          "guided-relaxation": "film",
+          "meditation-session": "sound",
+          "sound-bath": "sound",
+          "mindfulness-session": "portrait",
+          "wellness-consultation": "oils",
+          "couples-spa-escape": "pool",
+          "luxury-spa-day": "water",
+          "bridal-wellness": "beauty",
+          "birthday-spa": "still-life",
+          "signature-indulgence": "robe",
+          "ultimate-relaxation": "pool",
+          manicure: "nails",
+          pedicure: "foot",
+          "luxury-hand-treatment": "oils",
+          "luxury-foot-treatment": "foot",
+          "scalp-massage": "scalp",
+          "hair-spa": "hair",
+        };
+        const pages = {
+          "/services": "mask",
+          "/about": "robe",
+          "/experience": "pool",
+          "/studio": "pool",
+          "/gallery": "still-life",
+          "/booking": "oils",
+          "/contact": "candles",
+          "/faq": "still-life",
+        };
+        const name =
+          path === "/"
+            ? "portrait"
+            : pages[path] || details[path.split("/services/")[1]];
+        if (!name) return;
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = "/images/noire/" + name + "-800.webp";
+        link.imageSrcset = [480, 800, 1200, 1800]
+          .map((w) => "/images/noire/" + name + "-" + w + ".webp " + w + "w")
+          .join(", ");
+        link.imageSizes =
+          path === "/"
+            ? "(max-width: 700px) 92vw, 43vw"
+            : "(max-width: 700px) 100vw, 50vw";
+        link.fetchPriority = "high";
+        document.head.append(link);
+      })();
+    </script>
+    <meta name="theme-color" content="#201326" />
     <meta
       name="description"
       content="Explore a fictional Toronto wellness studio: relaxation massage, botanical facials and considered spa rituals. A premium website concept by MSPixelPulse."
     />
 
-    <title>MSPixelPulse Wellness Studio | The art of indulgence</title>
+    <title>MSPixelPulse Wellness Studio | Your world, on pause</title>
   </head>
 
   <body>

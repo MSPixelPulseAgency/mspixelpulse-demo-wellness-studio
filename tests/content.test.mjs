@@ -43,7 +43,11 @@ test("treatment identities, CAD illustration data and photo references remain va
     assert.ok(t.alt.length > 20);
     assert.ok(Number.isFinite(t.price) && t.price > 0);
     assert.ok(Number.isFinite(t.duration) && t.duration > 0);
-    assert.ok(["Massage", "Skin", "Rituals"].includes(t.category));
+    assert.ok(
+      ["Massage", "Facials", "Body", "Wellness", "Packages", "Beauty"].includes(
+        t.category,
+      ),
+    );
   }
 });
 test("the sitemap retains all existing treatment and main page URLs", () => {
