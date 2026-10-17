@@ -9,6 +9,9 @@ export default function LeadForm({ contact = false }) {
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
   const result = useRef(null);
+  const form = useRef(null);
+  const focusForm = () =>
+    requestAnimationFrame(() => form.current?.querySelector("input")?.focus());
   const date = new Date();
   date.setDate(date.getDate() + 1);
   const minDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
@@ -70,6 +73,7 @@ export default function LeadForm({ contact = false }) {
           onClick={() => {
             setRequest(null);
             setError("");
+            focusForm();
           }}
         >
           Edit request
@@ -81,6 +85,7 @@ export default function LeadForm({ contact = false }) {
             setDraft(null);
             setError("");
             setCopied(false);
+            focusForm();
           }}
         >
           Clear details
@@ -92,7 +97,7 @@ export default function LeadForm({ contact = false }) {
       {error && <p role="alert">{error}</p>}
     </section>
   ) : (
-    <form className="lead-form" onSubmit={submit}>
+    <form ref={form} className="lead-form" onSubmit={submit}>
       <p className="form-notice">
         Demo only · Use sample details. Do not enter medical or sensitive
         information. Nothing is sent or saved to a server.

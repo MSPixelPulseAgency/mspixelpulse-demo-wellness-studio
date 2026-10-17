@@ -13,7 +13,7 @@ export const treatments = [
     duration: 60,
     price: 110,
     image: "massage",
-    alt: "A relaxation massage with botanical oil in a softly lit treatment space",
+    alt: "An adult guest receiving a relaxation massage beside softly glowing candles",
     description:
       "A slower rhythm. A little space to exhale. A relaxation-focused massage concept, shaped around your comfort.",
     includes: [
@@ -30,7 +30,7 @@ export const treatments = [
     duration: 60,
     price: 125,
     image: "facial",
-    alt: "An aesthetician applying a facial treatment in a light-filled spa room",
+    alt: "An aesthetician gently massaging an adult guest’s face in warm light",
     description:
       "A considered introduction to skin care, with a gentle cleanse, a face massage and time to simply be.",
     includes: [
@@ -46,8 +46,8 @@ export const treatments = [
     title: "The aromatic pause",
     duration: 60,
     price: 115,
-    image: "botanicals",
-    alt: "Lavender, botanical oil and fresh towels arranged for a spa ritual",
+    image: "candles",
+    alt: "Candles, body brushes and oil arranged on a dark spa surface",
     description:
       "Soft textures and a thoughtfully chosen aroma set the tone for an unhurried self-care ritual.",
     includes: [
@@ -63,8 +63,8 @@ export const treatments = [
     title: "The body ritual",
     duration: 75,
     price: 145,
-    image: "details",
-    alt: "Amber glass spa bottles and folded natural-fibre towels",
+    image: "body",
+    alt: "Hands gently massaging the back of an adult spa guest",
     description:
       "A tactile body-care concept that brings together gentle exfoliation, warm towels and a soft finishing touch.",
     includes: [
@@ -80,13 +80,13 @@ export const treatments = [
     title: "The evening reset",
     duration: 45,
     price: 90,
-    image: "studio",
-    alt: "A warmly lit massage room with natural plaster walls and a treatment bed",
+    image: "scalp",
+    alt: "An adult guest receiving a gentle head massage with eyes closed",
     description:
       "A shorter pause at the end of a full day, with a relaxation massage and room to unwind.",
     includes: [
       "A brief comfort consultation",
-      "A gentle shoulder, arm and hand massage",
+      "A gentle shoulder and scalp massage",
       "A quiet, unhurried finish",
     ],
     note: "A non-medical spa concept; no practitioner credentials, availability or treatment outcomes are represented.",
@@ -97,8 +97,8 @@ export const treatments = [
     title: "The signature escape",
     duration: 90,
     price: 175,
-    image: "interior",
-    alt: "A softly illuminated spa room with neutral curtains and a massage bed",
+    image: "skin",
+    alt: "An adult guest enjoying a facial massage with eyes closed",
     description:
       "Our most spacious studio concept: a facial ritual and a gentle hand massage, brought together in one considered visit.",
     includes: [
@@ -111,40 +111,58 @@ export const treatments = [
 ];
 export const gallery = [
   {
-    image: "studio",
-    alt: "Warm plaster arches around a linen-covered massage table",
-    caption: "A softer kind of space",
+    image: "pool",
+    alt: "An ornate indoor pool with arched windows, classical sculptures and warm reflections",
+    caption: "Stillness, reflected",
     tag: "The studio",
   },
   {
-    image: "facial",
-    alt: "A facial treatment in a bright and peaceful studio room",
-    caption: "Care in the small details",
+    image: "hero",
+    alt: "An adult guest receiving a gentle gua sha facial in soft, warm light",
+    caption: "The art of a gentle touch",
     tag: "Skin rituals",
   },
   {
-    image: "details",
-    alt: "Amber bottles and textured towels on a spa tray",
-    caption: "Simple, considered essentials",
+    image: "candles",
+    alt: "Candles, amber oil and spa brushes on a dark surface",
+    caption: "Small rituals. Rich details.",
     tag: "The details",
   },
   {
     image: "massage",
-    alt: "Botanical oil being used during a relaxation massage",
-    caption: "Time to slow down",
+    alt: "An adult guest receiving a relaxation massage in a candlelit room",
+    caption: "An unhurried rhythm",
     tag: "Massage",
   },
   {
-    image: "botanicals",
-    alt: "Lavender beside a bottle of oil and a neatly folded towel",
-    caption: "An aromatic pause",
+    image: "portrait",
+    alt: "An adult woman with a towel wrap resting her fingertips at her temples",
+    caption: "A moment, entirely yours",
+    tag: "Skin rituals",
+  },
+  {
+    image: "robe",
+    alt: "A soft robe on a wooden hook in a dark spa interior",
+    caption: "Comfort in every detail",
+    tag: "The studio",
+  },
+  {
+    image: "water",
+    alt: "Still water in a warm stone-lined spa pool",
+    caption: "A quieter world",
+    tag: "The studio",
+  },
+  {
+    image: "oils",
+    alt: "Warm-toned ceramic vessels and aromatic oil on marble",
+    caption: "The finishing touches",
     tag: "The details",
   },
   {
-    image: "interior",
-    alt: "A minimalist spa treatment room with soft indirect lighting",
-    caption: "Room to breathe",
-    tag: "The studio",
+    image: "facial",
+    alt: "A therapist gently massaging an adult guest’s face",
+    caption: "Considered care",
+    tag: "Skin rituals",
   },
 ];
 export const faqs = [
