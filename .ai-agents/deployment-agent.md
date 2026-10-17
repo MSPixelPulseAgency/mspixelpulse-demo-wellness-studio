@@ -16,3 +16,5 @@ Accessibility: preserve labels, focus states, skip link, keyboard menu/Escape, a
 Deployment: only MSPixelPulseAgency/mspixelpulse-demo-wellness-studio and existing Vercel prj_wtsYNiyFergsugt5YlYg5i5mOLXl. Vite, npm install, npm run build, dist, root ./, production main. Follow current user release authorization; verify exact production SHA, domain, assets and request flow. Record rollback deployment before release.
 
 Do not edit unrelated repositories, authentication, DNS, billing, client projects or Oyemahak/Katrina-Studios. Future changes must remain scoped, build successfully, be reviewed in a PR and preserve old working URLs and demo safety. Maintain docs/media-license.md and evidence-based QA notes.
+
+Glass compatibility: keep `-webkit-backdrop-filter` before the standard `backdrop-filter`. Inspect the built CSS and live computed header style; it must report `blur(28px) saturate(1.45)` in Chrome. Check service-dialog, hero-glass-note and film-control blur declarations too. A source-level blur declaration is not sufficient validation after minification.

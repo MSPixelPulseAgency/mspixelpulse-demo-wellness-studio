@@ -375,8 +375,8 @@ main:focus {
   border-radius: 28px;
   border: 1px solid #e7d0ff66;
   background: linear-gradient(120deg, #3d2449ce, #251a31bd 55%, #593156b3);
-  backdrop-filter: blur(28px) saturate(145%);
   -webkit-backdrop-filter: blur(28px) saturate(145%);
+  backdrop-filter: blur(28px) saturate(145%);
   box-shadow:
     0 18px 48px #130c242b,
     0 0 27px #8bc8ff18,

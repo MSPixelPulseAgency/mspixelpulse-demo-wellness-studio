@@ -59,3 +59,7 @@ Initial local Lighthouse found late primary-image delivery (Home 89, Gallery 87)
 This JavaScript/JSX project has no TypeScript compiler configuration. Lint, tests and production build are the appropriate code checks. Responsive browser emulation and automated accessibility audits do not establish physical-device proof, field Core Web Vitals or full WCAG conformance.
 
 Evidence: /Users/mahak/Documents/MSPixelPulse/operations-audits/2026-10-17-wellness-v3/. Release must use the existing main-branch GitHub → Vercel workflow, existing project prj_wtsYNiyFergsugt5YlYg5i5mOLXl, existing team team_zccbJjixiq0C3YRhUkZlSnF9 and canonical wellness.mspixelpulse.com. Never change unrelated repos, DNS, authentication, billing or Aurelion data for this redesign.
+
+## Compiled glass compatibility check
+
+Production inspection found that declaring the WebKit blur alias after the standard property caused this build's CSS minifier to retain only the prefixed declaration on the header. Chrome ignored that alias. Put the WebKit declaration first and the standard `backdrop-filter` last. The repaired production CSS must retain the unprefixed rule, and the browser-computed header value must be `blur(28px) saturate(1.45)`. Validate compiled styles and the live computed value in future releases; source declarations alone are insufficient proof of a glass effect.
