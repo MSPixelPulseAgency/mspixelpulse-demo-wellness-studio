@@ -1,7 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, ArrowRight, Menu, X, Flower2, Plus } from "lucide-react";
+import {
+  ArrowUpRight,
+  ArrowRight,
+  Menu,
+  X,
+  Flower2,
+  Plus,
+  ChevronDown,
+} from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import { brand, faqs } from "../data/studio";
+import media from "../data/media.json";
+import { brand, faqs, treatments } from "../data/studio";
 export function SEO({ title, description, path = "" }) {
   useEffect(() => {
     document.title = `${title} | MSPixelPulse Wellness Studio`;
@@ -32,22 +41,32 @@ export function SEO({ title, description, path = "" }) {
       "og:url": `https://wellness.mspixelpulse.com${path}`,
       "og:type": "website",
       "og:image":
-        "https://wellness.mspixelpulse.com/images/wellness/studio.webp",
+        "https://wellness.mspixelpulse.com/images/noire/hero-1200.webp",
     }))
       meta(`meta[property="${property}"]`, "meta", { property }, content);
   }, [title, description, path]);
   return null;
 }
-export function Photo({ name, alt, className = "", eager = false, ...props }) {
+export function Photo({
+  name,
+  alt,
+  className = "",
+  eager = false,
+  sizes = "(max-width: 700px) 100vw, 50vw",
+  ...props
+}) {
+  const image = media[name];
   return (
     <img
-      className={`photo ${className}`}
-      src={`/images/wellness/${name}-960.webp`}
-      srcSet={`/images/wellness/${name}-640.webp 640w, /images/wellness/${name}-960.webp 960w, /images/wellness/${name}.webp ${name === "facial" ? 1800 : name === "studio" ? 1350 : 1200}w`}
-      sizes={eager ? "100vw" : "(max-width: 700px) 100vw, 50vw"}
+      className={`photo photo-${name} ${className}`}
+      src={`/images/noire/${name}-800.webp`}
+      srcSet={image.widths
+        .map((w) => `/images/noire/${name}-${w}.webp ${w}w`)
+        .join(", ")}
+      sizes={sizes}
       alt={alt}
-      width={name === "facial" ? 1800 : name === "studio" ? 1350 : 1200}
-      height={name === "facial" ? 1200 : 1800}
+      width={image.width}
+      height={image.height}
       loading={eager ? "eager" : "lazy"}
       fetchPriority={eager ? "high" : undefined}
       decoding="async"
@@ -85,6 +104,16 @@ export function Eyebrow({ children, light = false }) {
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const toggle = useRef(null);
+  const sentinel = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (!("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver(([entry]) =>
+      setScrolled(!entry.isIntersecting),
+    );
+    observer.observe(sentinel.current);
+    return () => observer.disconnect();
+  }, []);
   useEffect(() => {
     if (!open) return;
     function escape(e) {
@@ -102,19 +131,19 @@ export function Navbar() {
         Skip to content
       </a>
       <div className="demo-bar">
-        A fictional studio. A real moment of inspiration.{" "}
-        <span> A website concept by MSPixelPulse.</span>
+        MSPixelPulse concept · Fictional studio <span> · Toronto, Canada</span>
       </div>
-      <header className="site-header">
+      <span ref={sentinel} className="nav-sentinel" aria-hidden="true" />
+      <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <Link
           className="wordmark"
           to="/"
-          aria-label="Wellness Studio by MSPixelPulse home"
+          title="Go to the Wellness Studio homepage"
         >
           <Flower2 size={29} strokeWidth={1.1} aria-hidden="true" />
           <span>
             WELLNESS <i>STUDIO</i>
-            <small>BY MSPIXELPULSE</small>
+            <small>THE ART OF INDULGENCE</small>
           </span>
         </Link>
         <button
@@ -132,12 +161,39 @@ export function Navbar() {
           className={open ? "navigation is-open" : "navigation"}
           aria-label="Main navigation"
         >
-          <NavLink to="/services">Treatments</NavLink>
+          <div className="nav-treatment">
+            <NavLink to="/services">Treatments</NavLink>
+            <details
+              className="nav-dropdown"
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  e.currentTarget.open = false;
+                  e.currentTarget.querySelector("summary")?.focus();
+                }
+              }}
+            >
+              <summary aria-label="Explore treatment menu">
+                <ChevronDown size={14} />
+              </summary>
+              <div className="nav-treatment-menu">
+                <p className="eyebrow">The ritual collection</p>
+                {treatments.map((t) => (
+                  <Link to={`/services/${t.id}`} key={t.id}>
+                    {t.title}
+                    <span>{t.duration} min</span>
+                  </Link>
+                ))}
+                <Link to="/services">
+                  Explore all treatments <ArrowUpRight size={16} />
+                </Link>
+              </div>
+            </details>
+          </div>
           <NavLink to="/about">Our story</NavLink>
           <NavLink to="/experience">The experience</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <ButtonLink to="/booking">Make time for you</ButtonLink>
+          <ButtonLink to="/booking">Begin your escape</ButtonLink>
         </nav>
       </header>
     </>
@@ -146,14 +202,17 @@ export function Navbar() {
 export function Footer() {
   return (
     <footer className="site-footer">
+      <div className="footer-signature" aria-hidden="true">
+        W<span>✧</span>S
+      </div>
       <div className="footer-top">
         <div>
-          <Eyebrow light>A little less rush. A little more you.</Eyebrow>
+          <Eyebrow light>A world apart. A moment for you.</Eyebrow>
           <p className="footer-title">
-            Wellness, <em>at your pace.</em>
+            The art of <em>indulgence.</em>
           </p>
           <ButtonLink to="/booking" light>
-            Explore an appointment
+            Begin your escape
           </ButtonLink>
         </div>
         <div className="footer-links">
@@ -190,23 +249,26 @@ export function ContactCTA() {
   return (
     <section className="closing">
       <Photo
-        name="botanicals"
-        alt="Lavender and linen in a calm spa still life"
+        name="ritual"
+        alt="An adult guest resting in a warm candlelit spa setting"
+        sizes="100vw"
       />
-      <div className="closing-copy">
-        <Eyebrow>Your next quiet moment</Eyebrow>
+      <div className="closing-copy wrap">
+        <Eyebrow light>Your invitation to indulge</Eyebrow>
         <h2>
-          Leave a little room
+          A little escape.
           <br />
-          for <em>yourself.</em>
+          An entirely <em>different feeling.</em>
         </h2>
-        <p>
-          Find your ritual. Choose your pace. Explore what a more considered
-          kind of care could feel like.
-        </p>
-        <ButtonLink to="/booking">Find your moment</ButtonLink>
-        <small>Demonstration only. No real appointment is made.</small>
+        <p>Let the world wait a little. Find the ritual that speaks to you.</p>
+        <ButtonLink to="/booking" light>
+          Explore your appointment
+        </ButtonLink>
+        <small>Fictional studio · Demo requests only · No real bookings</small>
       </div>
+      <span className="closing-index" aria-hidden="true">
+        W / S
+      </span>
     </section>
   );
 }
@@ -219,7 +281,9 @@ export function FAQAccordion({ limit }) {
             {q}
             <Plus size={18} aria-hidden="true" />
           </summary>
-          <p>{a}</p>
+          <div className="faq-answer">
+            <p>{a}</p>
+          </div>
         </details>
       ))}
     </div>
@@ -235,7 +299,7 @@ export function ServiceCard({ item, index }) {
       >
         <Photo name={item.image} alt={item.alt} />
         <span className="image-arrow">
-          <ArrowUpRight size={22} />
+          <ArrowUpRight size={22} aria-hidden="true" />
         </span>
       </Link>
       <div className="treatment-meta">
@@ -248,7 +312,12 @@ export function ServiceCard({ item, index }) {
         <Link to={`/services/${item.id}`}>{item.title}</Link>
       </h3>
       <p>{item.description}</p>
-      <span className="treatment-number">0{index + 1}</span>
+      <TextLink to={`/booking?treatment=${item.id}`}>
+        Explore appointment
+      </TextLink>
+      <span className="treatment-number" aria-hidden="true">
+        0{index + 1}
+      </span>
     </article>
   );
 }

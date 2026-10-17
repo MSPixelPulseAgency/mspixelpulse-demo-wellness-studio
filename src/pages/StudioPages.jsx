@@ -1,13 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import {
   ArrowRight,
   X,
   ChevronLeft,
   ChevronRight,
-  Leaf,
-  Sun,
-  Heart,
+  ArrowUpRight,
+  Sparkles,
 } from "lucide-react";
 import {
   SEO,
@@ -25,183 +24,319 @@ export function Home() {
   return (
     <>
       <SEO
-        title="A slower kind of self-care"
-        description="An editorial wellness studio concept in Toronto. Explore relaxation massage, botanical facials and thoughtful spa rituals. A fictional MSPixelPulse demo."
+        title="The art of indulgence"
+        description="Enter a cinematic Toronto spa concept: relaxation massage, beautiful skin rituals and an unhurried escape. A fictional luxury wellness studio by MSPixelPulse."
       />
       <section className="hero">
-        <picture className="hero-picture">
-          <source media="(max-width: 700px)" srcSet="/images/wellness/studio-960.webp" />
-          <img className="photo" src="/images/wellness/studio-wide.webp" alt="A warm, sculptural spa room with arched plaster walls, linen and a treatment bed" width="1350" height="850" fetchPriority="high" decoding="async" />
-        </picture>
+        <div className="hero-media">
+          <Photo
+            name="hero"
+            alt="An adult guest enjoying a gentle facial ritual, wrapped in soft rose linen"
+            eager
+            sizes="(max-width: 700px) 100vw, 70vw"
+          />
+        </div>
         <div className="hero-shade" />
-        <div className="hero-content">
-          <Eyebrow light>Wellness, beautifully unhurried</Eyebrow>
+        <div className="hero-content wrap">
+          <Eyebrow light>Toronto wellness · The NOIRÉ edit</Eyebrow>
           <h1>
-            A slower kind
+            The art of
             <br />
-            of <em>self-care.</em>
+            <em>indulgence.</em>
           </h1>
           <p>
-            Thoughtful treatments. Quiet surroundings.
-            <br />A little time that belongs entirely to you.
+            Warmth on the skin. Stillness in the mind.
+            <br />A world that asks nothing of you.
           </p>
-          <ButtonLink to="/services" light>
-            Discover your ritual
-          </ButtonLink>
-        </div>
-        <div className="hero-bottom">
-          <span>A Toronto wellness studio concept</span>
-          <span>
-            Massage <i /> Skin <i /> Rituals
-          </span>
-          <a
-            href="#welcome"
-            aria-label="Scroll to unwind — explore the studio introduction"
-          >
-            SCROLL TO UNWIND ↓
-          </a>
-        </div>
-      </section>
-      <section id="welcome" className="intro section wrap">
-        <Eyebrow>A gentle invitation</Eyebrow>
-        <div className="intro-grid">
-          <h2>
-            Less doing.
-            <br />
-            More <em>being.</em>
-          </h2>
-          <div>
-            <p className="large-copy">
-              Some days call for a softer pace. A quiet space. Care that feels
-              personal, from the first hello to the final moment.
-            </p>
-            <p>
-              Our fictional studio brings the feeling of a thoughtful spa to
-              life — through considered rituals, natural textures and an
-              unhurried approach to self-care.
-            </p>
-            <TextLink to="/about">Meet the studio</TextLink>
+          <div className="button-row">
+            <ButtonLink to="/booking" light>
+              Begin your escape
+            </ButtonLink>
+            <TextLink to="/services">Discover the rituals</TextLink>
           </div>
         </div>
-        <div className="values-line">
-          <span>
-            <Leaf />
-            Considered care
-          </span>
-          <span>
-            <Sun />A softer pace
-          </span>
-          <span>
-            <Heart />
-            Comfort comes first
+        <div className="hero-note">
+          <span className="fine-label">THE SIGNATURE FEELING</span>
+          <p>
+            Beautifully personal.
+            <br />
+            <em>Deliciously unhurried.</em>
+          </p>
+          <span className="fine-label">
+            A fictional studio, imagined by MSPixelPulse
           </span>
         </div>
+        <div className="hero-bottom wrap">
+          <a href="#welcome">
+            SCROLL TO DISCOVER <ArrowRight size={16} aria-hidden="true" />
+          </a>
+          <span>RELAXATION MASSAGE · SKIN · RITUALS</span>
+          <span>01 / THE ART OF INDULGENCE</span>
+        </div>
       </section>
-      <section className="section treatments-section">
+      <section id="welcome" className="welcome-section section wrap">
+        <div className="welcome-images">
+          <div className="arch-photo">
+            <Photo
+              name="portrait"
+              alt="An adult woman in a white towel wrap taking a quiet moment with eyes closed"
+            />
+          </div>
+          <div className="welcome-inset">
+            <Photo
+              name="oils"
+              alt="Ceramic spa vessels and an amber bottle in warm light"
+            />
+          </div>
+          <span className="image-index">01 / THE FEELING</span>
+        </div>
+        <div className="welcome-copy">
+          <Eyebrow>A world apart</Eyebrow>
+          <h2>
+            Not just a pause.
+            <br />
+            An{" "}
+            <em>
+              awakening
+              <br />
+              of the senses.
+            </em>
+          </h2>
+          <p className="large-copy">
+            Some places are made to be seen.
+            <br />
+            This one is imagined to be felt.
+          </p>
+          <p>
+            The hush of soft linen. The glow of warm light. A ritual that
+            unfolds at your pace. Discover a Toronto wellness concept where
+            every little detail invites you to let go.
+          </p>
+          <TextLink to="/experience">Enter the experience</TextLink>
+          <div className="signature-note">
+            <FlowerMark />
+            <span>
+              Considered care.
+              <br />
+              Extraordinary little moments.
+            </span>
+          </div>
+        </div>
+      </section>
+      <section className="signature-section section">
         <div className="wrap">
           <div className="section-heading">
             <div>
-              <Eyebrow>The treatment collection</Eyebrow>
+              <Eyebrow light>01 — The treatment collection</Eyebrow>
               <h2>
-                Find your <em>kind of calm.</em>
+                Your ritual.
+                <br />
+                <em>Your kind of luxury.</em>
               </h2>
             </div>
-            <TextLink to="/services">All treatments</TextLink>
+            <div>
+              <p>
+                From a slow, soothing massage to a beautiful skin ritual. A
+                little more care. A little less world.
+              </p>
+              <TextLink to="/services">Explore all treatments</TextLink>
+            </div>
           </div>
-          <div className="treatments-grid">
+          <div className="signature-treatments">
             {treatments.slice(0, 3).map((t, i) => (
-              <ServiceCard key={t.id} item={t} index={i} />
+              <ServiceCard item={t} index={i} key={t.id} />
             ))}
           </div>
           <p className="caption">
-            Fictional services. Illustrative prices in CAD. No real appointments
-            or payments.
+            Fictional services · Illustrative CAD prices · No real appointments
+            or payments
           </p>
         </div>
       </section>
-      <section className="experience-feature">
-        <div className="experience-photo">
-          <Photo
-            name="details"
-            alt="Amber spa bottles, natural textures and carefully folded towels"
-          />
-          <span className="photo-caption">THE BEAUTY IS IN THE DETAILS</span>
-        </div>
-        <div className="experience-copy">
-          <Eyebrow>The studio experience</Eyebrow>
+      <section className="atmosphere">
+        <Photo
+          name="pool"
+          alt="An atmospheric indoor pool with arched windows and golden reflections; illustrative spa setting"
+          sizes="100vw"
+        />
+        <div className="atmosphere-shade" />
+        <div className="atmosphere-copy wrap">
+          <Eyebrow light>02 — The art of relaxation</Eyebrow>
           <h2>
-            Designed for
-            <br />a deeper <em>pause.</em>
+            Let the world
+            <br />
+            <em>melt away.</em>
           </h2>
           <p>
-            Warm light. Soft linen. A thoughtful introduction before every
-            treatment. Our concept is built around a simple feeling: being cared
-            for, without being hurried.
+            Quiet water. Golden light. The beautiful luxury of being present.
           </p>
-          <div className="numbered-note">
-            <span>01</span>
-            <div>
-              <h3>Arrive as you are</h3>
-              <p>
-                Make space to settle in, share your preferences and choose your
-                pace.
-              </p>
-            </div>
-          </div>
-          <div className="numbered-note">
-            <span>02</span>
-            <div>
-              <h3>Let the day soften</h3>
-              <p>
-                Explore a gentle ritual, with comfort at the centre of the
-                experience.
-              </p>
-            </div>
-          </div>
-          <TextLink to="/experience">Step inside</TextLink>
+          <ButtonLink to="/experience" light>
+            Find your stillness
+          </ButtonLink>
+        </div>
+        <span className="atmosphere-caption">
+          Atmosphere study · Licensed stock setting, not an operating facility
+        </span>
+      </section>
+      <section className="ritual-story section wrap">
+        <div className="ritual-copy">
+          <Eyebrow>03 — Beauty & wellness rituals</Eyebrow>
+          <h2>
+            A softer touch.
+            <br />A deeper <em>feeling.</em>
+          </h2>
+          <p>
+            Beautiful skin rituals and gentle, relaxation-focused care. Imagined
+            with comfort at the centre, and a little indulgence in every detail.
+          </p>
+          <TextLink to="/services/botanical-facial">
+            Discover skin rituals
+          </TextLink>
+          <span className="editorial-word" aria-hidden="true">
+            Touch.
+          </span>
+        </div>
+        <div className="ritual-main">
+          <Photo
+            name="skin"
+            alt="An adult guest receiving a facial massage in a warmly lit spa"
+          />
+        </div>
+        <div className="ritual-detail">
+          <Photo
+            name="body"
+            alt="Hands applying a gentle relaxation massage to an adult guest’s back"
+          />
+          <p>
+            THE QUIET LUXURY
+            <br />
+            OF CONSIDERED CARE
+          </p>
         </div>
       </section>
-      <section className="studio-quote wrap">
-        <Eyebrow>Our philosophy</Eyebrow>
-        <p>
-          “Self-care doesn’t need to be
-          <br />
-          another thing to <em>get right.</em>
-          <br />
-          It can simply be time for you.”
-        </p>
-        <span>A thought from our fictional studio</span>
+      <section className="studio-feature">
+        <div className="studio-photo">
+          <Photo
+            name="robe"
+            alt="A charcoal robe hanging in a dark, softly lit spa interior"
+          />
+        </div>
+        <div className="studio-copy">
+          <Eyebrow light>04 — Behind the feeling</Eyebrow>
+          <h2>
+            Dim the lights.
+            <br />
+            <em>Elevate the moment.</em>
+          </h2>
+          <p>
+            Deep, enveloping tones. Warm textures. A thoughtful welcome. An
+            imagined sanctuary with room to be entirely yourself.
+          </p>
+          <div className="studio-details">
+            <div>
+              <span>01</span>
+              <h3>A warm arrival</h3>
+              <p>Settle in. Share your preferences. Find your pace.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Nothing hurried</h3>
+              <p>Space for every small detail, from beginning to end.</p>
+            </div>
+          </div>
+          <TextLink to="/about">The studio story</TextLink>
+        </div>
       </section>
       <section className="section gallery-preview wrap">
         <div className="section-heading">
           <div>
-            <Eyebrow>A glimpse inside</Eyebrow>
+            <Eyebrow>05 — A visual escape</Eyebrow>
             <h2>
-              Soft light. <em>Small details.</em>
+              Beauty in
+              <br />
+              <em>every detail.</em>
             </h2>
           </div>
-          <TextLink to="/gallery">Explore the gallery</TextLink>
+          <TextLink to="/gallery">Enter the gallery</TextLink>
         </div>
-        <div className="gallery-triptych">
-          {gallery.slice(0, 3).map((g, i) => (
+        <div className="editorial-gallery">
+          {[
+            gallery[6],
+            {
+              image: "scalp",
+              alt: "An adult guest receiving a gentle head massage",
+              caption: "Time to surrender",
+            },
+            {
+              image: "still-life",
+              alt: "A candle, bath sphere and soft linen beside a window",
+              caption: "The smallest details",
+            },
+            {
+              image: "beauty",
+              alt: "An adult guest with eyes closed during a gentle facial massage",
+              caption: "Beautifully at ease",
+            },
+          ].map((g, i) => (
             <Link
               to="/gallery"
               key={g.image}
-              className={`gallery-preview-item item-${i}`}
+              className={`gallery-preview-item gallery-piece-${i}`}
             >
               <Photo name={g.image} alt={g.alt} />
-              <span>{g.caption}</span>
+              <span>
+                {g.caption}
+                <ArrowUpRight size={20} aria-hidden="true" />
+              </span>
             </Link>
           ))}
         </div>
       </section>
+      <section className="booking-invitation section">
+        <div className="wrap booking-invitation-grid">
+          <div>
+            <Eyebrow light>06 — Make a little time for you</Eyebrow>
+            <h2>
+              Your escape
+              <br />
+              begins with
+              <br />
+              <em>a little intention.</em>
+            </h2>
+          </div>
+          <div>
+            <p className="large-copy">
+              Choose a ritual.
+              <br />
+              Make the moment yours.
+            </p>
+            <ol>
+              <li>
+                <span>01</span>Explore six considered treatment concepts
+              </li>
+              <li>
+                <span>02</span>Choose your preferred day and time
+              </li>
+              <li>
+                <span>03</span>Review your sample request, at your pace
+              </li>
+            </ol>
+            <ButtonLink to="/booking" light>
+              Explore an appointment
+            </ButtonLink>
+            <p className="caption">
+              A transparent demo. Nothing is booked, charged or sent.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="section faq-section wrap">
         <div>
-          <Eyebrow>Before your visit</Eyebrow>
+          <Eyebrow>A few thoughtful details</Eyebrow>
           <h2>
-            A few <em>good things</em>
+            Before your
             <br />
-            to know.
+            <em>escape.</em>
           </h2>
           <TextLink to="/faq">All questions</TextLink>
         </div>
@@ -211,17 +346,44 @@ export function Home() {
     </>
   );
 }
-function PageIntro({ eyebrow, title, children }) {
+function FlowerMark() {
+  return <Sparkles size={30} strokeWidth={1} aria-hidden="true" />;
+}
+const photoDescriptions = {
+  water: "Still water in a warm stone-lined spa pool",
+  "still-life": "A candle, bath sphere and folded linen beside a window",
+  portrait: "An adult woman in a towel wrap, eyes closed in a quiet spa moment",
+  robe: "A soft robe hanging in a dark, warmly illuminated spa interior",
+  pool: "Arched windows and golden reflections over an ornate indoor spa pool",
+  oils: "Spa vessels and aromatic oil on marble",
+  candles: "Candles and body-care essentials on a dark surface",
+  ritual: "An adult spa guest resting beside candlelight",
+};
+function PageIntro({ eyebrow, title, children, image = "water" }) {
   return (
-    <section className="page-intro wrap">
-      <Eyebrow>{eyebrow}</Eyebrow>
-      <h1>{title}</h1>
-      {children && <p>{children}</p>}
+    <section className="page-intro">
+      <div className="page-intro-media">
+        <Photo name={image} alt={photoDescriptions[image]} eager />
+      </div>
+      <div className="page-intro-shade" />
+      <div className="wrap page-intro-copy">
+        <Eyebrow light>{eyebrow}</Eyebrow>
+        <h1>{title}</h1>
+        {children && <p>{children}</p>}
+        <span className="page-intro-index" aria-hidden="true">
+          WELLNESS / THE NOIRÉ EDIT
+        </span>
+      </div>
     </section>
   );
 }
 export function Services() {
-  const [filter, setFilter] = useState("All");
+  const [params] = useSearchParams();
+  const [filter, setFilter] = useState(
+    ["Massage", "Skin", "Rituals"].includes(params.get("category"))
+      ? params.get("category")
+      : "All",
+  );
   return (
     <>
       <SEO
@@ -230,11 +392,12 @@ export function Services() {
         description="Explore illustrative relaxation massages, botanical facials and spa rituals at our Toronto wellness studio concept. Clear demo CAD pricing and treatment details."
       />
       <PageIntro
+        image="portrait"
         eyebrow="The treatment collection"
         title={
           <>
-            A little care.
-            <br />A lasting <em>impression.</em>
+            The ritual collection.
+            <br />A little <em>indulgence.</em>
           </>
         }
       >
@@ -283,8 +446,8 @@ export function Treatment() {
         path={`/services/${t.id}`}
         description={`${t.description} Explore this fictional ${t.duration}-minute wellness experience, with illustrative CAD pricing.`}
       />
-      <section className="treatment-detail wrap">
-        <div>
+      <section className="treatment-detail">
+        <div className="treatment-detail-copy">
           <Link className="back-link" to="/services">
             ← Back to treatments
           </Link>
@@ -344,12 +507,12 @@ export function About() {
         description="Meet the idea behind MSPixelPulse Wellness Studio, a fictional Toronto spa concept inspired by considered care, natural materials and a slower rhythm."
       />
       <PageIntro
+        image="robe"
         eyebrow="The studio story"
         title={
           <>
-            A quiet space.
-            <br />
-            An open <em>invitation.</em>
+            A world apart.
+            <br />A personal <em>invitation.</em>
           </>
         }
       >
@@ -358,8 +521,8 @@ export function About() {
       </PageIntro>
       <section className="editorial-split wrap">
         <Photo
-          name="studio"
-          alt="Softly sculpted arches in an intimate, warm-toned spa room"
+          name="beauty"
+          alt="An adult guest resting with eyes closed during a gentle facial massage"
           eager
         />
         <div>
@@ -396,7 +559,7 @@ export function About() {
           [
             "02",
             "Quiet, by design",
-            "A restrained palette, natural textures and space to breathe. Details that support the feeling, gently.",
+            "Enveloping colour, warm textures and a little theatrical light. Details that support the feeling, beautifully.",
           ],
           [
             "03",
@@ -424,6 +587,7 @@ export function Experience() {
         description="Step into an imagined Toronto wellness studio, from a warm welcome to considered spa rituals. Stock photography illustrates this fictional studio concept."
       />
       <PageIntro
+        image="pool"
         eyebrow="Step inside"
         title={
           <>
@@ -438,8 +602,8 @@ export function Experience() {
       </PageIntro>
       <div className="wide-photo">
         <Photo
-          name="interior"
-          alt="A quiet spa interior with natural curtains, soft lighting and a treatment bed"
+          name="water"
+          alt="Still water and warm stone in an illustrative indoor spa pool"
           eager
         />
       </div>
@@ -518,16 +682,17 @@ export function Gallery() {
         description="Explore a curated stock-photography gallery of spa interiors, relaxation massage and beauty rituals for our fictional Toronto wellness studio."
       />
       <PageIntro
+        image="still-life"
         eyebrow="A glimpse of the feeling"
         title={
           <>
-            A quiet kind
+            An intimate view
             <br />
-            of <em>beautiful.</em>
+            of <em>indulgence.</em>
           </>
         }
       >
-        Natural textures. Considered care. Stock photographs that bring our
+        Golden light. Intimate details. Stock photographs that bring our
         fictional studio concept to life.
       </PageIntro>
       <section className="wrap section">
@@ -550,7 +715,7 @@ export function Gallery() {
               <button
                 className="gallery-open"
                 onClick={(e) => open(i, e)}
-                aria-label={`Enlarge: ${g.caption}`}
+                aria-label={`View photograph: ${g.caption}`}
               >
                 <Photo name={g.image} alt={g.alt} />
                 <span>
@@ -593,7 +758,7 @@ export function Gallery() {
               <X />
             </button>
             <img
-              src={`/images/wellness/${items[active].image}.webp`}
+              src={`/images/noire/${items[active].image}-1800.webp`}
               alt={items[active].alt}
             />
             <div className="lightbox-bottom">
@@ -623,12 +788,13 @@ export function Booking() {
         description="Try a transparent demo appointment request for our fictional Toronto wellness studio. Choose a treatment and review your request. No booking, payment or server submission."
       />
       <PageIntro
-        eyebrow="Make a little time for you"
+        image="oils"
+        eyebrow="Your invitation to indulge"
         title={
           <>
-            Your next
+            Make the moment
             <br />
-            <em>quiet moment.</em>
+            <em>yours.</em>
           </>
         }
       >
@@ -636,10 +802,15 @@ export function Booking() {
         request for you to review; it does not make a real booking.
       </PageIntro>
       <section className="wrap section booking-layout">
+        <div className="request-steps" aria-label="Appointment preview steps">
+          <span>01 / Choose your ritual</span>
+          <span>02 / Share your preferences</span>
+          <span>03 / Review your request</span>
+        </div>
         <aside>
           <Photo
-            name="details"
-            alt="A considered collection of spa oils and natural linen"
+            name="still-life"
+            alt="A candle and soft linen beside a window"
           />
           <h2>A gentle start.</h2>
           <p>
@@ -675,6 +846,7 @@ export function Contact() {
         description="Explore the contact experience for our fictional Toronto wellness studio. Placeholder contact details and a local demo enquiry form by MSPixelPulse."
       />
       <PageIntro
+        image="candles"
         eyebrow="A conversation starts here"
         title={
           <>
@@ -689,6 +861,7 @@ export function Contact() {
       </PageIntro>
       <section className="wrap section contact-layout">
         <aside>
+          <Photo name="oils" alt="Ceramic spa vessels and oil in warm light" />
           <Eyebrow>Studio details</Eyebrow>
           <h2>
             Say <em>hello.</em>
