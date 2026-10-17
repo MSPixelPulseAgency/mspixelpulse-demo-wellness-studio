@@ -71,6 +71,10 @@ export default function ServicePicker({
         id={id}
         className="service-dialog"
         aria-labelledby={`${id}-title`}
+        onKeyDown={(e) => {
+          // Escape dismisses the chooser before its containing mobile navigation.
+          if (e.key === "Escape") e.stopPropagation();
+        }}
         onClose={() => setOpen(false)}
         onCancel={(e) => {
           e.preventDefault();

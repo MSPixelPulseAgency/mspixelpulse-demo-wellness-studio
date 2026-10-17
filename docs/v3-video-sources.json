@@ -10,6 +10,6 @@
     "dimensions": "540x960",
     "audio": "removed",
     "encoding": "H.264 CRF28, yuv420p, faststart, 24fps",
-    "behavior": "Click-to-play, source attached only after interaction, muted playsinline, pauses offscreen/hidden; no automatic motion including reduced motion."
+    "behavior": "Homepage hero: muted looping inline autoplay after page load, only while onscreen and tab visible; reduced motion prevents automatic source loading; explicit play/pause and poster/retry fallback. Below-fold and Experience copies remain click-to-load. One file shared from browser cache."
   }
 }

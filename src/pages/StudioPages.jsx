@@ -37,6 +37,7 @@ import {
 import LeadForm from "../components/LeadForm";
 import ServiceDiscovery from "../components/ServiceDiscovery";
 import AtmosphereFilm from "../components/AtmosphereFilm";
+import HeroFilm from "../components/HeroFilm";
 export function Home() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
@@ -81,12 +82,7 @@ export function Home() {
         </div>
         <div className="hero-art">
           <div className="hero-portrait">
-            <Photo
-              name="portrait"
-              alt={photoDescriptions.portrait}
-              eager
-              sizes="(max-width: 700px) 92vw, 43vw"
-            />
+            <HeroFilm />
             <span className="portrait-word" aria-hidden="true">
               unhurried.
             </span>
