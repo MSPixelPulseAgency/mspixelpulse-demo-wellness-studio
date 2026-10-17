@@ -103,5 +103,61 @@
     "source": "https://www.pexels.com/photo/woman-lying-with-eyes-closed-while-getting-a-face-massage-6628808/",
     "license": "https://www.pexels.com/license/",
     "retrieved": "2026-10-17"
+  },
+  "stone": {
+    "pexelsId": 5240636,
+    "photographer": "Anete Lusina",
+    "source": "https://www.pexels.com/photo/crop-person-with-hot-stones-on-back-during-massage-procedure-5240636/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "nails": {
+    "pexelsId": 3736313,
+    "photographer": "Polina Tankilevitch",
+    "source": "https://www.pexels.com/photo/client-in-beauty-salon-3736313/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "mask": {
+    "pexelsId": 3985333,
+    "photographer": "Gustavo Fring",
+    "source": "https://www.pexels.com/photo/woman-getting-a-facial-treatment-3985333/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "sound": {
+    "pexelsId": 6634963,
+    "photographer": "Cup of Couple",
+    "source": "https://www.pexels.com/photo/a-woman-meditating-while-using-tibetan-singing-bowl-6634963/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "foot": {
+    "pexelsId": 5793887,
+    "photographer": "Yan Krukau",
+    "source": "https://www.pexels.com/photo/a-woman-massaging-a-client-s-foot-5793887/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "hair": {
+    "pexelsId": 8834060,
+    "photographer": "Kampus Production",
+    "source": "https://www.pexels.com/photo/person-in-black-long-sleeves-washing-the-hair-of-the-customer-8834060/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "V3 addition"
+  },
+  "film": {
+    "pexelsId": 6617115,
+    "photographer": "Pavel Danilyuk",
+    "source": "https://www.pexels.com/video/woman-relaxin-in-indoor-pool-6617115/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17",
+    "note": "Local poster frame from licensed video"
   }
 }

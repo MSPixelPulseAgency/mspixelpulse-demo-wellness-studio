@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Navbar, Footer } from "./components/StudioUI";
 import {
@@ -15,11 +15,13 @@ import {
 } from "./pages/StudioPages";
 export default function App() {
   const location = useLocation();
+  const firstVisit = useRef(true);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
-    if (location.key !== "default")
+    if (!firstVisit.current)
       document.getElementById("main")?.focus({ preventScroll: true });
-  }, [location.pathname, location.key]);
+    firstVisit.current = false;
+  }, [location.pathname]);
   useEffect(() => {
     if (
       !("IntersectionObserver" in window) ||
@@ -37,7 +39,9 @@ export default function App() {
       { threshold: 0.08 },
     );
     document
-      .querySelectorAll("main>section:not(.hero):not(.page-intro)")
+      .querySelectorAll(
+        "main>section:not(.hero):not(.page-intro):not(.treatment-hero)",
+      )
       .forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [location.pathname]);

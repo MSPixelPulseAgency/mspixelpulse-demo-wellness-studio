@@ -1,16 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  ArrowUpRight,
-  ArrowRight,
-  Menu,
-  X,
-  Flower2,
-  Plus,
-  ChevronDown,
-} from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { ArrowUpRight, ArrowRight, Menu, X, Flower2, Plus } from "lucide-react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import media from "../data/media.json";
-import { brand, faqs, treatments } from "../data/studio";
+import { brand, faqs } from "../data/studio";
+import ServicePicker from "./ServicePicker";
 export function SEO({ title, description, path = "" }) {
   useEffect(() => {
     document.title = `${title} | MSPixelPulse Wellness Studio`;
@@ -41,7 +34,7 @@ export function SEO({ title, description, path = "" }) {
       "og:url": `https://wellness.mspixelpulse.com${path}`,
       "og:type": "website",
       "og:image":
-        "https://wellness.mspixelpulse.com/images/noire/hero-1200.webp",
+        "https://wellness.mspixelpulse.com/images/noire/portrait-1200.webp",
     }))
       meta(`meta[property="${property}"]`, "meta", { property }, content);
   }, [title, description, path]);
@@ -69,7 +62,7 @@ export function Photo({
       height={image.height}
       loading={eager ? "eager" : "lazy"}
       fetchPriority={eager ? "high" : undefined}
-      decoding="async"
+      decoding={eager ? "sync" : "async"}
       {...props}
     />
   );
@@ -103,9 +96,11 @@ export function Eyebrow({ children, light = false }) {
 }
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const toggle = useRef(null);
-  const sentinel = useRef(null);
+  const toggle = useRef(null),
+    sentinel = useRef(null),
+    header = useRef(null);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     if (!("IntersectionObserver" in window)) return;
     const observer = new IntersectionObserver(([entry]) =>
@@ -116,14 +111,23 @@ export function Navbar() {
   }, []);
   useEffect(() => {
     if (!open) return;
-    function escape(e) {
+    function close(e) {
       if (e.key === "Escape") {
         setOpen(false);
         toggle.current?.focus();
+      } else if (
+        e.type === "pointerdown" &&
+        !header.current?.contains(e.target)
+      ) {
+        setOpen(false);
       }
     }
-    document.addEventListener("keydown", escape);
-    return () => document.removeEventListener("keydown", escape);
+    document.addEventListener("keydown", close);
+    document.addEventListener("pointerdown", close);
+    return () => {
+      document.removeEventListener("keydown", close);
+      document.removeEventListener("pointerdown", close);
+    };
   }, [open]);
   return (
     <>
@@ -131,69 +135,50 @@ export function Navbar() {
         Skip to content
       </a>
       <div className="demo-bar">
-        MSPixelPulse concept · Fictional studio <span> · Toronto, Canada</span>
+        MSPixelPulse concept · Fictional studio · Toronto
       </div>
-      <span ref={sentinel} className="nav-sentinel" aria-hidden="true" />
-      <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <span className="nav-sentinel" ref={sentinel} aria-hidden="true" />
+      <header
+        ref={header}
+        className={`site-header ${scrolled ? "is-scrolled" : ""}`}
+      >
         <Link
           className="wordmark"
           to="/"
-          title="Go to the Wellness Studio homepage"
+          title="Wellness Studio homepage"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <Flower2 size={29} strokeWidth={1.1} aria-hidden="true" />
+          <Flower2 size={32} strokeWidth={1.4} aria-hidden="true" />
           <span>
-            WELLNESS <i>STUDIO</i>
-            <small>THE ART OF INDULGENCE</small>
+            Wellness Studio<small>SPA · SKIN · SLOW LIVING</small>
           </span>
         </Link>
         <button
+          type="button"
+          className="menu-toggle icon-button"
           ref={toggle}
-          className="menu-toggle"
+          aria-label={open ? "Close navigation" : "Open navigation"}
           aria-expanded={open}
           aria-controls="main-nav"
-          aria-label={open ? "Close navigation" : "Open navigation"}
           onClick={() => setOpen(!open)}
         >
           {open ? <X /> : <Menu />}
         </button>
         <nav
           id="main-nav"
-          className={open ? "navigation is-open" : "navigation"}
+          className={`navigation ${open ? "is-open" : ""}`}
           aria-label="Main navigation"
         >
-          <div className="nav-treatment">
-            <NavLink to="/services">Treatments</NavLink>
-            <details
-              className="nav-dropdown"
-              onKeyDown={(e) => {
-                if (e.key === "Escape") {
-                  e.currentTarget.open = false;
-                  e.currentTarget.querySelector("summary")?.focus();
-                }
-              }}
-            >
-              <summary aria-label="Explore treatment menu">
-                <ChevronDown size={14} />
-              </summary>
-              <div className="nav-treatment-menu">
-                <p className="eyebrow">The ritual collection</p>
-                {treatments.map((t) => (
-                  <Link to={`/services/${t.id}`} key={t.id}>
-                    {t.title}
-                    <span>{t.duration} min</span>
-                  </Link>
-                ))}
-                <Link to="/services">
-                  Explore all treatments <ArrowUpRight size={16} />
-                </Link>
-              </div>
-            </details>
-          </div>
-          <NavLink to="/about">Our story</NavLink>
-          <NavLink to="/experience">The experience</NavLink>
+          <ServicePicker
+            compact
+            label="Services"
+            onSelect={(t) => navigate(t ? `/services/${t.id}` : "/services")}
+          />
+          <NavLink to="/experience">Experience</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
+          <NavLink to="/about">Our story</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <ButtonLink to="/booking">Begin your escape</ButtonLink>
+          <ButtonLink to="/booking">Find your escape</ButtonLink>
         </nav>
       </header>
     </>
@@ -272,10 +257,10 @@ export function ContactCTA() {
     </section>
   );
 }
-export function FAQAccordion({ limit }) {
+export function FAQAccordion({ limit, items = faqs }) {
   return (
     <div className="faq-list">
-      {faqs.slice(0, limit).map(([q, a]) => (
+      {items.slice(0, limit).map(([q, a]) => (
         <details key={q}>
           <summary>
             {q}
@@ -289,35 +274,43 @@ export function FAQAccordion({ limit }) {
     </div>
   );
 }
-export function ServiceCard({ item, index }) {
+export function ServiceCard({ item }) {
   return (
     <article className="treatment-card">
       <Link
         to={`/services/${item.id}`}
         className="treatment-image"
-        aria-label={`Explore ${item.title}`}
+        aria-label={`View details: ${item.title}, ${item.category}`}
       >
         <Photo name={item.image} alt={item.alt} />
+        <span className="card-category">{item.category}</span>
         <span className="image-arrow">
           <ArrowUpRight size={22} aria-hidden="true" />
         </span>
       </Link>
-      <div className="treatment-meta">
-        <span>{item.category}</span>
-        <span>
-          {item.duration} MIN · DEMO CAD ${item.price}
-        </span>
+      <div className="card-content">
+        <div className="treatment-meta">
+          <span>{item.duration} minutes</span>
+          <span>
+            Demo CAD ${item.price}
+            {item.couples ? " / two" : ""}
+          </span>
+        </div>
+        <h3>
+          <Link to={`/services/${item.id}`}>{item.title}</Link>
+        </h3>
+        <p>{item.description}</p>
+        <div className="card-actions">
+          <TextLink to={`/services/${item.id}`}>View details</TextLink>
+          <Link
+            className="card-book"
+            to={`/booking?treatment=${item.id}`}
+            aria-label={`Request ${item.title}`}
+          >
+            Request <ArrowUpRight size={17} aria-hidden="true" />
+          </Link>
+        </div>
       </div>
-      <h3>
-        <Link to={`/services/${item.id}`}>{item.title}</Link>
-      </h3>
-      <p>{item.description}</p>
-      <TextLink to={`/booking?treatment=${item.id}`}>
-        Explore appointment
-      </TextLink>
-      <span className="treatment-number" aria-hidden="true">
-        0{index + 1}
-      </span>
     </article>
   );
 }
