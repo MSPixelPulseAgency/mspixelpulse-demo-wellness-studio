@@ -203,7 +203,7 @@ main:focus {
 }
 .eyebrow {
   font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
   letter-spacing: 0.13em;
@@ -223,7 +223,7 @@ main:focus {
   color: var(--blush);
 }
 .caption {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.7;
 }
@@ -245,7 +245,7 @@ main:focus {
     0 6px 22px #a442a328,
     inset 0 1px 0 #ffffff30;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
   position: relative;
@@ -304,7 +304,7 @@ main:focus {
   display: inline-flex;
   align-items: center;
   gap: 13px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   padding: 10px 0;
   border: 0;
@@ -345,7 +345,7 @@ main:focus {
   inset: 0 0 auto;
   background: var(--plum);
   color: #e2d4e5;
-  font-size: 11px;
+  font-size: 16px;
   text-align: center;
   line-height: 28px;
   letter-spacing: 0.03em;
@@ -429,7 +429,7 @@ main:focus {
 .wordmark small {
   display: block;
   font-family: Manrope, sans-serif;
-  font-size: 8px;
+  font-size: 16px;
   letter-spacing: 0.17em;
   margin-top: 7px;
   color: #e1c5dd;
@@ -438,7 +438,7 @@ main:focus {
   display: flex;
   align-items: center;
   gap: 26px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 }
 .navigation > a:not(.button) {
@@ -468,7 +468,7 @@ main:focus {
 }
 .navigation .button {
   padding: 13px 22px;
-  font-size: 14px;
+  font-size: 16px;
   white-space: nowrap;
 }
 .menu-toggle {
@@ -483,7 +483,7 @@ main:focus {
   background: none;
   color: white;
   box-shadow: none;
-  font-size: 15px;
+  font-size: 16px;
   gap: 8px;
   min-height: 44px;
   border-radius: 10px;
@@ -550,7 +550,7 @@ main:focus {
   margin-bottom: 32px;
 }
 .hero .eyebrow {
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.11em;
 }
 .hero-footnote {
@@ -558,7 +558,7 @@ main:focus {
   align-items: center;
   gap: 14px;
   margin-top: 42px;
-  font-size: 13px;
+  font-size: 16px;
   color: #e1c6df;
 }
 .hero-footnote svg {
@@ -567,7 +567,7 @@ main:focus {
 .hero-footnote small {
   display: block;
   color: #d7bdd8;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 4px;
 }
 .hero-art {
@@ -620,7 +620,7 @@ main:focus {
   bottom: 0;
   inset-inline: 0;
   padding: 38px 12px 15px;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   background: linear-gradient(transparent, #251530e6);
@@ -660,14 +660,14 @@ main:focus {
   color: var(--ivory);
 }
 .hero-glass-note small {
-  font-size: 11px;
+  font-size: 16px;
   color: #f0d7ea;
 }
 .hero-art-label {
   position: absolute;
   right: 30px;
   bottom: -10px;
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #dcb9da;
@@ -711,7 +711,7 @@ main:focus {
   background: transparent;
   outline: none;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 16px;
 }
 .search-field input:focus-visible {
   outline: none;
@@ -773,12 +773,12 @@ main:focus {
   box-shadow: 0 8px 30px #87419e22;
 }
 .category-rail strong {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
 }
 .category-rail small {
-  font-size: 11px;
+  font-size: 16px;
   color: var(--muted);
 }
 .signature-section {
@@ -849,7 +849,7 @@ main:focus {
   position: absolute;
   top: 18px;
   left: 18px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   background: #2a1d35d4;
   color: white;
@@ -867,7 +867,7 @@ main:focus {
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   color: #755e7d;
   line-height: 1.6;
@@ -879,7 +879,7 @@ main:focus {
   margin: 0 0 14px;
 }
 .treatment-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 18px;
@@ -893,7 +893,7 @@ main:focus {
   padding-top: 13px;
 }
 .card-actions .text-link {
-  font-size: 12px;
+  font-size: 16px;
   border: 0;
 }
 .card-book {
@@ -905,7 +905,7 @@ main:focus {
   border-radius: 30px;
   background: #f0e1f1;
   color: #61387c;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   transition:
     background 0.25s,
@@ -985,7 +985,7 @@ main:focus {
   display: flex;
   gap: 22px;
   margin-top: 36px;
-  font-size: 12px;
+  font-size: 16px;
   color: #eddbed;
 }
 .sensory-details > span {
@@ -1032,7 +1032,7 @@ main:focus {
   background: #291c33bd;
   color: white;
   padding: 7px 12px;
-  font-size: 10px;
+  font-size: 16px;
   backdrop-filter: blur(16px);
 }
 .film-control {
@@ -1054,7 +1054,7 @@ main:focus {
   backdrop-filter: blur(20px);
   color: white;
   border: 1px solid #ffffff70;
-  font-size: 12px;
+  font-size: 16px;
   box-shadow: inset 0 1px 0 #ffffff40;
   transition: background 0.2s;
 }
@@ -1068,7 +1068,7 @@ main:focus {
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 9px;
+  font-size: 16px;
   color: #fff1ff;
   margin: 0;
 }
@@ -1081,7 +1081,7 @@ main:focus {
   background: #281b32ef;
   color: white;
   border-radius: 14px;
-  font-size: 13px;
+  font-size: 16px;
   padding: 12px;
 }
 .loading-ring {
@@ -1122,7 +1122,7 @@ main:focus {
   font-size: 52px;
 }
 .story-intro > p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
 }
 .story-tile {
@@ -1161,7 +1161,7 @@ main:focus {
   margin: 7px 25px 0 0;
 }
 .story-tile > div > span {
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #f7d0ea;
@@ -1233,7 +1233,7 @@ main:focus {
   font-weight: 500;
 }
 .glass-tag small {
-  font-size: 10px;
+  font-size: 16px;
   color: #e7cde6;
 }
 .studio-story > div > p {
@@ -1246,7 +1246,7 @@ main:focus {
   align-items: center;
   padding: 11px 0;
   color: #5c3a6e;
-  font-size: 14px;
+  font-size: 16px;
 }
 .studio-story .text-link {
   margin-top: 20px;
@@ -1284,7 +1284,7 @@ main:focus {
   padding: 55px 18px 22px;
   color: white;
   background: linear-gradient(transparent, #201326db);
-  font-size: 13px;
+  font-size: 16px;
 }
 .booking-invitation {
   padding: 60px;
@@ -1322,7 +1322,7 @@ main:focus {
 }
 .booking-invitation li p {
   color: #e3cde7;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 .faq-section {
@@ -1344,7 +1344,7 @@ main:focus {
   gap: 20px;
   cursor: pointer;
   list-style: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   min-height: 64px;
@@ -1360,7 +1360,7 @@ main:focus {
   transform: rotate(45deg);
 }
 .faq-answer > p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   padding: 0 30px 24px 2px;
   margin: 0;
@@ -1418,7 +1418,7 @@ main:focus {
 }
 .closing small {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 22px;
   color: #ead3e8;
 }
@@ -1474,7 +1474,7 @@ main:focus {
 }
 .footer-links h2 {
   font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--blush);
@@ -1483,7 +1483,7 @@ main:focus {
 .footer-links a,
 .footer-links > div > span {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   color: #d7c5da;
   padding-block: 7px;
   overflow-wrap: anywhere;
@@ -1497,7 +1497,7 @@ main:focus {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 10px;
+  font-size: 16px;
   color: #c8b5cd;
   flex-wrap: wrap;
 }
@@ -1534,7 +1534,7 @@ main:focus {
   max-width: 480px;
 }
 .intro-signature {
-  font-size: 9px;
+  font-size: 16px;
   color: #dfbfdf;
   letter-spacing: 0.13em;
   display: block;
@@ -1547,7 +1547,7 @@ main:focus {
   border: 1px solid #ffffff3b;
 }
 .page-intro .eyebrow {
-  font-size: 10px;
+  font-size: 16px;
 }
 .page-intro-media .photo-mask {
   object-position: 65% 50%;
@@ -1582,7 +1582,7 @@ main:focus {
   border-radius: 160px 160px 26px 26px;
 }
 .treatment-hero small {
-  font-size: 11px;
+  font-size: 16px;
   display: block;
   color: #ead5e9;
   margin-top: 20px;
@@ -1602,7 +1602,7 @@ main:focus {
   background: #ffffff0a;
   border-radius: 30px;
   padding: 10px 15px;
-  font-size: 13px;
+  font-size: 16px;
   color: #f4e2f4;
 }
 .treatment-story {
@@ -1612,7 +1612,7 @@ main:focus {
   align-items: center;
 }
 .treatment-story > div > p:not(.eyebrow) {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
   max-width: 480px;
 }
@@ -1651,7 +1651,7 @@ main:focus {
   margin: 0 0 9px;
 }
 .detail-callout p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   color: #695773;
 }
@@ -1707,7 +1707,7 @@ main:focus {
   font-size: 32px;
 }
 .values-grid p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0;
 }
@@ -1767,7 +1767,7 @@ main:focus {
   font-size: 30px;
 }
 .journey-cards p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0;
 }
@@ -1785,7 +1785,7 @@ main:focus {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 16px;
   color: #6d517a;
 }
 .duration-filter > span {
@@ -1799,7 +1799,7 @@ main:focus {
   padding: 10px 30px 10px 15px;
   background: #fffaf8;
   color: var(--purple);
-  font-size: 13px;
+  font-size: 16px;
 }
 .discovery-filters {
   display: flex;
@@ -1818,7 +1818,7 @@ main:focus {
   border-radius: 99px;
   background: #fffaf8;
   color: #654477;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
   min-height: 44px;
@@ -1845,7 +1845,7 @@ main:focus {
   align-items: center;
   gap: 9px;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--purple);
   padding: 10px 0;
   cursor: pointer;
@@ -1865,14 +1865,14 @@ main:focus {
 }
 .results-heading p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   color: #62506e;
 }
 .results-heading p span {
   color: var(--muted);
 }
 .results-heading .text-link {
-  font-size: 12px;
+  font-size: 16px;
   padding-block: 4px;
   border: 0;
 }
@@ -1904,7 +1904,7 @@ main:focus {
 .load-more {
   text-align: center;
   margin-top: 40px;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
 }
 .load-more p {
@@ -1929,11 +1929,11 @@ main:focus {
 }
 .empty-state > p {
   margin: 0 0 12px;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
 }
 .empty-state > a:not(.button) {
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: underline;
   padding: 12px;
 }
@@ -1950,7 +1950,7 @@ main:focus {
   background: #f9eff9;
   color: #623c75;
   box-shadow: inset 0 1px 0 #ffffffc4;
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
   transition:
     background 0.25s,
@@ -1996,7 +1996,7 @@ main:focus {
   margin-bottom: 18px;
 }
 .picker-heading .eyebrow {
-  font-size: 10px;
+  font-size: 16px;
   margin-bottom: 7px;
 }
 .picker-heading h2 {
@@ -2007,7 +2007,7 @@ main:focus {
   padding-left: 16px;
 }
 .service-dialog .search-field input {
-  font-size: 13px;
+  font-size: 16px;
 }
 .service-dialog .filter-row {
   margin-top: 18px;
@@ -2015,11 +2015,11 @@ main:focus {
 }
 .service-dialog .filter-row button {
   padding: 9px 13px;
-  font-size: 11px;
+  font-size: 16px;
 }
 .service-dialog > .caption {
   margin: 15px 0 10px;
-  font-size: 11px;
+  font-size: 16px;
   color: #6a5077;
 }
 .picker-results {
@@ -2073,14 +2073,14 @@ main:focus {
 }
 .picker-results strong {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
   color: #422651;
 }
 .picker-results small {
   display: block;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.6;
   margin-top: 5px;
   color: #725a7f;
@@ -2099,7 +2099,7 @@ main:focus {
 }
 .picker-footer .text-link,
 .picker-footer > a {
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
 }
 .picker-footer > a {
@@ -2166,7 +2166,7 @@ main:focus {
   border-radius: 99px;
   backdrop-filter: blur(18px);
   padding: 10px 16px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .gallery-grid figcaption {
   padding-top: 14px;
@@ -2177,7 +2177,7 @@ main:focus {
 .gallery-grid figcaption > span {
   display: block;
   font-family: Manrope, sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2234,7 +2234,7 @@ main:focus {
   padding: 16px 10px 4px;
 }
 .lightbox-bottom p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   text-align: center;
@@ -2254,7 +2254,7 @@ main:focus {
   font-size: 48px;
 }
 .booking-aside > p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--muted);
 }
 .check-list {
@@ -2265,7 +2265,7 @@ main:focus {
   align-items: center;
   gap: 12px;
   padding: 8px 0;
-  font-size: 13px;
+  font-size: 16px;
   color: #634774;
 }
 .check-list svg {
@@ -2301,7 +2301,7 @@ main:focus {
   border: 0;
   padding: 4px 0;
   min-height: 44px;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
   color: #6d5978;
   line-height: 1.4;
@@ -2318,7 +2318,7 @@ main:focus {
   border: 1px solid #c9add3;
   background: #fff8fd;
   color: #684078;
-  font-size: 11px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 .booking-progress .current span,
@@ -2344,12 +2344,12 @@ main:focus {
   border-radius: 14px;
   background: #f0e0f159;
   color: #67516f;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
 }
 .form-title .eyebrow {
-  font-size: 10px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 .form-title h2 {
@@ -2363,7 +2363,7 @@ main:focus {
 }
 .field-label,
 .lead-form label:not(.check-label) {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
   color: #60456e;
@@ -2382,7 +2382,7 @@ main:focus {
   border-radius: 16px;
   background: #fffaf9;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 9px;
   box-shadow: inset 0 1px 2px #21132603;
@@ -2413,7 +2413,7 @@ main:focus {
   opacity: 1;
 }
 .optional {
-  font-size: 10px;
+  font-size: 16px;
   color: #806c88;
   font-weight: 400;
 }
@@ -2435,7 +2435,7 @@ main:focus {
   border: 0;
   background: none;
   color: #7d4c8c;
-  font-size: 11px;
+  font-size: 16px;
 }
 .help-choice.selected {
   color: #4b2360;
@@ -2465,14 +2465,14 @@ main:focus {
 }
 .selected-service strong,
 .selection-recap strong {
-  font-size: 13px;
+  font-size: 16px;
   display: block;
   font-weight: 600;
   color: #5b2f72;
 }
 .selected-service span,
 .selection-recap span {
-  font-size: 11px;
+  font-size: 16px;
   color: #765780;
   display: block;
   margin-top: 5px;
@@ -2490,7 +2490,7 @@ main:focus {
   display: flex;
   align-items: flex-start;
   gap: 11px;
-  font-size: 11px;
+  font-size: 16px;
   color: #695475;
   line-height: 1.8;
   cursor: pointer;
@@ -2512,10 +2512,10 @@ main:focus {
   padding-top: 5px;
 }
 .form-actions .button {
-  font-size: 13px;
+  font-size: 16px;
 }
 .lead-form > .caption {
-  font-size: 10px;
+  font-size: 16px;
   margin: 0;
 }
 .form-error {
@@ -2524,7 +2524,7 @@ main:focus {
   border: 1px solid #e4b0c5;
   border-radius: 12px;
   padding: 11px 14px;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
 }
 .request-success {
@@ -2547,10 +2547,10 @@ main:focus {
   font-size: 46px;
 }
 .request-success > .eyebrow {
-  font-size: 10px;
+  font-size: 16px;
 }
 .request-success > p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
 }
 .request-success pre {
@@ -2561,7 +2561,7 @@ main:focus {
   border-radius: 18px;
   padding: 22px;
   font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   color: #60406f;
   margin-bottom: 25px;
@@ -2570,11 +2570,11 @@ main:focus {
   margin-top: 15px;
 }
 .request-success [role="status"] {
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 15px;
 }
 .request-success .button {
-  font-size: 12px;
+  font-size: 16px;
 }
 .contact-layout {
   display: grid;
@@ -2588,7 +2588,7 @@ main:focus {
 .contact-intro > p {
   color: var(--muted);
   max-width: 370px;
-  font-size: 15px;
+  font-size: 16px;
 }
 .contact-info-card {
   display: flex;
@@ -2603,7 +2603,7 @@ main:focus {
 }
 .contact-info-card h3 {
   font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0;
   margin-bottom: 8px;
@@ -2611,12 +2611,12 @@ main:focus {
 }
 .contact-info-card p,
 .contact-info-card a {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 .contact-info-card small {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   color: var(--muted);
   margin-top: 7px;
 }
@@ -2648,7 +2648,7 @@ main:focus {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
-  font-size: 12px;
+  font-size: 16px;
   color: #694b77;
   margin: 22px 0;
 }
@@ -2656,7 +2656,7 @@ main:focus {
   margin: 0;
 }
 .hours-card .caption {
-  font-size: 10px;
+  font-size: 16px;
   margin: 0;
 }
 .contact-still {
@@ -2735,11 +2735,11 @@ dialog[open] {
 @media (max-width: 1200px) {
   .navigation {
     gap: 19px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .navigation .button {
     padding: 13px 18px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .wordmark {
     font-size: 21px;
@@ -2772,7 +2772,7 @@ dialog[open] {
     font-size: 89px;
   }
   .hero .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 21px;
   }
   .hero .button-row {
@@ -2797,7 +2797,7 @@ dialog[open] {
     padding-inline: 11px;
   }
   .card-actions .text-link {
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatments-grid .treatment-card {
     grid-template-columns: 0.75fr 1fr;
@@ -2860,7 +2860,7 @@ dialog[open] {
     gap: 8px;
   }
   .booking-progress button {
-    font-size: 9px;
+    font-size: 16px;
     gap: 5px;
   }
   .booking-progress span {
@@ -2887,16 +2887,16 @@ dialog[open] {
     font-size: 27px;
   }
   .treatments-grid .treatment-card p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .treatments-grid .treatment-meta {
-    font-size: 10px;
+    font-size: 16px;
   }
   .about-editorial {
     gap: 60px;
   }
 }
-@media (max-width: 1110px) {
+@media (max-width: 1279px) {
   .navigation {
     display: none;
     position: absolute;
@@ -2937,7 +2937,7 @@ dialog[open] {
   }
   .navigation .button {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .picker-compact .picker-trigger {
     padding: 10px 14px;
@@ -2956,7 +2956,7 @@ dialog[open] {
     font-size: 23px;
   }
   .wordmark small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-glass-note {
     max-width: 200px;
@@ -2968,7 +2968,7 @@ dialog[open] {
     width: 18px;
   }
   .hero-art-label {
-    font-size: 9px;
+    font-size: 16px;
   }
   .hero-portrait {
     height: 530px;
@@ -2980,7 +2980,7 @@ dialog[open] {
     font-size: 16px;
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 16px;
   }
   .v3-hero {
     min-height: 830px;
@@ -2990,10 +2990,10 @@ dialog[open] {
     padding-right: 10px;
   }
   .hero-footnote {
-    font-size: 11px;
+    font-size: 16px;
   }
   .hero-footnote small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .hero .button-row {
     align-items: start;
@@ -3031,7 +3031,7 @@ dialog[open] {
   }
   .featured-grid .treatment-card:not(:first-child) .treatment-meta {
     display: flex;
-    font-size: 10px;
+    font-size: 16px;
   }
   .featured-grid .treatment-card:not(:first-child) .card-actions {
     padding-top: 8px;
@@ -3051,17 +3051,17 @@ dialog[open] {
   }
   .treatments-grid .treatment-meta {
     display: flex;
-    font-size: 12px;
+    font-size: 16px;
   }
   .treatments-grid .treatment-card p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .treatments-grid .card-content {
     padding: 25px;
   }
   .treatments-grid .card-actions .text-link,
   .treatments-grid .card-book {
-    font-size: 13px;
+    font-size: 16px;
   }
   .booking-invitation {
     padding: 45px;
@@ -3112,7 +3112,7 @@ dialog[open] {
     font-size: 22px;
   }
   .glass-tag small {
-    font-size: 9px;
+    font-size: 16px;
   }
   .studio-collage > .photo:first-child {
     height: 430px;
@@ -3128,7 +3128,7 @@ dialog[open] {
     height: 270px;
   }
   .home-gallery span {
-    font-size: 11px;
+    font-size: 16px;
     padding-inline: 12px;
   }
   .faq-section {
@@ -3142,7 +3142,7 @@ dialog[open] {
     font-size: 43px;
   }
   .booking-progress button {
-    font-size: 9px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -3169,7 +3169,7 @@ dialog[open] {
     font-size: 57px;
   }
   .page-intro-copy > p:not(.eyebrow) {
-    font-size: 14px;
+    font-size: 16px;
   }
   .treatment-hero {
     padding: 35px;
@@ -3224,7 +3224,7 @@ dialog[open] {
     gap: 25px;
   }
   .footer-links a {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media (max-width: 760px) {
@@ -3255,12 +3255,12 @@ dialog[open] {
     width: 28px;
   }
   .wordmark small {
-    font-size: 7px;
+    font-size: 16px;
     margin-top: 6px;
     letter-spacing: 0.14em;
   }
   .demo-bar {
-    font-size: 9px;
+    font-size: 16px;
     letter-spacing: 0.025em;
   }
   .navigation {
@@ -3277,7 +3277,7 @@ dialog[open] {
   }
   .hero .eyebrow {
     justify-content: center;
-    font-size: 9px;
+    font-size: 16px;
     gap: 7px;
     letter-spacing: 0.08em;
   }
@@ -3297,7 +3297,7 @@ dialog[open] {
   }
   .hero .button {
     min-width: 0;
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 20px;
     gap: 12px;
     min-height: 50px;
@@ -3305,10 +3305,10 @@ dialog[open] {
   .hero-footnote {
     justify-content: center;
     margin-top: 28px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-footnote small {
-    font-size: 9px;
+    font-size: 16px;
   }
   .hero-art {
     width: min(100%, 510px);
@@ -3334,13 +3334,13 @@ dialog[open] {
     border-radius: 90px 90px 22px 22px;
   }
   .hero-inset > span {
-    font-size: 9px;
+    font-size: 16px;
   }
   .hero-glass-note strong {
     font-size: 24px;
   }
   .hero-glass-note small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .portrait-word {
     font-size: 36px;
@@ -3350,7 +3350,7 @@ dialog[open] {
   .hero-art-label {
     right: 25px;
     bottom: -8px;
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-orbit {
     width: 700px;
@@ -3378,10 +3378,10 @@ dialog[open] {
     padding: 5px;
   }
   .category-rail strong {
-    font-size: 14px;
+    font-size: 16px;
   }
   .category-rail small {
-    font-size: 9px;
+    font-size: 16px;
   }
   .section-heading {
     align-items: start;
@@ -3393,7 +3393,7 @@ dialog[open] {
     font-size: 44px;
   }
   .section-heading > div > p:not(.eyebrow) {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
   .featured-grid {
@@ -3424,7 +3424,7 @@ dialog[open] {
   }
   .featured-grid .treatment-card:not(:first-child) .card-content > p {
     display: block;
-    font-size: 13px;
+    font-size: 16px;
   }
   .featured-grid .treatment-card:not(:first-child) .treatment-image {
     height: 240px;
@@ -3440,33 +3440,33 @@ dialog[open] {
     font-size: 58px;
   }
   .sensory-copy > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .sensory-copy .button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 13px 18px;
   }
   .sensory-details {
     flex-direction: column;
     gap: 10px;
     margin-top: 25px;
-    font-size: 11px;
+    font-size: 16px;
   }
   .film-control {
     padding: 10px 13px;
-    font-size: 10px;
+    font-size: 16px;
     gap: 6px;
   }
   .film-control svg {
     width: 17px;
   }
   .film-chip {
-    font-size: 8px;
+    font-size: 16px;
     top: 20px;
     padding: 6px 10px;
   }
   .film-disclosure {
-    font-size: 8px;
+    font-size: 16px;
   }
   .atmosphere-film {
     border-radius: 130px 130px 24px 24px;
@@ -3481,7 +3481,7 @@ dialog[open] {
     font-size: 40px;
   }
   .story-intro p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .story-tile,
   .story-tall {
@@ -3506,7 +3506,7 @@ dialog[open] {
     font-size: 43px;
   }
   .studio-story > div > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .studio-collage {
     padding-right: 35px;
@@ -3534,15 +3534,15 @@ dialog[open] {
     width: 21px;
   }
   .glass-tag small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .value-line {
-    font-size: 12px;
+    font-size: 16px;
     align-items: start;
     gap: 9px;
   }
   .studio-story .text-link {
-    font-size: 12px;
+    font-size: 16px;
     gap: 9px;
   }
   .home-gallery {
@@ -3557,7 +3557,7 @@ dialog[open] {
     height: 295px;
   }
   .home-gallery span {
-    font-size: 13px;
+    font-size: 16px;
     padding: 45px 18px 20px;
   }
   .booking-invitation {
@@ -3569,7 +3569,7 @@ dialog[open] {
     font-size: 45px;
   }
   .booking-invitation > div > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .booking-invitation li {
     padding: 20px 0;
@@ -3589,7 +3589,7 @@ dialog[open] {
     max-width: none;
   }
   .faq-list summary {
-    font-size: 14px;
+    font-size: 16px;
     padding-block: 22px;
   }
   .closing {
@@ -3606,7 +3606,7 @@ dialog[open] {
     max-width: 550px;
   }
   .closing-copy > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .closing-index {
     font-size: 35px;
@@ -3635,10 +3635,10 @@ dialog[open] {
   }
   .footer-links a,
   .footer-links > div > span {
-    font-size: 13px;
+    font-size: 16px;
   }
   .footer-bottom {
-    font-size: 10px;
+    font-size: 16px;
     gap: 12px;
     flex-direction: column;
   }
@@ -3658,13 +3658,13 @@ dialog[open] {
     border-radius: 130px 130px 22px 22px;
   }
   .page-intro-copy > p:not(.eyebrow) {
-    font-size: 13px;
+    font-size: 16px;
   }
   .page-intro .eyebrow {
-    font-size: 8px;
+    font-size: 16px;
   }
   .intro-signature {
-    font-size: 7px;
+    font-size: 16px;
     letter-spacing: 0.09em;
   }
   .treatment-hero {
@@ -3677,25 +3677,25 @@ dialog[open] {
     font-size: 48px;
   }
   .treatment-hero > div > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .treatment-hero .photo {
     height: 450px;
     border-radius: 130px 130px 24px 24px;
   }
   .treatment-hero small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .detail-pills {
     gap: 8px;
     margin: 20px 0;
   }
   .detail-pills span {
-    font-size: 11px;
+    font-size: 16px;
     padding: 8px 12px;
   }
   .treatment-hero .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 20px;
   }
   .treatment-story {
@@ -3736,7 +3736,7 @@ dialog[open] {
     font-size: 42px;
   }
   .about-editorial > div > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .about-editorial .large-copy {
     font-size: 20px;
@@ -3776,13 +3776,13 @@ dialog[open] {
     font-size: 44px;
   }
   .experience-film > div:not(.atmosphere-film) > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .experience-film > .photo {
     display: none;
   }
   .experience-film .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .journey-cards {
     gap: 15px;
@@ -3797,7 +3797,7 @@ dialog[open] {
     font-size: 27px;
   }
   .journey-cards p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .discovery-toolbar {
     grid-template-columns: 1fr;
@@ -3805,7 +3805,7 @@ dialog[open] {
   }
   .duration-filter {
     justify-content: flex-end;
-    font-size: 12px;
+    font-size: 16px;
   }
   .duration-filter > span {
     display: block;
@@ -3820,12 +3820,12 @@ dialog[open] {
     gap: 7px;
   }
   .filter-row button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 10px 15px;
   }
   .couples-filter {
     padding: 2px 4px;
-    font-size: 12px;
+    font-size: 16px;
     min-height: 40px;
   }
   .treatments-grid {
@@ -3842,14 +3842,14 @@ dialog[open] {
   }
   .treatments-grid .treatment-meta {
     display: block;
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatments-grid .card-actions .text-link,
   .treatments-grid .card-book {
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatments-grid .card-content p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .booking-layout,
   .contact-layout {
@@ -3873,22 +3873,22 @@ dialog[open] {
     margin-bottom: 15px;
   }
   .booking-aside .eyebrow {
-    font-size: 9px;
+    font-size: 16px;
     margin: 15px 0 10px;
   }
   .booking-aside > p {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 7px;
   }
   .booking-aside .check-list {
     margin: 10px 0;
   }
   .check-list li {
-    font-size: 11px;
+    font-size: 16px;
     padding-block: 4px;
   }
   .booking-aside .text-link {
-    font-size: 11px;
+    font-size: 16px;
   }
   .lead-form,
   .request-success {
@@ -3898,7 +3898,7 @@ dialog[open] {
     padding-inline: 28px;
   }
   .booking-progress button {
-    font-size: 11px;
+    font-size: 16px;
     flex-direction: row;
     gap: 8px;
   }
@@ -3929,10 +3929,10 @@ dialog[open] {
   }
   .contact-info-card p,
   .contact-info-card a {
-    font-size: 12px;
+    font-size: 16px;
   }
   .contact-info-card small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .hours-card {
     grid-column: span 2;
@@ -3942,13 +3942,13 @@ dialog[open] {
     display: none;
   }
   .contact-intro > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .hours-card dl {
-    font-size: 13px;
+    font-size: 16px;
   }
   .hours-card .caption {
-    font-size: 11px;
+    font-size: 16px;
   }
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
@@ -3970,13 +3970,13 @@ dialog[open] {
     font-size: 26px;
   }
   .gallery-open > span {
-    font-size: 11px;
+    font-size: 16px;
     padding: 10px 13px;
     right: 12px;
     bottom: 12px;
   }
   .gallery-grid figcaption > span {
-    font-size: 9px;
+    font-size: 16px;
   }
   .lightbox {
     padding: 10px;
@@ -3986,7 +3986,7 @@ dialog[open] {
     height: 68dvh;
   }
   .lightbox-bottom p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .lightbox-bottom {
     gap: 12px;
@@ -4042,7 +4042,7 @@ dialog[open] {
     letter-spacing: -0.055em;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 16px;
     letter-spacing: 0.07em;
     gap: 6px;
   }
@@ -4050,20 +4050,20 @@ dialog[open] {
     width: 14px;
   }
   .hero-copy > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .hero .button {
     padding: 14px 17px;
     gap: 10px;
-    font-size: 11px;
+    font-size: 16px;
     min-height: 48px;
   }
   .hero-footnote {
-    font-size: 10px;
+    font-size: 16px;
     margin-top: 24px;
   }
   .hero-footnote small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-art {
     padding: 0 20px 24px 29px;
@@ -4082,7 +4082,7 @@ dialog[open] {
     bottom: 0;
   }
   .hero-inset > span {
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1.6;
     padding-inline: 5px;
   }
@@ -4098,7 +4098,7 @@ dialog[open] {
     font-size: 22px;
   }
   .hero-glass-note small {
-    font-size: 9px;
+    font-size: 16px;
   }
   .hero-glass-note > svg {
     width: 16px;
@@ -4109,7 +4109,7 @@ dialog[open] {
     bottom: 20px;
   }
   .hero-art-label {
-    font-size: 7px;
+    font-size: 16px;
     right: 22px;
     bottom: -7px;
   }
@@ -4121,14 +4121,14 @@ dialog[open] {
     font-size: 36px;
   }
   .discovery-landing .eyebrow {
-    font-size: 10px;
+    font-size: 16px;
   }
   .search-field {
     padding-left: 16px;
     gap: 10px;
   }
   .search-field input {
-    font-size: 12px;
+    font-size: 16px;
   }
   .search-field > svg {
     width: 19px;
@@ -4146,10 +4146,10 @@ dialog[open] {
     padding: 4px;
   }
   .category-rail strong {
-    font-size: 12px;
+    font-size: 16px;
   }
   .category-rail small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .category-rail svg {
     height: 29px;
@@ -4167,7 +4167,7 @@ dialog[open] {
     gap: 21px;
   }
   .eyebrow {
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 0.1em;
   }
   .featured-grid {
@@ -4199,20 +4199,20 @@ dialog[open] {
   }
   .featured-grid .treatment-card:not(:first-child) .treatment-meta {
     display: flex;
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatment-meta {
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatment-card p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .card-actions .text-link,
   .card-book {
-    font-size: 12px;
+    font-size: 16px;
   }
   .signature-section > .caption {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.7;
   }
   .sensory-layout {
@@ -4226,11 +4226,11 @@ dialog[open] {
     font-size: 16px;
   }
   .sensory-copy .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .sensory-details {
     flex-direction: row;
-    font-size: 11px;
+    font-size: 16px;
     gap: 18px;
     margin-top: 25px;
   }
@@ -4240,14 +4240,14 @@ dialog[open] {
     justify-self: center;
   }
   .film-chip {
-    font-size: 9px;
+    font-size: 16px;
   }
   .film-control {
-    font-size: 11px;
+    font-size: 16px;
     padding: 12px 16px;
   }
   .film-disclosure {
-    font-size: 9px;
+    font-size: 16px;
   }
   .ritual-stories {
     grid-template-columns: 1fr;
@@ -4262,7 +4262,7 @@ dialog[open] {
     margin-bottom: 20px;
   }
   .story-intro p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .story-tile,
   .story-tall {
@@ -4299,19 +4299,19 @@ dialog[open] {
     font-size: 24px;
   }
   .glass-tag small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .studio-story h2 {
     font-size: 45px;
   }
   .studio-story > div > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .value-line {
-    font-size: 13px;
+    font-size: 16px;
   }
   .studio-story .text-link {
-    font-size: 13px;
+    font-size: 16px;
     margin-top: 15px;
   }
   .home-gallery {
@@ -4325,7 +4325,7 @@ dialog[open] {
     margin-top: 25px;
   }
   .home-gallery span {
-    font-size: 10px;
+    font-size: 16px;
     padding: 40px 13px 17px;
     gap: 5px;
   }
@@ -4341,7 +4341,7 @@ dialog[open] {
     font-size: 41px;
   }
   .booking-invitation .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 20px;
   }
   .booking-invitation li {
@@ -4349,7 +4349,7 @@ dialog[open] {
     padding: 20px 0;
   }
   .booking-invitation li p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .booking-invitation li h3 {
     font-size: 27px;
@@ -4358,11 +4358,11 @@ dialog[open] {
     font-size: 40px;
   }
   .faq-list summary {
-    font-size: 13px;
+    font-size: 16px;
     gap: 15px;
   }
   .faq-answer > p {
-    font-size: 13px;
+    font-size: 16px;
     padding-right: 10px;
   }
   .closing {
@@ -4380,11 +4380,11 @@ dialog[open] {
     display: none;
   }
   .closing .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 20px;
   }
   .closing small {
-    font-size: 9px;
+    font-size: 16px;
     max-width: 240px;
   }
   .closing > .photo {
@@ -4406,17 +4406,17 @@ dialog[open] {
   }
   .footer-links a,
   .footer-links > div > span {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.8;
   }
   .footer-links h2 {
-    font-size: 10px;
+    font-size: 16px;
   }
   .site-footer {
     padding-inline: 22px;
   }
   .footer-bottom {
-    font-size: 9px;
+    font-size: 16px;
   }
   .page-intro {
     margin-top: 140px;
@@ -4429,14 +4429,14 @@ dialog[open] {
     margin-bottom: 20px;
   }
   .page-intro .eyebrow {
-    font-size: 9px;
+    font-size: 16px;
   }
   .page-intro-copy > p:not(.eyebrow) {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0;
   }
   .intro-signature {
-    font-size: 7px;
+    font-size: 16px;
     margin-top: 22px;
   }
   .page-intro-media {
@@ -4459,11 +4459,11 @@ dialog[open] {
     font-size: 51px;
   }
   .treatment-hero > div > .text-link {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
   .treatment-hero .eyebrow {
-    font-size: 10px;
+    font-size: 16px;
   }
   .treatment-hero .photo {
     height: 350px;
@@ -4473,22 +4473,22 @@ dialog[open] {
     margin-bottom: 20px;
   }
   .detail-pills span {
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatment-hero > div > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .treatment-hero .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .treatment-hero small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .treatment-story h2 {
     font-size: 42px;
   }
   .treatment-story > div > p:not(.eyebrow) {
-    font-size: 14px;
+    font-size: 16px;
   }
   .experience-steps li {
     gap: 20px;
@@ -4508,7 +4508,7 @@ dialog[open] {
     font-size: 28px;
   }
   .detail-callout p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .detail-callout > .text-link {
     margin-left: 0;
@@ -4532,13 +4532,13 @@ dialog[open] {
     font-size: 44px;
   }
   .about-editorial > div > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .about-editorial .large-copy {
     font-size: 22px;
   }
   .about-editorial .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .values-grid article {
     display: block;
@@ -4562,7 +4562,7 @@ dialog[open] {
     font-size: 46px;
   }
   .experience-film > div:not(.atmosphere-film) > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .journey-cards {
     grid-template-columns: 1fr;
@@ -4578,7 +4578,7 @@ dialog[open] {
     font-size: 32px;
   }
   .journey-cards p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .journey-section {
     padding-bottom: 35px;
@@ -4596,7 +4596,7 @@ dialog[open] {
     gap: 7px;
   }
   .filter-row button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 10px 14px;
     min-height: 42px;
   }
@@ -4605,15 +4605,15 @@ dialog[open] {
     gap: 10px;
   }
   .results-heading p {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.8;
   }
   .results-heading p span {
     display: block;
-    font-size: 10px;
+    font-size: 16px;
   }
   .results-heading .text-link {
-    font-size: 10px;
+    font-size: 16px;
     gap: 6px;
     white-space: nowrap;
   }
@@ -4631,15 +4631,15 @@ dialog[open] {
     font-size: 32px;
   }
   .treatments-grid .treatment-card p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .treatments-grid .treatment-meta {
     display: flex;
-    font-size: 11px;
+    font-size: 16px;
   }
   .treatments-grid .card-actions .text-link,
   .treatments-grid .card-book {
-    font-size: 12px;
+    font-size: 16px;
   }
   .booking-aside {
     grid-template-columns: 110px 1fr;
@@ -4650,7 +4650,7 @@ dialog[open] {
     border-radius: 65px 65px 20px 20px;
   }
   .booking-aside .eyebrow {
-    font-size: 8px;
+    font-size: 16px;
     margin-top: 5px;
   }
   .booking-aside h2 {
@@ -4658,13 +4658,13 @@ dialog[open] {
     margin-bottom: 12px;
   }
   .booking-aside > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .booking-aside .check-list {
     display: none;
   }
   .booking-aside .text-link {
-    font-size: 10px;
+    font-size: 16px;
     line-height: 1.7;
     gap: 7px;
   }
@@ -4680,13 +4680,13 @@ dialog[open] {
   }
   .booking-progress button {
     flex-direction: column;
-    font-size: 9px;
+    font-size: 16px;
     gap: 7px;
   }
   .booking-progress span {
     width: 25px;
     height: 25px;
-    font-size: 10px;
+    font-size: 16px;
   }
   .lead-form,
   .request-success {
@@ -4697,7 +4697,7 @@ dialog[open] {
     font-size: 34px;
   }
   .form-notice {
-    font-size: 10px;
+    font-size: 16px;
     padding: 12px;
   }
   .form-grid {
@@ -4706,7 +4706,7 @@ dialog[open] {
   }
   .lead-form label:not(.check-label),
   .field-label {
-    font-size: 12px;
+    font-size: 16px;
   }
   .lead-form label input:not([type="checkbox"]),
   .lead-form select,
@@ -4716,7 +4716,7 @@ dialog[open] {
     min-height: 51px;
   }
   .picker-trigger {
-    font-size: 13px;
+    font-size: 16px;
     gap: 10px;
     min-height: 57px;
     padding: 14px;
@@ -4733,50 +4733,50 @@ dialog[open] {
     height: 55px;
   }
   .selected-service strong {
-    font-size: 12px;
+    font-size: 16px;
   }
   .selected-service span {
-    font-size: 10px;
+    font-size: 16px;
   }
   .selected-service > svg {
     width: 16px;
   }
   .help-choice {
-    font-size: 11px;
+    font-size: 16px;
   }
   .selection-recap strong {
-    font-size: 12px;
+    font-size: 16px;
   }
   .selection-recap span {
-    font-size: 10px;
+    font-size: 16px;
   }
   .form-actions {
     gap: 10px;
   }
   .form-actions .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 14px 20px;
     min-height: 49px;
     gap: 10px;
   }
   .lead-form .check-label {
-    font-size: 11px;
+    font-size: 16px;
   }
   .lead-form > .caption {
-    font-size: 10px;
+    font-size: 16px;
   }
   .request-success h2 {
     font-size: 42px;
   }
   .request-success > .eyebrow {
-    font-size: 9px;
+    font-size: 16px;
   }
   .request-success pre {
     padding: 17px;
-    font-size: 11px;
+    font-size: 16px;
   }
   .request-success .button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 14px 19px;
   }
   .request-success > .button-row {
@@ -4793,7 +4793,7 @@ dialog[open] {
     font-size: 44px;
   }
   .contact-intro > p {
-    font-size: 15px;
+    font-size: 16px;
   }
   .contact-info-card {
     padding: 15px 0 22px;
@@ -4801,10 +4801,10 @@ dialog[open] {
   }
   .contact-info-card p,
   .contact-info-card a {
-    font-size: 14px;
+    font-size: 16px;
   }
   .contact-info-card small {
-    font-size: 11px;
+    font-size: 16px;
   }
   .hours-card {
     grid-column: auto;
@@ -4830,7 +4830,7 @@ dialog[open] {
     font-size: 23px;
   }
   .gallery-grid figcaption > span {
-    font-size: 8px;
+    font-size: 16px;
   }
   .gallery-open > span {
     font-size: 0;
@@ -4848,7 +4848,7 @@ dialog[open] {
     width: 17px;
   }
   .gallery-grid + .caption {
-    font-size: 11px;
+    font-size: 16px;
   }
   .lightbox {
     max-width: calc(100vw - 16px);
@@ -4866,7 +4866,7 @@ dialog[open] {
     padding: 14px 4px 3px;
   }
   .lightbox-bottom p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .lightbox-bottom button {
     width: 42px;
@@ -4882,7 +4882,7 @@ dialog[open] {
     font-size: 36px;
   }
   .picker-heading .eyebrow {
-    font-size: 8px;
+    font-size: 16px;
   }
   .picker-heading {
     gap: 10px;
@@ -4900,14 +4900,14 @@ dialog[open] {
     font-size: 16px;
   }
   .service-dialog .search-field input::placeholder {
-    font-size: 11px;
+    font-size: 16px;
   }
   .service-dialog .filter-row {
     gap: 6px;
     margin-top: 15px;
   }
   .service-dialog .filter-row button {
-    font-size: 10px;
+    font-size: 16px;
     padding: 9px 12px;
     min-height: 40px;
   }
@@ -4924,23 +4924,23 @@ dialog[open] {
     height: 53px;
   }
   .picker-results strong {
-    font-size: 12px;
+    font-size: 16px;
   }
   .picker-results small {
-    font-size: 9px;
+    font-size: 16px;
   }
   .picker-results button > svg {
     width: 16px;
   }
   .service-dialog > .caption {
-    font-size: 9px;
+    font-size: 16px;
   }
   .picker-footer {
     gap: 12px;
   }
   .picker-footer > a,
   .picker-footer .text-link {
-    font-size: 10px;
+    font-size: 16px;
   }
   .service-dialog .empty-state {
     padding: 25px 18px;
@@ -4955,10 +4955,10 @@ dialog[open] {
     font-size: 35px;
   }
   .empty-state p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .faq-page > .search-field input {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 @media (max-width: 359px) {
@@ -4970,7 +4970,7 @@ dialog[open] {
     font-size: 66px;
   }
   .hero .eyebrow {
-    font-size: 7px;
+    font-size: 16px;
   }
   .hero .button-row {
     gap: 9px;
@@ -4979,13 +4979,13 @@ dialog[open] {
   }
   .hero .button {
     min-width: 185px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-copy > p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .hero-footnote {
-    font-size: 9px;
+    font-size: 16px;
     gap: 10px;
   }
   .hero-art {
@@ -5008,7 +5008,7 @@ dialog[open] {
     font-size: 20px;
   }
   .hero-glass-note small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-glass-note > svg {
     width: 14px;
@@ -5021,7 +5021,7 @@ dialog[open] {
     gap: 7px;
   }
   .wordmark small {
-    font-size: 6px;
+    font-size: 16px;
   }
   .wordmark > svg {
     width: 23px;
@@ -5030,7 +5030,7 @@ dialog[open] {
     padding: 10px 12px;
   }
   .demo-bar {
-    font-size: 8px;
+    font-size: 16px;
   }
   .category-rail a > span {
     width: 79px;
@@ -5040,7 +5040,7 @@ dialog[open] {
     gap: 22px 8px;
   }
   .category-rail strong {
-    font-size: 11px;
+    font-size: 16px;
   }
   .category-rail small {
     display: none;
@@ -5086,11 +5086,11 @@ dialog[open] {
     font-size: 31px;
   }
   .form-actions .button {
-    font-size: 11px;
+    font-size: 16px;
     padding-inline: 16px;
   }
   .picker-trigger {
-    font-size: 12px;
+    font-size: 16px;
     padding: 13px 12px;
     gap: 8px;
   }
@@ -5102,13 +5102,13 @@ dialog[open] {
     gap: 10px;
   }
   .selected-service strong {
-    font-size: 11px;
+    font-size: 16px;
   }
   .selected-service > svg {
     display: none;
   }
   .booking-progress button {
-    font-size: 8px;
+    font-size: 16px;
   }
   .gallery-grid {
     gap: 24px 12px;
@@ -5121,13 +5121,13 @@ dialog[open] {
     font-size: 21px;
   }
   .gallery-grid figcaption > span {
-    font-size: 7px;
+    font-size: 16px;
   }
   .picker-heading h2 {
     font-size: 33px;
   }
   .service-dialog .filter-row button {
-    font-size: 9px;
+    font-size: 16px;
     padding-inline: 11px;
   }
   .picker-thumb {
@@ -5138,27 +5138,27 @@ dialog[open] {
     gap: 9px;
   }
   .picker-results strong {
-    font-size: 11px;
+    font-size: 16px;
   }
   .picker-results small {
-    font-size: 8px;
+    font-size: 16px;
   }
   .picker-footer > a,
   .picker-footer .text-link {
-    font-size: 9px;
+    font-size: 16px;
   }
   .service-dialog > .caption {
-    font-size: 8px;
+    font-size: 16px;
   }
   .sensory-details {
-    font-size: 10px;
+    font-size: 16px;
     gap: 12px;
   }
   .footer-links {
     gap: 17px;
   }
   .footer-links a {
-    font-size: 10px;
+    font-size: 16px;
   }
   .home-gallery > a {
     height: 220px;
@@ -5167,7 +5167,7 @@ dialog[open] {
     height: 195px;
   }
   .home-gallery span {
-    font-size: 9px;
+    font-size: 16px;
     padding-inline: 10px;
   }
   .closing h2 {
@@ -5239,7 +5239,7 @@ dialog[open] {
 .hero-inset > span,
 .hero-art-label,
 .category-rail small {
-  font-size: 12px;
+  font-size: 16px;
 }
 .hero .button,
 .form-actions .button,
@@ -5249,43 +5249,43 @@ dialog[open] {
 .service-dialog .picker-results strong,
 .booking-invitation .button,
 .closing .button {
-  font-size: 12px;
+  font-size: 16px;
 }
 @media (max-width: 520px) {
   .hero-art-label {
-    font-size: 9px;
+    font-size: 16px;
   }
   .hero-inset > span {
-    font-size: 9px;
+    font-size: 16px;
   }
   .category-rail small {
-    font-size: 10px;
+    font-size: 16px;
   }
   .booking-progress button {
-    font-size: 10px;
+    font-size: 16px;
   }
   .film-chip,
   .film-disclosure {
-    font-size: 10px;
+    font-size: 16px;
   }
   .service-dialog > .caption {
-    font-size: 10px;
+    font-size: 16px;
   }
   .picker-results small {
-    font-size: 11px;
+    font-size: 16px;
   }
   .service-dialog .filter-row button {
-    font-size: 11px;
+    font-size: 16px;
   }
   .gallery-grid figcaption > span {
-    font-size: 10px;
+    font-size: 16px;
   }
   .footer-links a,
   .footer-links > div > span {
-    font-size: 12px;
+    font-size: 16px;
   }
   .picker-results strong {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -5326,5 +5326,429 @@ dialog[open] {
   }
   .treatment-hero .photo {
     height: clamp(300px, 65vw, 450px);
+  }
+}
+
+/* Final V3 polish: one accessible control language, without changing the identity. */
+:root {
+  --control-gradient: linear-gradient(
+    115deg,
+    #a62d73 0%,
+    #7d328b 48%,
+    #60317d 100%
+  );
+}
+body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.site-header {
+  max-width: 1390px;
+  gap: 20px;
+}
+.navigation {
+  gap: 8px;
+  font-size: 17px;
+}
+.navigation > a:not(.button),
+.picker-compact .picker-trigger {
+  font-size: 17px;
+  padding: 10px 12px;
+  border-radius: 14px;
+}
+.navigation .button {
+  font-size: 16px;
+  gap: 12px;
+  padding-inline: 20px;
+}
+.wordmark small {
+  font-size: 10px;
+}
+.eyebrow,
+.page-intro .eyebrow,
+.picker-heading .eyebrow {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+}
+.demo-bar,
+.intro-signature,
+.hero-art-label,
+.hero-inset > span,
+.film-chip,
+.film-disclosure,
+.closing small,
+.footer-bottom {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.demo-bar {
+  line-height: 28px;
+}
+.hero-art-label {
+  letter-spacing: 0.06em;
+}
+.button,
+.card-book,
+.filter-row button[aria-pressed="true"],
+.help-choice.selected {
+  background: var(--control-gradient);
+  background-size: 180% 100%;
+  color: #fff;
+}
+.button,
+.card-book,
+.filter-row button,
+.picker-trigger,
+.picker-results button,
+.icon-button,
+.help-choice,
+.film-control,
+.navigation > a:not(.button) {
+  transition:
+    background-position 0.55s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+.button:hover,
+.button:focus-visible,
+.card-book:hover,
+.card-book:focus-visible,
+.filter-row button:hover,
+.filter-row button:focus-visible,
+.picker-trigger:hover,
+.picker-trigger:focus-visible,
+.picker-trigger[aria-expanded="true"],
+.picker-results button:hover,
+.picker-results button:focus-visible,
+.icon-button:hover,
+.icon-button:focus-visible,
+.help-choice:hover,
+.help-choice:focus-visible,
+.film-control:hover,
+.film-control:focus-visible,
+.navigation > a:not(.button):hover,
+.navigation > a:not(.button):focus-visible,
+.navigation > a.active {
+  background: var(--control-gradient);
+  background-size: 180% 100%;
+  background-position: 100% 50%;
+  color: #fff;
+  border-color: #c89cdb;
+  filter: none;
+  box-shadow:
+    0 7px 20px #7e398a30,
+    0 0 18px #d76dbe15,
+    inset 0 1px 0 #ffffff38;
+}
+.picker-compact .picker-trigger:hover,
+.picker-compact .picker-trigger:focus-visible,
+.picker-compact .picker-trigger[aria-expanded="true"] {
+  color: #fff;
+  background: var(--control-gradient);
+  background-size: 180% 100%;
+  background-position: 100% 50%;
+}
+.picker-results button:is(:hover, :focus-visible) strong,
+.picker-results button:is(:hover, :focus-visible) small {
+  color: #fff;
+}
+.navigation > a:not(.button)::after {
+  display: none;
+}
+.button-light,
+.button-glass {
+  color: var(--purple);
+  background: linear-gradient(130deg, #ffffffc9, #f0e4f4c9);
+}
+.hero .button-light,
+.closing .button-light,
+.sensory-section .button-light,
+.site-footer .button-light {
+  background: linear-gradient(130deg, #ffffff19, #b9a5db10);
+  color: #fff;
+}
+.button-light:is(:hover, :focus-visible),
+.button-glass:is(:hover, :focus-visible) {
+  color: #fff;
+  background: var(--control-gradient);
+  background-size: 180% 100%;
+  background-position: 100% 50%;
+}
+:is(button, .button, .card-book):active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 5px #20132630;
+}
+button:disabled {
+  cursor: not-allowed;
+  color: #65536d;
+  opacity: 1;
+  box-shadow: none;
+}
+.button:disabled {
+  background: #e0d3e5;
+  color: #594363;
+}
+:focus-visible {
+  outline: 3px solid #8a47ad;
+  outline-offset: 4px;
+}
+.site-header :focus-visible,
+.hero :focus-visible,
+.site-footer :focus-visible,
+.sensory-section :focus-visible {
+  outline-color: #bce1ff;
+}
+.picker-trigger svg:last-child {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.picker-trigger[aria-expanded="true"] svg:last-child {
+  transform: rotate(180deg);
+}
+.picker-results button > svg {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.picker-results button:hover > svg {
+  transform: translateX(3px);
+}
+.text-link {
+  line-height: 1.5;
+}
+.text-link:hover {
+  color: #8b286e;
+}
+.card-actions,
+.form-actions,
+.picker-footer,
+.results-heading {
+  flex-wrap: wrap;
+}
+.card-actions > *,
+.form-actions > * {
+  flex-shrink: 0;
+}
+.booking-progress {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+}
+.booking-progress button {
+  font-size: 16px;
+  gap: 8px;
+  text-align: left;
+}
+.booking-progress span {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+.booking-progress button:disabled {
+  color: #6b5775;
+}
+.footer-links {
+  grid-template-columns: 1fr 1fr;
+}
+.footer-links > div {
+  min-width: 0;
+}
+.footer-links a {
+  overflow-wrap: anywhere;
+}
+.hero-film,
+.hero-film video,
+.hero-film > .photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-film video,
+.hero-film > .photo {
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+.hero-film.has-error video {
+  visibility: hidden;
+}
+.hero-portrait::after {
+  z-index: 1;
+}
+.portrait-word {
+  bottom: 90px;
+  font-size: clamp(28px, 3.1vw, 45px);
+}
+.hero-film-control {
+  z-index: 3;
+  right: 20px;
+  left: auto;
+  bottom: 20px;
+  transform: none;
+  font-size: 16px;
+  min-height: 46px;
+  white-space: nowrap;
+  padding: 11px 16px;
+}
+.hero-film-control:hover {
+  transform: translateY(-1px);
+}
+.hero-film-error {
+  position: absolute;
+  z-index: 3;
+  inset: auto 12px 72px;
+  color: white;
+  font-size: 16px;
+  background: #28152ded;
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin: 0;
+}
+.hero-glass-note {
+  top: 12px;
+  right: -8px;
+}
+.hero-glass-note small {
+  font-size: 14px;
+}
+.hero h1 {
+  font-size: clamp(58px, 7.2vw, 124px);
+}
+.page-intro h1 {
+  font-size: clamp(44px, 5.5vw, 84px);
+}
+@media (max-width: 1279px) {
+  .navigation {
+    gap: 4px;
+  }
+  .navigation > a:not(.button),
+  .picker-compact .picker-trigger {
+    font-size: 17px;
+    padding: 12px 16px;
+  }
+  .navigation .button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: clamp(58px, 12vw, 82px);
+  }
+  .hero .button {
+    padding-inline: 20px;
+  }
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .picker-heading {
+    gap: 10px;
+  }
+  .picker-results button {
+    gap: 10px;
+    align-items: center;
+  }
+  .picker-results strong,
+  .service-dialog .picker-results strong,
+  .picker-results small {
+    font-size: 16px;
+  }
+  .picker-results button > svg {
+    width: 18px;
+  }
+  .picker-thumb {
+    width: 44px;
+    height: 54px;
+  }
+  .hero-glass-note {
+    max-width: 190px;
+    padding: 12px 14px;
+    top: 8px;
+    right: 0;
+  }
+  .hero-glass-note small {
+    font-size: 13px;
+  }
+  .hero-inset {
+    width: 36%;
+  }
+  .hero-film-control {
+    right: 12px;
+    bottom: 15px;
+    padding: 10px 14px;
+  }
+  .portrait-word {
+    right: 20px;
+    bottom: 76px;
+  }
+  .service-dialog {
+    padding: 20px;
+  }
+  .service-dialog .filter-row button {
+    padding: 10px 12px;
+    min-height: 44px;
+  }
+  .picker-footer {
+    gap: 8px;
+  }
+  .booking-progress {
+    padding: 16px;
+    gap: 8px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .selected-service {
+    flex-wrap: wrap;
+  }
+  .selected-service > div {
+    min-width: 0;
+  }
+  .filter-row button {
+    min-height: 44px;
+  }
+  .results-heading .text-link {
+    white-space: normal;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .button:hover,
+  .icon-button:hover,
+  .hero-glass-note:hover,
+  .hero-film-control:hover {
+    transform: none;
+  }
+}
+.hero-copy > .eyebrow {
+  font-size: 12px;
+}
+.hero-glass-note {
+  top: -25px;
+}
+.hero-glass-note small {
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .hero-glass-note {
+    top: -22px;
+    max-width: 210px;
+    gap: 8px;
+  }
+  .hero-glass-note > svg:first-child {
+    display: none;
+  }
+}
+@media (max-width: 359px) {
+  .treatment-hero h1 {
+    font-size: clamp(34px, 11.25vw, 40px);
+    overflow-wrap: normal;
   }
 }
