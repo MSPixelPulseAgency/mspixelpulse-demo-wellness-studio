@@ -11,7 +11,7 @@ React 19 / Vite / React Router / Lucide / CSS. The current NOIRÉ collection com
 - Native modal service chooser with categories, search, clear/reset, keyboard arrows/Home/End/Enter/Escape and focus restoration.
 - Four-step local request: ritual → preferred date/time → sample details → review/edit/copy/clear.
 - Improved Contact with enquiry topics and clearly fictional example hours/location; searchable FAQs; 16-photo filterable keyboard gallery.
-- 22 licensed photo/poster sources with 88 responsive WebP variants. The silent 10-second pool film is 736 KiB and loads only after Play, with poster/loading/error feedback and automatic offscreen pause.
+- 22 licensed photo/poster sources with 88 responsive WebP variants. The silent 10-second pool film is 736 KiB. It autoplays in the homepage hero only after page load, while visible; reduced motion prevents automatic loading. The poster and explicit play/pause/retry control remain available. Below-fold and Experience films still load only after Play. All films pause offscreen or in a hidden tab.
 - All original routes, six service IDs, CAD prices and durations retained. 45 routes including 36 details and the /studio alias.
 
 **Demo safety:** no operating spa, practitioner credentials, real availability, reviews, health outcomes, bookings, payments, emails or server persistence are represented. Use fictional sample details. No medical or sensitive questions. Media is illustrative stock, not an actual studio.
