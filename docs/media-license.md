@@ -46,3 +46,10 @@ Bodoni Moda regular/italic from the official Google Fonts repository (https://gi
 Six additional Pexels photographs: Anete Lusina (5240636, warm stones); Polina Tankilevitch (3736313, manicure); Gustavo Fring (3985333, facial mask); Cup of Couple (6634963, singing bowl); Yan Krukau (5793887, foot massage); Kampus Production (8834060, hair wash). Full source links are recorded in noire-media-sources.json. Each has 480/800/1200/1800px local WebP variants.
 
 Pool film and its poster: [Pavel Danilyuk / Pexels 6617115](https://www.pexels.com/video/woman-relaxin-in-indoor-pool-6617115/), under the [Pexels license](https://www.pexels.com/license/). The original 10.56s source was downloaded through the public download link, trimmed to 10s and encoded silent H.264 540×960/24fps with fast-start. Its locally extracted poster has the same license and responsive variants. See v3-video-sources.json. Depicted people are clearly adults; the pool footage shows an adult in swimwear. Media was visually reviewed and is illustrative, not an operating studio or endorsement. No video soundtrack is used.
+
+
+## V4 ambient collection
+
+The 50 unique ambient clips and their responsive posters are derived from Pexels stock videos under the [Pexels License](https://www.pexels.com/license/), which permits free use and modification on websites. No assets were purchased. [The complete inventory](v4-video-sources.json) records each source page, original download, license URL, duration, dimensions, encoded byte size and SHA-256. The collection was visually reviewed; it illustrates spa rituals and relaxation, rather than depicting an actual MSPixelPulse studio or endorsing a service. Files are silent H.264, fast-start, 24fps, at most 960px and 850KB per clip, with 480/960px WebP posters.
+
+The Wellness Tips page links to official AAD/NHS source pages and lazily embeds their public educational YouTube videos through youtube-nocookie.com. Those videos remain hosted on YouTube and are not downloaded or represented as agency content.

@@ -13,6 +13,7 @@ import {
   FAQ,
   NotFound,
 } from "./pages/StudioPages";
+import { Reviews, Feedback, WellnessTips } from "./pages/CommunityPages";
 export default function App() {
   const location = useLocation();
   const firstVisit = useRef(true);
@@ -60,6 +61,9 @@ export default function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/wellness-tips" element={<WellnessTips />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

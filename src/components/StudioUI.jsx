@@ -4,6 +4,8 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import media from "../data/media.json";
 import { brand, faqs } from "../data/studio";
 import ServicePicker from "./ServicePicker";
+import MotionPreference from "./MotionPreference";
+import JournalMenu from "./JournalMenu";
 export function SEO({ title, description, path = "" }) {
   useEffect(() => {
     document.title = `${title} | MSPixelPulse Wellness Studio`;
@@ -33,8 +35,7 @@ export function SEO({ title, description, path = "" }) {
       "og:description": description,
       "og:url": `https://wellness.mspixelpulse.com${path}`,
       "og:type": "website",
-      "og:image":
-        "https://wellness.mspixelpulse.com/images/noire/portrait-1200.webp",
+      "og:image": "https://wellness.mspixelpulse.com/videos/v4/home-960.webp",
     }))
       meta(`meta[property="${property}"]`, "meta", { property }, content);
   }, [title, description, path]);
@@ -178,6 +179,7 @@ export function Navbar() {
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/about">Our story</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          <JournalMenu />
           <ButtonLink to="/booking">Find your escape</ButtonLink>
         </nav>
       </header>
@@ -213,11 +215,15 @@ export function Footer() {
             <Link to="/booking">Demo appointment</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/faq">Frequently asked</Link>
+            <Link to="/reviews">Sample reviews</Link>
+            <Link to="/feedback">Share feedback</Link>
+            <Link to="/wellness-tips">Wellness tips</Link>
             <a href={`mailto:${brand.email}`}>{brand.email}</a>
             <span>{brand.phone}</span>
           </div>
         </div>
       </div>
+      <MotionPreference />
       <div className="footer-bottom">
         <span>
           © {new Date().getFullYear()} {brand.name}

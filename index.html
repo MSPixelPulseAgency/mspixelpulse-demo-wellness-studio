@@ -33,75 +33,77 @@
     <script>
       (() => {
         const path = location.pathname;
-        const details = {
-          "relaxation-massage": "massage",
-          "hot-stone-massage": "stone",
-          "aromatherapy-massage": "body",
-          "couples-massage": "ritual",
-          "evening-reset": "scalp",
-          "foot-relaxation": "foot",
-          "botanical-facial": "facial",
-          "signature-experience": "skin",
-          "hydrating-facial": "mask",
-          "deep-cleansing-facial": "beauty",
-          "brightening-facial": "hero",
-          "sensitive-skin-facial": "portrait",
-          "body-care": "body",
-          "body-polish": "still-life",
-          "body-wrap": "ritual",
-          "hydrating-body": "oils",
-          "exfoliation-ritual": "candles",
-          "rose-body-ritual": "mask",
-          "aromatherapy-ritual": "candles",
-          "guided-relaxation": "film",
-          "meditation-session": "sound",
-          "sound-bath": "sound",
-          "mindfulness-session": "portrait",
-          "wellness-consultation": "oils",
-          "couples-spa-escape": "pool",
-          "luxury-spa-day": "water",
-          "bridal-wellness": "beauty",
-          "birthday-spa": "still-life",
-          "signature-indulgence": "robe",
-          "ultimate-relaxation": "pool",
-          manicure: "nails",
-          pedicure: "foot",
-          "luxury-hand-treatment": "oils",
-          "luxury-foot-treatment": "foot",
-          "scalp-massage": "scalp",
-          "hair-spa": "hair",
-        };
-        const pages = {
-          "/services": "mask",
-          "/about": "robe",
-          "/experience": "pool",
-          "/studio": "pool",
-          "/gallery": "still-life",
-          "/booking": "oils",
-          "/contact": "candles",
-          "/faq": "still-life",
-        };
         const name =
           path === "/"
-            ? "film"
-            : pages[path] || details[path.split("/services/")[1]];
-        if (!name) return;
+            ? "home"
+            : path.startsWith("/services/")
+              ? path.split("/")[2]
+              : path.split("/")[1];
+        const known = [
+          "hot-stone-massage",
+          "relaxation-massage",
+          "aromatherapy-massage",
+          "foot-relaxation",
+          "couples-massage",
+          "evening-reset",
+          "botanical-facial",
+          "signature-experience",
+          "hydrating-facial",
+          "deep-cleansing-facial",
+          "brightening-facial",
+          "sensitive-skin-facial",
+          "body-care",
+          "body-wrap",
+          "body-polish",
+          "exfoliation-ritual",
+          "hydrating-body",
+          "rose-body-ritual",
+          "aromatherapy-ritual",
+          "guided-relaxation",
+          "meditation-session",
+          "sound-bath",
+          "wellness-consultation",
+          "mindfulness-session",
+          "couples-spa-escape",
+          "bridal-wellness",
+          "luxury-spa-day",
+          "birthday-spa",
+          "signature-indulgence",
+          "ultimate-relaxation",
+          "pedicure",
+          "manicure",
+          "luxury-foot-treatment",
+          "scalp-massage",
+          "hair-spa",
+          "services",
+          "about",
+          "experience",
+          "studio",
+          "gallery",
+          "booking",
+          "contact",
+          "luxury-hand-treatment",
+          "reviews",
+          "feedback",
+          "wellness-tips",
+          "home",
+          "faq",
+        ];
+        if (!known.includes(name)) return;
+        const posterWidths = {"botanical-facial":540,"signature-experience":540,"hydrating-facial":540,"brightening-facial":540,"sensitive-skin-facial":540,"body-wrap":540,"exfoliation-ritual":506,"aromatherapy-ritual":506,"guided-relaxation":540,"mindfulness-session":540,"couples-spa-escape":540,"luxury-spa-day":540,"ultimate-relaxation":540,"services":540,"about":506,"gallery":506,"booking":506,"contact":506,"wellness-tips":540,"home":540,"home-atmosphere":540,"faq":540};
         const link = document.createElement("link");
         link.rel = "preload";
         link.as = "image";
-        link.href = "/images/noire/" + name + "-800.webp";
-        link.imageSrcset = [480, 800, 1200, 1800]
-          .map((w) => "/images/noire/" + name + "-" + w + ".webp " + w + "w")
+        link.href = "/videos/v4/" + name + "-960.webp";
+        link.imageSrcset = [480, 960]
+          .map((w) => "/videos/v4/" + name + "-" + w + ".webp " + (w === 960 ? posterWidths[name] || 960 : w) + "w")
           .join(", ");
-        link.imageSizes =
-          path === "/"
-            ? "(max-width: 700px) 92vw, 43vw"
-            : "(max-width: 700px) 100vw, 50vw";
+        link.imageSizes = "(max-width:760px) 92vw, 48vw";
         link.fetchPriority = "high";
         document.head.append(link);
       })();
     </script>
-    <meta name="theme-color" content="#201326" />
+    <meta name="theme-color" content="#fff7fb" />
     <meta
       name="description"
       content="Explore a fictional Toronto wellness studio: relaxation massage, botanical facials and considered spa rituals. A premium website concept by MSPixelPulse."

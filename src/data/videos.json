@@ -1,0 +1,402 @@
+{
+  "hot-stone-massage": {
+    "id": 6187080,
+    "src": "/videos/v4/hot-stone-massage.mp4",
+    "poster": "/videos/v4/hot-stone-massage-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Receiving Hot Stone Massage Therapy; illustrative licensed stock setting"
+  },
+  "relaxation-massage": {
+    "id": 17887953,
+    "src": "/videos/v4/relaxation-massage.mp4",
+    "poster": "/videos/v4/relaxation-massage-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "back massage at the spa; illustrative licensed stock setting"
+  },
+  "aromatherapy-massage": {
+    "id": 3998264,
+    "src": "/videos/v4/aromatherapy-massage.mp4",
+    "poster": "/videos/v4/aromatherapy-massage-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "Applying Essential Oils On A Woman's Back; illustrative licensed stock setting"
+  },
+  "foot-relaxation": {
+    "id": 36997788,
+    "src": "/videos/v4/foot-relaxation.mp4",
+    "poster": "/videos/v4/foot-relaxation-960.webp",
+    "width": 960,
+    "height": 640,
+    "alt": "Relaxing Foot Massage in a Spa Setting; illustrative licensed stock setting"
+  },
+  "couples-massage": {
+    "id": 6187308,
+    "src": "/videos/v4/couples-massage.mp4",
+    "poster": "/videos/v4/couples-massage-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Man Getting a Back Massage; illustrative licensed stock setting"
+  },
+  "evening-reset": {
+    "id": 6187895,
+    "src": "/videos/v4/evening-reset.mp4",
+    "poster": "/videos/v4/evening-reset-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Neck Massage at Spa; illustrative licensed stock setting"
+  },
+  "botanical-facial": {
+    "id": 5659272,
+    "src": "/videos/v4/botanical-facial.mp4",
+    "poster": "/videos/v4/botanical-facial-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Aesthetician Giving Customer Facial Massage; illustrative licensed stock setting"
+  },
+  "signature-experience": {
+    "id": 5659235,
+    "src": "/videos/v4/signature-experience.mp4",
+    "poster": "/videos/v4/signature-experience-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Woman Getting a Face Massage; illustrative licensed stock setting"
+  },
+  "hydrating-facial": {
+    "id": 30005202,
+    "src": "/videos/v4/hydrating-facial.mp4",
+    "poster": "/videos/v4/hydrating-facial-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Relaxing Facial Massage in Spa Setting; illustrative licensed stock setting"
+  },
+  "deep-cleansing-facial": {
+    "id": 8204308,
+    "src": "/videos/v4/deep-cleansing-facial.mp4",
+    "poster": "/videos/v4/deep-cleansing-facial-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Massaging the Face of a Client; illustrative licensed stock setting"
+  },
+  "brightening-facial": {
+    "id": 9335905,
+    "src": "/videos/v4/brightening-facial.mp4",
+    "poster": "/videos/v4/brightening-facial-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Person Applying a Face Mask on a Client's Face; illustrative licensed stock setting"
+  },
+  "sensitive-skin-facial": {
+    "id": 5937381,
+    "src": "/videos/v4/sensitive-skin-facial.mp4",
+    "poster": "/videos/v4/sensitive-skin-facial-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Woman Using a Face Mask; illustrative licensed stock setting"
+  },
+  "body-care": {
+    "id": 6750888,
+    "src": "/videos/v4/body-care.mp4",
+    "poster": "/videos/v4/body-care-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Woman Relaxing in a Spa; illustrative licensed stock setting"
+  },
+  "body-wrap": {
+    "id": 6724993,
+    "src": "/videos/v4/body-wrap.mp4",
+    "poster": "/videos/v4/body-wrap-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Person Holding a Body Scrub; illustrative licensed stock setting"
+  },
+  "body-polish": {
+    "id": 7020150,
+    "src": "/videos/v4/body-polish.mp4",
+    "poster": "/videos/v4/body-polish-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Applying Body Scrub to her Arms; illustrative licensed stock setting"
+  },
+  "exfoliation-ritual": {
+    "id": 8272815,
+    "src": "/videos/v4/exfoliation-ritual.mp4",
+    "poster": "/videos/v4/exfoliation-ritual-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Close up of a Person Making a Body Scrub; illustrative licensed stock setting"
+  },
+  "hydrating-body": {
+    "id": 7020132,
+    "src": "/videos/v4/hydrating-body.mp4",
+    "poster": "/videos/v4/hydrating-body-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Woman Applying Body Scrub on Her Legs; illustrative licensed stock setting"
+  },
+  "rose-body-ritual": {
+    "id": 7020151,
+    "src": "/videos/v4/rose-body-ritual.mp4",
+    "poster": "/videos/v4/rose-body-ritual-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Applying Body Scrub to her Arms; illustrative licensed stock setting"
+  },
+  "aromatherapy-ritual": {
+    "id": 3998272,
+    "src": "/videos/v4/aromatherapy-ritual.mp4",
+    "poster": "/videos/v4/aromatherapy-ritual-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Applying Essential Oil From A Bottle On A Woman's Back; illustrative licensed stock setting"
+  },
+  "guided-relaxation": {
+    "id": 6707471,
+    "src": "/videos/v4/guided-relaxation.mp4",
+    "poster": "/videos/v4/guided-relaxation-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Woman Meditating At Home; illustrative licensed stock setting"
+  },
+  "meditation-session": {
+    "id": 6035124,
+    "src": "/videos/v4/meditation-session.mp4",
+    "poster": "/videos/v4/meditation-session-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "Women Meditating Indoors; illustrative licensed stock setting"
+  },
+  "sound-bath": {
+    "id": 5041663,
+    "src": "/videos/v4/sound-bath.mp4",
+    "poster": "/videos/v4/sound-bath-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Meditating; illustrative licensed stock setting"
+  },
+  "wellness-consultation": {
+    "id": 6707273,
+    "src": "/videos/v4/wellness-consultation.mp4",
+    "poster": "/videos/v4/wellness-consultation-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Woman Using Essential Oil On Her Skin; illustrative licensed stock setting"
+  },
+  "mindfulness-session": {
+    "id": 9035666,
+    "src": "/videos/v4/mindfulness-session.mp4",
+    "poster": "/videos/v4/mindfulness-session-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Woman Meditating; illustrative licensed stock setting"
+  },
+  "couples-spa-escape": {
+    "id": 6617115,
+    "src": "/videos/v4/couples-spa-escape.mp4",
+    "poster": "/videos/v4/couples-spa-escape-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Woman Relaxin in Indoor Pool; illustrative licensed stock setting"
+  },
+  "bridal-wellness": {
+    "id": 6187085,
+    "src": "/videos/v4/bridal-wellness.mp4",
+    "poster": "/videos/v4/bridal-wellness-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Professional Massage at Spa; illustrative licensed stock setting"
+  },
+  "luxury-spa-day": {
+    "id": 34626788,
+    "src": "/videos/v4/luxury-spa-day.mp4",
+    "poster": "/videos/v4/luxury-spa-day-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Relaxing Spa Bath with Scenic View; illustrative licensed stock setting"
+  },
+  "birthday-spa": {
+    "id": 6629945,
+    "src": "/videos/v4/birthday-spa.mp4",
+    "poster": "/videos/v4/birthday-spa-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "A Woman Having a Hot Stone Massage; illustrative licensed stock setting"
+  },
+  "signature-indulgence": {
+    "id": 6629947,
+    "src": "/videos/v4/signature-indulgence.mp4",
+    "poster": "/videos/v4/signature-indulgence-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "Using Stones to Massage the Back; illustrative licensed stock setting"
+  },
+  "ultimate-relaxation": {
+    "id": 29209247,
+    "src": "/videos/v4/ultimate-relaxation.mp4",
+    "poster": "/videos/v4/ultimate-relaxation-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Relaxed Woman in Calm Spa Pool Ambiance; illustrative licensed stock setting"
+  },
+  "pedicure": {
+    "id": 4855999,
+    "src": "/videos/v4/pedicure.mp4",
+    "poster": "/videos/v4/pedicure-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Person Having a Pedicure; illustrative licensed stock setting"
+  },
+  "manicure": {
+    "id": 16117302,
+    "src": "/videos/v4/manicure.mp4",
+    "poster": "/videos/v4/manicure-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Nail beauty care manicure; illustrative licensed stock setting"
+  },
+  "luxury-foot-treatment": {
+    "id": 5999062,
+    "src": "/videos/v4/luxury-foot-treatment.mp4",
+    "poster": "/videos/v4/luxury-foot-treatment-960.webp",
+    "width": 960,
+    "height": 506,
+    "alt": "Person Getting a Pedicure; illustrative licensed stock setting"
+  },
+  "scalp-massage": {
+    "id": 7575402,
+    "src": "/videos/v4/scalp-massage.mp4",
+    "poster": "/videos/v4/scalp-massage-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Shampooing and Massaging A Client's Hair; illustrative licensed stock setting"
+  },
+  "hair-spa": {
+    "id": 7754864,
+    "src": "/videos/v4/hair-spa.mp4",
+    "poster": "/videos/v4/hair-spa-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Woman Washing the Hair of the Client; illustrative licensed stock setting"
+  },
+  "services": {
+    "id": 30365474,
+    "src": "/videos/v4/services.mp4",
+    "poster": "/videos/v4/services-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Facial Treatment with Mask Application; illustrative licensed stock setting"
+  },
+  "about": {
+    "id": 6628247,
+    "src": "/videos/v4/about.mp4",
+    "poster": "/videos/v4/about-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Woman Lighting Candles; illustrative licensed stock setting"
+  },
+  "experience": {
+    "id": 6616373,
+    "src": "/videos/v4/experience.mp4",
+    "poster": "/videos/v4/experience-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Footage Of Indoor Swimming Pool; illustrative licensed stock setting"
+  },
+  "studio": {
+    "id": 6813119,
+    "src": "/videos/v4/studio.mp4",
+    "poster": "/videos/v4/studio-960.webp",
+    "width": 960,
+    "height": 462,
+    "alt": "Relaxing Candlelit Room; illustrative licensed stock setting"
+  },
+  "gallery": {
+    "id": 6693922,
+    "src": "/videos/v4/gallery.mp4",
+    "poster": "/videos/v4/gallery-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Set of Personal Hygiene and Spa Products; illustrative licensed stock setting"
+  },
+  "booking": {
+    "id": 6628242,
+    "src": "/videos/v4/booking.mp4",
+    "poster": "/videos/v4/booking-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Female Masseuse Hands Lighting Candles; illustrative licensed stock setting"
+  },
+  "contact": {
+    "id": 6768218,
+    "src": "/videos/v4/contact.mp4",
+    "poster": "/videos/v4/contact-960.webp",
+    "width": 506,
+    "height": 960,
+    "alt": "Putting Drop of Essential Oil on Burner; illustrative licensed stock setting"
+  },
+  "luxury-hand-treatment": {
+    "id": 3741679,
+    "src": "/videos/v4/luxury-hand-treatment.mp4",
+    "poster": "/videos/v4/luxury-hand-treatment-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Person Massaging a Hand; illustrative licensed stock setting"
+  },
+  "reviews": {
+    "id": 7754435,
+    "src": "/videos/v4/reviews.mp4",
+    "poster": "/videos/v4/reviews-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Manicurist Massaging Hand of a Female Client; illustrative licensed stock setting"
+  },
+  "feedback": {
+    "id": 4855854,
+    "src": "/videos/v4/feedback.mp4",
+    "poster": "/videos/v4/feedback-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "A Person Having a Hand Massage; illustrative licensed stock setting"
+  },
+  "wellness-tips": {
+    "id": 7590371,
+    "src": "/videos/v4/wellness-tips.mp4",
+    "poster": "/videos/v4/wellness-tips-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Woman Meditating Indoors; illustrative licensed stock setting"
+  },
+  "home": {
+    "id": 6187077,
+    "src": "/videos/v4/home.mp4",
+    "poster": "/videos/v4/home-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "Woman Receiving Facial Massage; illustrative licensed stock setting"
+  },
+  "experience-atmosphere": {
+    "id": 3780085,
+    "src": "/videos/v4/experience-atmosphere.mp4",
+    "poster": "/videos/v4/experience-atmosphere-960.webp",
+    "width": 960,
+    "height": 540,
+    "alt": "Footage Of A Woman Having A Massage; illustrative licensed stock setting"
+  },
+  "home-atmosphere": {
+    "id": 6750885,
+    "src": "/videos/v4/home-atmosphere.mp4",
+    "poster": "/videos/v4/home-atmosphere-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Person Using a Pump Dispenser; illustrative licensed stock setting"
+  },
+  "faq": {
+    "id": 6724994,
+    "src": "/videos/v4/faq.mp4",
+    "poster": "/videos/v4/faq-960.webp",
+    "width": 540,
+    "height": 960,
+    "alt": "A Burning Candle in a Glass; illustrative licensed stock setting"
+  }
+}

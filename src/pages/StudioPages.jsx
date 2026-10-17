@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import {
   Sparkles,
   ArrowRight,
@@ -36,8 +36,9 @@ import {
 } from "../components/StudioUI";
 import LeadForm from "../components/LeadForm";
 import ServiceDiscovery from "../components/ServiceDiscovery";
-import AtmosphereFilm from "../components/AtmosphereFilm";
-import HeroFilm from "../components/HeroFilm";
+
+import AmbientVideo from "../components/AmbientVideo";
+import BookingFlow from "../components/BookingFlow";
 export function Home() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
@@ -82,7 +83,7 @@ export function Home() {
         </div>
         <div className="hero-art">
           <div className="hero-portrait">
-            <HeroFilm />
+            <AmbientVideo name="home" eager />
             <span className="portrait-word" aria-hidden="true">
               unhurried.
             </span>
@@ -210,7 +211,7 @@ export function Home() {
               </span>
             </div>
           </div>
-          <AtmosphereFilm />
+          <AmbientVideo name="home-atmosphere" className="atmosphere-film" />
           <div className="sensory-still">
             <Photo name="stone" alt={photoDescriptions.stone} />
             <span>Warmth, thoughtfully placed.</span>
@@ -346,7 +347,7 @@ export function Home() {
             [
               "03",
               "Keep it with you",
-              "Review, edit and copy. Nothing is sent.",
+              "Review your demo. Submit only when delivery is configured.",
             ],
           ].map(([n, h, p]) => (
             <li key={n}>
@@ -373,7 +374,9 @@ export function Home() {
     </>
   );
 }
-function PageIntro({ eyebrow, title, children, image = "water" }) {
+function PageIntro({ eyebrow, title, children }) {
+  const location = useLocation();
+  const videoName = location.pathname.split("/").filter(Boolean)[0] || "home";
   return (
     <section className="page-intro wrap">
       <div className="page-intro-copy">
@@ -385,7 +388,7 @@ function PageIntro({ eyebrow, title, children, image = "water" }) {
         </span>
       </div>
       <div className="page-intro-media">
-        <Photo name={image} alt={photoDescriptions[image]} eager />
+        <AmbientVideo name={videoName} eager />
         <span className="intro-orbit" aria-hidden="true" />
       </div>
     </section>
@@ -458,7 +461,9 @@ export function Treatment() {
           </ButtonLink>
           <small>Illustrative price. No real booking or payment.</small>
         </div>
-        <Photo name={t.image} alt={t.alt} eager />
+        <div className="treatment-media">
+          <AmbientVideo name={t.id} eager />
+        </div>
       </section>
       <section className="section wrap treatment-story">
         <div>
@@ -624,7 +629,10 @@ export function Experience() {
         pace.
       </PageIntro>
       <section className="section wrap experience-film">
-        <AtmosphereFilm />
+        <AmbientVideo
+          name="experience-atmosphere"
+          className="atmosphere-film"
+        />
         <div>
           <Eyebrow>Press pause on the ordinary</Eyebrow>
           <h2>
@@ -633,7 +641,7 @@ export function Experience() {
             <em>A softer world.</em>
           </h2>
           <p>
-            Take ten seconds by the water. A small atmosphere film captures the
+            Take a quiet moment. A short atmosphere clip captures the
             feeling behind the studio concept.
           </p>
           <p className="caption">
@@ -854,7 +862,7 @@ export function Booking() {
       <SEO
         title="Find your escape — demo request"
         path="/booking"
-        description="Choose from 36 illustrative spa services, a preferred date and your sample details. Review, edit and copy a demo request. No real appointment or server submission."
+        description="Choose from 36 illustrative spa services, a preferred date and your sample details. Review a clearly labeled demo request. Email delivery is available only after agency configuration; no real appointments."
       />
       <PageIntro
         image="oils"
@@ -868,7 +876,7 @@ export function Booking() {
         }
       >
         A ritual, a preferred moment, a few simple details. Prepare your demo
-        request in four easy steps.
+        request in seven thoughtful steps.
       </PageIntro>
       <section className="section wrap booking-layout">
         <aside className="booking-aside">
@@ -887,7 +895,7 @@ export function Booking() {
             </li>
             <li>
               <Check />
-              Edit before you copy
+              Review before you submit
             </li>
             <li>
               <Check />
@@ -896,7 +904,7 @@ export function Booking() {
           </ul>
           <TextLink to="/services">Still exploring? Browse rituals</TextLink>
         </aside>
-        <LeadForm />
+        <BookingFlow />
       </section>
       <section className="section wrap faq-section">
         <div>

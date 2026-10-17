@@ -1,7 +1,7 @@
 export const brand = {
   name: "MSPixelPulse Wellness Studio",
   short: "Wellness Studio",
-  email: "hello@mspixelpulse.com",
+  email: "mspixelpulse@gmail.com",
   phone: "+1 (000) 000-0000",
   location: "Toronto, Ontario, Canada",
 };
@@ -768,7 +768,7 @@ export const faqs = [
   ],
   [
     "How does the appointment request work?",
-    "Choose a treatment and a preferred date, then review your demo request. The form runs entirely in your browser and does not send or store an appointment. You can copy the prepared request yourself. No booking is confirmed.",
+    "Choose a service, preferred date and time, then review your demo request. You can copy it locally. Email submission is available only when agency delivery is configured; the form clearly shows its status. Any submission is labeled as a demo request, never a confirmed reservation.",
   ],
   [
     "Are the prices in Canadian dollars?",
