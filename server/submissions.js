@@ -1,6 +1,13 @@
 import { createHmac, randomUUID } from "node:crypto";
 import { treatments } from "../src/data/studio.js";
 const agency = "mspixelpulse@gmail.com";
+// Central MSPixelPulse inquiry pipeline (Aurelion). Used whenever the optional Resend/Redis delivery is not configured:
+// the console saves the request first, then emails the agency. Server-to-server with the site's registered public host as
+// Origin. Demo site: no appointment, availability or payment exists.
+export const AURELION_SITE_ID = "mspixelpulse-demo-wellness-studio";
+export const AURELION_ENDPOINT = "https://mahakpatel.com/play/ai/api/intake/site/" + AURELION_SITE_ID;
+const AURELION_HOSTS = ["wellness.mspixelpulse.com", "mspixelpulse-demo-wellness-studio.vercel.app"];
+export const aurelionOrigin = (host) => (AURELION_HOSTS.includes(String(host || "").toLowerCase()) ? "https://" + String(host).toLowerCase() : null);
 const clean = (v, max = 1000) =>
   typeof v === "string" ? v.trim().slice(0, max) : "";
 const email = (v) => clean(v, 254).toLowerCase();
@@ -66,9 +73,19 @@ export function configuration(env) {
       env.WELLNESS_REDIS_REST_TOKEN &&
       env.WELLNESS_SUBMISSION_SECRET?.length >= 32,
   );
-  return {
+  const provider = {
     booking: storage && Boolean(env.RESEND_API_KEY && env.WELLNESS_EMAIL_FROM),
     feedback: storage,
+  };
+  // The central pipeline needs no credentials here; it can be switched off explicitly for local fixtures.
+  const aurelion = env.WELLNESS_DISABLE_AURELION !== "true";
+  return {
+    booking: provider.booking || aurelion,
+    feedback: provider.feedback || aurelion,
+    provider,
+    aurelion,
+    // Only the provider path emails the customer a copy; the central pipeline notifies the agency.
+    customerEmail: provider.booking,
   };
 }
 const digest = (secret, value) =>
@@ -128,7 +145,8 @@ export function createSubmissionService({
           error: "Please take a moment to check the form and try again.",
         },
       };
-    if (!configuration(env)[kind])
+    const config = configuration(env);
+    if (!config[kind])
       return {
         status: 503,
         body: {
@@ -137,6 +155,7 @@ export function createSubmissionService({
           code: "configuration_required",
         },
       };
+    if (!config.provider[kind]) return forwardToAurelion(kind, data, { host, fetcher, logger });
     const secret = env.WELLNESS_SUBMISSION_SECRET;
     const fingerprint = digest(
       secret,
@@ -291,4 +310,89 @@ export function createSubmissionService({
 }
 export function requestId() {
   return randomUUID();
+}
+// Central pipeline delivery: one POST, idempotent by requestId (the console records a repeat as a duplicate), the
+// console's inquiry id as the demo reference. No customer email is sent on this path, and the response says so.
+async function forwardToAurelion(kind, data, { host, fetcher, logger }) {
+  const origin = aurelionOrigin(host);
+  if (!origin)
+    return {
+      status: 503,
+      body: {
+        error:
+          "This preview address is not registered for demo requests. Please use the main studio website.",
+        code: "origin_not_registered",
+      },
+    };
+  const service =
+    treatments.find((t) => t.id === data.service)?.title || "Help me choose";
+  const details =
+    kind === "booking"
+      ? { "Preferred date": data.date, "Preferred time": data.time }
+      : { Rating: String(data.rating), "Publish permission": data.publish ? "yes" : "no" };
+  const payload = {
+    clientId: data.requestId,
+    formType: kind === "booking" ? "booking" : "feedback",
+    name: data.name,
+    email: data.email,
+    ...(data.phone ? { phone: data.phone } : {}),
+    service,
+    message:
+      (kind === "booking" ? data.notes : data.feedback) ||
+      (kind === "booking" ? "Demo appointment request (no notes)." : ""),
+    details,
+    consent: true,
+    pageUrl: origin + (kind === "booking" ? "/book" : "/feedback"),
+  };
+  try {
+    const response = await fetcher(AURELION_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: origin },
+      body: JSON.stringify(payload),
+      redirect: "error",
+      signal: AbortSignal.timeout(10000),
+    });
+    const body = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      logger.warn(JSON.stringify({ kind, status: "aurelion_refused", code: response.status }));
+      return {
+        status: response.status === 429 ? 429 : 503,
+        body: {
+          error:
+            body.error ||
+            "We could not complete this demo request right now. Please try again later.",
+        },
+      };
+    }
+    const reference = `DEMO-${kind === "booking" ? "B" : "F"}-${String(body.inquiryId || "").slice(0, 10).toUpperCase() || "RECEIVED"}`;
+    const result =
+      kind === "booking"
+        ? {
+            reference,
+            status: "demo_request_received",
+            agencyEmail: "queued",
+            customerEmail: "not_sent",
+            deliveryNote:
+              "Received by MSPixelPulse's inquiry system; the studio team is notified by email. You will not receive an automatic email copy.",
+            message:
+              "Your demo request has been received. This is not a confirmed reservation.",
+          }
+        : {
+            reference,
+            status: "pending_moderation",
+            message:
+              "Demo feedback received privately by MSPixelPulse for moderation. It is not published.",
+          };
+    logger.info(JSON.stringify({ kind, reference, status: "aurelion_accepted", duplicate: !!body.duplicate }));
+    return { status: 201, body: result };
+  } catch {
+    logger.warn(JSON.stringify({ kind, status: "aurelion_unavailable" }));
+    return {
+      status: 503,
+      body: {
+        error:
+          "We could not reach the inquiry service. Your request was not saved; please try again shortly.",
+      },
+    };
+  }
 }
