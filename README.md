@@ -1,27 +1,23 @@
-# MSPixelPulse Demo Wellness Studio
+# MSPixelPulse Wellness Studio
 
-A modern React + Vite demo website for a wellness studio template under MSPixelPulse.
+An original editorial wellness/spa/beauty/relaxation-massage website concept for Toronto. Fictional services, illustrative CAD prices, licensed stock photography and a local demo appointment request; no operating spa, real bookings or payments.
 
-## Purpose
+## Development
 
-This repository is used as a demo website template for Canadian small business wellness/beauty websites. It can be customized for studios, salons, spas, wellness clinics, yoga studios, and similar service businesses.
+React 19, Vite, React Router and Lucide. Run `npm install`, `npm run dev`, `npm run build`; output is `dist`. `npm run lint` checks source. Content lives in `src/data/studio.js`; reusable UI in `src/components/`; route compositions in `src/pages/StudioPages.jsx`; design tokens in `src/index.css`.
 
-## Tech Stack
+## Routes
 
-- React
-- Vite
-- CSS
-- Vercel-ready deployment
+`/`, `/services`, six `/services/:id` treatments, `/about`, `/experience`, `/gallery`, `/booking`, `/contact`, `/faq`; `/studio` is an experience alias.
 
-## Notes
+## Production identity
 
-This commit confirms the organization repository is connected and ready for continued updates.
+- Repository: https://github.com/MSPixelPulseAgency/mspixelpulse-demo-wellness-studio
+- Production: https://wellness.mspixelpulse.com
+- Existing Vercel fallback: https://mspixelpulse-demo-wellness-studio.vercel.app
+- Existing project: prj_wtsYNiyFergsugt5YlYg5i5mOLXl
+- Build: Vite, npm install, npm run build, dist, root ./
 
-## Website and demo management
+All contact details are placeholders: hello@mspixelpulse.com, +1 (000) 000-0000, Toronto, Ontario, Canada. No real spa address or practitioner claims. Forms prepare a request in memory and do not send it; never collect health data. No hair, barber, nail or medical-spa service claims.
 
-- **Live Website:** [https://wellness.mspixelpulse.com](https://wellness.mspixelpulse.com)
-- **Original Vercel URL (fallback):** [https://mspixelpulse-demo-wellness-studio.vercel.app](https://mspixelpulse-demo-wellness-studio.vercel.app)
-- **MSPixelPulse Projects:** [MSPixelPulse Projects](https://mspixelpulse.com/projects)
-- **Aurelion Demo Library:** [Private Demo Management — Owner Access Required](https://mahakpatel.com/play/ai?view=demo-library)
-
-The category subdomain is the primary public demo link; the original Vercel address stays available as a fallback. The Aurelion link is an owner-only management interface and does not grant access.
+See [design and QA](docs/redesign-and-qa.md), [media licensing](docs/media-license.md) and the five role-specific `.ai-agents/` maintenance guides. Preserve current user release instructions and verify actual production after publishing.
