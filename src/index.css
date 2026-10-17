@@ -5752,3 +5752,59 @@ button:disabled {
     overflow-wrap: normal;
   }
 }
+/* Apply the same feedback to image-dialog controls and native disclosure rows. */
+.lightbox button {
+  min-width: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
+  transition:
+    background-position 0.55s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+.lightbox button:is(:hover, :focus-visible),
+.booking-progress button:not(:disabled):is(:hover, :focus-visible),
+.faq-list summary:is(:hover, :focus-visible) {
+  background: var(--control-gradient);
+  background-size: 180% 100%;
+  background-position: 100% 50%;
+  color: white;
+  box-shadow:
+    0 6px 18px #7e398a24,
+    inset 0 1px 0 #ffffff30;
+}
+.lightbox :focus-visible {
+  outline-color: #bce1ff;
+}
+.booking-progress button {
+  border-radius: 12px;
+}
+.faq-list summary {
+  padding-inline: 14px;
+  border-radius: 14px;
+  transition:
+    background-position 0.55s ease,
+    box-shadow 0.25s ease;
+}
+.faq-list summary:is(:hover, :focus-visible) svg {
+  color: white;
+}
+.footer-links a:hover {
+  color: #f5b5d2;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+.button:disabled:hover {
+  background: #e0d3e5;
+  color: #594363;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lightbox button,
+  .faq-list summary {
+    transition: none;
+  }
+}
