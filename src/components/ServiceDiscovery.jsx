@@ -4,6 +4,7 @@ import { Search, X, SlidersHorizontal, ArrowDown } from "lucide-react";
 import { categories } from "../data/studio";
 import { searchTreatments } from "../data/discovery";
 import { ServiceCard } from "./StudioUI";
+import CategoryPicker from "./CategoryPicker";
 function CatalogueResults({ items }) {
   const [limit, setLimit] = useState(12);
   return (
@@ -45,6 +46,9 @@ export default function ServiceDiscovery() {
     ? params.get("duration")
     : "";
   const couples = params.get("couples") === "true";
+  const price = ["75", "125", "200"].includes(params.get("price"))
+    ? params.get("price")
+    : "";
   function update(key, value) {
     setParams(
       (p) => {
@@ -56,7 +60,7 @@ export default function ServiceDiscovery() {
       { replace: true },
     );
   }
-  const items = searchTreatments({ query, category, duration, couples });
+  const items = searchTreatments({ query, category, duration, couples, price });
   return (
     <div className="discovery" id="discover-services">
       <h2 className="sr-only">Explore the service catalogue</h2>
@@ -99,6 +103,28 @@ export default function ServiceDiscovery() {
           </select>
         </label>
       </div>
+      <div className="v4-filter-tools">
+        <div>
+          <p className="field-label">Category</p>
+          <CategoryPicker
+            value={category}
+            onChange={(c) => update("category", c === "All" ? "" : c)}
+          />
+        </div>
+        <label>
+          Illustrative CAD price
+          <select
+            aria-label="Maximum price"
+            value={price}
+            onChange={(e) => update("price", e.target.value)}
+          >
+            <option value="">Any price</option>
+            <option value="75">Up to CAD $75</option>
+            <option value="125">Up to CAD $125</option>
+            <option value="200">Up to CAD $200</option>
+          </select>
+        </label>
+      </div>
       <div className="discovery-filters">
         <div className="filter-row" role="group" aria-label="Filter services">
           {["All", ...categories].map((c) => (
@@ -126,7 +152,7 @@ export default function ServiceDiscovery() {
           {items.length} {items.length === 1 ? "ritual" : "rituals"} to discover{" "}
           <span>· Illustrative CAD prices</span>
         </p>
-        {(query || category !== "All" || duration || couples) && (
+        {(query || category !== "All" || duration || couples || price) && (
           <button
             type="button"
             className="text-link"
@@ -138,7 +164,7 @@ export default function ServiceDiscovery() {
       </div>
       {items.length ? (
         <CatalogueResults
-          key={`${query}-${category}-${duration}-${couples}`}
+          key={`${query}-${category}-${duration}-${couples}-${price}`}
           items={items}
         />
       ) : (

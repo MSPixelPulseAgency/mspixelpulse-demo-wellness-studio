@@ -4,6 +4,7 @@ export function searchTreatments({
   category = "All",
   duration = "",
   couples = false,
+  price = "",
 } = {}) {
   const words = query
     .toLocaleLowerCase("en-CA")
@@ -15,6 +16,7 @@ export function searchTreatments({
       (category === "All" || t.category === category) &&
       (!duration || t.duration <= Number(duration)) &&
       (!couples || t.couples) &&
+      (!price || t.price <= Number(price)) &&
       words.every((word) =>
         `${t.title} ${t.category} ${t.description}`
           .toLocaleLowerCase("en-CA")
