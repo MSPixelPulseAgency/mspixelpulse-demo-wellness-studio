@@ -1,23 +1,34 @@
-# MSPixelPulse Wellness Studio
+# MSPixelPulse Wellness Studio — V3
 
-The NOIRÉ edit: an original cinematic luxury wellness/spa/beauty/relaxation-massage website concept for Toronto. Fictional services, illustrative CAD prices, licensed stock photography and a local demo appointment request; no operating spa, real bookings or payments.
+A fictional Toronto spa, wellness and cosmetic-beauty demonstration. Production: **https://wellness.mspixelpulse.com**.
 
-## Development
+React 19 / Vite / React Router / Lucide / CSS. The current NOIRÉ collection combines detached liquid-glass navigation, rounded editorial layouts, purple/pink/plum gradients, local Bodoni Moda/Manrope fonts and deliberate mobile compositions.
 
-React 19, Vite, React Router and Lucide. Run `npm install`, `npm run dev`, `npm run build`; output is `dist`. `npm run lint` checks source; `npm test` checks route/content/media contracts. This is JavaScript/JSX, with no TypeScript compiler configuration. Content lives in `src/data/studio.js`; reusable UI in `src/components/`; route compositions in `src/pages/StudioPages.jsx`; design tokens in `src/index.css`; responsive image metadata in `src/data/media.json`. Self-hosted Bodoni Moda and Manrope, deep burgundy/midnight plum/champagne/ivory/rose, and fifteen licensed local photo sources create a distinct editorial direction.
+## Explore
 
-## Routes
+- 36 services, six collections: Massage, Facials, Body, Wellness, Packages and Beauty.
+- Search names/categories/descriptions; combine category, duration and shared-experience filters. Query filters preserve input focus.
+- Native modal service chooser with categories, search, clear/reset, keyboard arrows/Home/End/Enter/Escape and focus restoration.
+- Four-step local request: ritual → preferred date/time → sample details → review/edit/copy/clear.
+- Improved Contact with enquiry topics and clearly fictional example hours/location; searchable FAQs; 16-photo filterable keyboard gallery.
+- 22 licensed photo/poster sources with 88 responsive WebP variants. The silent 10-second pool film is 736 KiB and loads only after Play, with poster/loading/error feedback and automatic offscreen pause.
+- All original routes, six service IDs, CAD prices and durations retained. 45 routes including 36 details and the /studio alias.
 
-`/`, `/services`, six `/services/:id` treatments, `/about`, `/experience`, `/gallery`, `/booking`, `/contact`, `/faq`; `/studio` is an experience alias.
+**Demo safety:** no operating spa, practitioner credentials, real availability, reviews, health outcomes, bookings, payments, emails or server persistence are represented. Use fictional sample details. No medical or sensitive questions. Media is illustrative stock, not an actual studio.
 
-## Production identity
+## Run and maintain
 
-- Repository: https://github.com/MSPixelPulseAgency/mspixelpulse-demo-wellness-studio
-- Production: https://wellness.mspixelpulse.com
-- Existing Vercel fallback: https://mspixelpulse-demo-wellness-studio.vercel.app
-- Existing project: prj_wtsYNiyFergsugt5YlYg5i5mOLXl
-- Build: Vite, npm install, npm run build, dist, root ./
+```sh
+npm install
+npm run dev
+npm test
+npm run lint
+npm run build
+npm run preview
+```
 
-All contact details are placeholders: hello@mspixelpulse.com, +1 (000) 000-0000, Toronto, Ontario, Canada. No real spa address or practitioner claims. Forms prepare a request in memory and do not send it; never collect health data. No hair, barber, nail or medical-spa service claims.
+This existing JavaScript/JSX project has no TypeScript configuration. Maintain data in `src/data/studio.js`, filters in `src/data/discovery.js` and the route-responsive image preload map in `index.html`. Shared UI, chooser, discovery, film and request components are in `src/components/`. Check the nine requested widths and every route after changes.
 
-See [current NOIRÉ research and QA](docs/noire-transformation.md), [previous redesign record](docs/redesign-and-qa.md), [media licensing](docs/media-license.md) and the five role-specific `.ai-agents/` maintenance guides. Preserve current user release instructions and verify actual production after publishing.
+Research and interaction/QA contracts: [V3 design and QA](docs/v3-design-and-qa.md). Image credits: [media sources](docs/noire-media-sources.json). Film encoding/license: [video source](docs/v3-video-sources.json). Earlier V2 research remains in [the NOIRÉ transformation history](docs/noire-transformation.md).
+
+Use only the existing MSPixelPulseAgency/mspixelpulse-demo-wellness-studio repository and Vercel project prj_wtsYNiyFergsugt5YlYg5i5mOLXl. Production deploys from main; Vite / npm install / npm run build / dist / root ./ and wellness.mspixelpulse.com remain. Follow current user release authorization and the five `.ai-agents` maintenance guides. Never edit unrelated projects, DNS, authentication or billing for demo revisions.
