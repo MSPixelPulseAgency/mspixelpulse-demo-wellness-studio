@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "pexelsId": 6663575,
+    "photographer": "Arina Krasnikova",
+    "source": "https://www.pexels.com/photo/a-person-using-a-gua-sha-on-a-woman-s-face-6663575/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "massage": {
+    "pexelsId": 6629612,
+    "photographer": "kaboompics.com",
+    "source": "https://www.pexels.com/photo/a-masseuse-rubbing-massage-oil-on-a-woman-s-back-6629612/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "facial": {
+    "pexelsId": 5240837,
+    "photographer": "Anete Lusina",
+    "source": "https://www.pexels.com/photo/woman-with-closed-eyes-getting-massage-in-salon-5240837/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "body": {
+    "pexelsId": 6560270,
+    "photographer": "Anna Tarazevich",
+    "source": "https://www.pexels.com/photo/woman-relaxation-treatment-candles-6560270/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "candles": {
+    "pexelsId": 8789623,
+    "photographer": "Darina Belonogova",
+    "source": "https://www.pexels.com/photo/candles-and-bath-toiletries-8789623/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "robe": {
+    "pexelsId": 9145360,
+    "photographer": "Ron Lach",
+    "source": "https://www.pexels.com/photo/bathrobe-handing-on-a-hook-on-a-wall-in-a-modern-spa-9145360/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "pool": {
+    "pexelsId": 35469393,
+    "photographer": "Lin Wenhan",
+    "source": "https://www.pexels.com/photo/luxurious-indoor-pool-with-classical-statues-35469393/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "water": {
+    "pexelsId": 6667423,
+    "photographer": "Pavel Danilyuk",
+    "source": "https://www.pexels.com/photo/brown-and-white-hot-tub-6667423/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "portrait": {
+    "pexelsId": 9774659,
+    "photographer": "SHVETS production",
+    "source": "https://www.pexels.com/photo/close-up-view-of-woman-with-hair-wrapped-in-towel-9774659/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "oils": {
+    "pexelsId": 6724505,
+    "photographer": "RDNE Stock project",
+    "source": "https://www.pexels.com/photo/candles-in-ceramic-and-glass-jars-6724505/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "ritual": {
+    "pexelsId": 9185042,
+    "photographer": "Ekaterina Mitkina",
+    "source": "https://www.pexels.com/photo/woman-lying-down-with-candles-9185042/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "skin": {
+    "pexelsId": 8460604,
+    "photographer": "Ornella Delfino",
+    "source": "https://www.pexels.com/photo/woman-having-a-facial-massage-8460604/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "scalp": {
+    "pexelsId": 5659019,
+    "photographer": "Ivan S",
+    "source": "https://www.pexels.com/photo/a-woman-eyes-closed-having-a-head-massage-5659019/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "still-life": {
+    "pexelsId": 374911,
+    "photographer": "Burst",
+    "source": "https://www.pexels.com/photo/bath-bomb-on-a-scarf-374911/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  },
+  "beauty": {
+    "pexelsId": 6628808,
+    "photographer": "KoolShooters",
+    "source": "https://www.pexels.com/photo/woman-lying-with-eyes-closed-while-getting-a-face-massage-6628808/",
+    "license": "https://www.pexels.com/license/",
+    "retrieved": "2026-10-17"
+  }
+}
