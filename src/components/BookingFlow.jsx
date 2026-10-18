@@ -359,7 +359,7 @@ export default function BookingFlow() {
             </strong>
             <p>
               {delivery === true
-                ? "The agency and your email will receive a clearly labeled demo request. No appointment is reserved."
+                ? "The studio team receives a clearly labeled demo request through MSPixelPulse's inquiry system. No appointment is reserved and no payment is taken."
                 : "You can review and copy your request. Nothing has been emailed or stored. The agency must configure delivery before submissions are available."}
             </p>
           </div>
@@ -373,8 +373,8 @@ export default function BookingFlow() {
               Reference: <strong>{result.reference}</strong>
             </p>
             <p>
-              Email status: accepted by the delivery provider. This does not
-              guarantee inbox delivery.
+              {result.deliveryNote ||
+                "Email status: accepted by the delivery provider. This does not guarantee inbox delivery."}
             </p>
             <button
               type="button"

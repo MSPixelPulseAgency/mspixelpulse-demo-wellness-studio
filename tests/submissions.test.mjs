@@ -24,9 +24,10 @@ const context = {
   host: "wellness.mspixelpulse.com",
   ip: "test-network",
 };
-function fixture({ configured = true, mailOk = true, storeOk = true } = {}) {
+function fixture({ configured = true, mailOk = true, storeOk = true, aurelionOk = true } = {}) {
   const env = configured
     ? {
+        WELLNESS_DISABLE_AURELION: "true",
         WELLNESS_REDIS_REST_URL: "https://redis.example.invalid",
         WELLNESS_REDIS_REST_TOKEN: "test-token",
         WELLNESS_SUBMISSION_SECRET: "test-only-key-32-characters-or-longer",
@@ -36,7 +37,8 @@ function fixture({ configured = true, mailOk = true, storeOk = true } = {}) {
     : {};
   const records = new Map();
   const mail = [],
-    logs = [];
+    logs = [],
+    aurelion = [];
   const fetcher = async (url, options) => {
     if (url === env.WELLNESS_REDIS_REST_URL) {
       if (!storeOk) throw Error("Unavailable");
@@ -67,6 +69,15 @@ function fixture({ configured = true, mailOk = true, storeOk = true } = {}) {
         }),
       };
     }
+    if (url === "https://mahakpatel.com/play/ai/api/intake/site/mspixelpulse-demo-wellness-studio") {
+      aurelion.push({ body: JSON.parse(options.body), headers: options.headers });
+      return {
+        ok: aurelionOk,
+        status: aurelionOk ? 202 : 503,
+        json: async () =>
+          aurelionOk ? { ok: true, inquiryId: "abcdef0123456789", duplicate: false } : { error: "Down" },
+      };
+    }
     throw Error("Unexpected destination");
   };
   const service = createSubmissionService({
@@ -75,7 +86,7 @@ function fixture({ configured = true, mailOk = true, storeOk = true } = {}) {
     now: () => now,
     logger: { info: (x) => logs.push(x), warn: (x) => logs.push(x) },
   });
-  return { service, records, mail, logs, env };
+  return { service, records, mail, logs, aurelion, env };
 }
 test("server validation normalizes email and rejects invalid dates, fields and consent", () => {
   const ok = validateSubmission("booking", valid, now);
@@ -97,14 +108,43 @@ test("server validation normalizes email and rejects invalid dates, fields and c
       ).length,
     );
 });
-test("unconfigured submission is explicit and performs no delivery or storage", async () => {
+test("without provider credentials, submissions go to the central MSPixelPulse inquiry pipeline (saved there first); nothing is emailed or stored here", async () => {
   const h = fixture({ configured: false });
-  assert.deepEqual(configuration(h.env), { booking: false, feedback: false });
+  const c = configuration(h.env);
+  assert.equal(c.booking, true);
+  assert.equal(c.feedback, true);
+  assert.equal(c.aurelion, true);
+  assert.equal(c.customerEmail, false);
   const r = await h.service("booking", valid, context);
-  assert.equal(r.status, 503);
-  assert.equal(r.body.code, "configuration_required");
+  assert.equal(r.status, 201);
+  assert.equal(r.body.status, "demo_request_received");
+  assert.equal(r.body.customerEmail, "not_sent");
+  assert.match(r.body.reference, /^DEMO-B-ABCDEF0123$/);
   assert.equal(h.mail.length, 0);
   assert.equal(h.records.size, 0);
+  assert.equal(h.aurelion.length, 1);
+  const sent = h.aurelion[0];
+  assert.equal(sent.headers.Origin, "https://wellness.mspixelpulse.com");
+  assert.equal(sent.body.formType, "booking");
+  assert.equal(sent.body.consent, true);
+  assert.equal(sent.body.email, "alex@example.com");
+  assert.equal(sent.body.clientId, valid.requestId);
+  assert.deepEqual(sent.body.details, { "Preferred date": "2026-10-21", "Preferred time": "Afternoon" });
+  // Feedback is forwarded privately with its moderation state; nothing is published here.
+  const f = await h.service("feedback", { ...valid, rating: 5, feedback: "Lovely demo experience overall.", publish: true }, context);
+  assert.equal(f.status, 201);
+  assert.equal(f.body.status, "pending_moderation");
+  assert.equal(h.aurelion[1].body.formType, "feedback");
+  // An unregistered host or a refused forward never reports success.
+  const preview = await h.service("booking", valid, { ...context, origin: "https://x.vercel.app", host: "x.vercel.app" });
+  assert.equal(preview.status, 503);
+  const down = fixture({ configured: false, aurelionOk: false });
+  const d = await down.service("booking", valid, context);
+  assert.equal(d.status, 503);
+  // Explicitly disabled: the old honest 503 remains.
+  const off = fixture({ configured: false });
+  off.env.WELLNESS_DISABLE_AURELION = "true";
+  assert.deepEqual(configuration(off.env).booking, false);
 });
 test("only validated submissions reach both email destinations; request is clearly demo-only", async () => {
   const h = fixture();
